@@ -12,8 +12,8 @@
                         <form action="{{ route('admins.login') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                <label for="username">Username</label>
+                                <input type="username" id="username" name="username" class="form-control" placeholder="Enter your username" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
