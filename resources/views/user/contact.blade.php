@@ -26,7 +26,7 @@
                 </div><!-- End .container -->
             </nav><!-- End .breadcrumb-nav -->
             <div class="container">
-	        	<div class="page-header page-header-big text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
+	        	<div class="page-header page-header-big text-center" style="background-image: url('../../../public/assets/images/Banners/banner-email.jpg')">
         			<h1 class="page-title text-white">Liên hệ<span class="text-white">Giữ liên lạc với chúng tôi</span></h1>
 	        	</div><!-- End .page-header -->
             </div><!-- End .container -->
@@ -128,7 +128,7 @@
 	                				<div class="row">
 	                					<div class="col-sm-5 col-xl-6">
 	                						<figure class="store-media mb-2 mb-lg-0">
-	                							<img src="assets/images/stores/img-1.jpg" alt="image">
+	                							<img src="../../../public/assets/images/stores/img-1.jpg" alt="image">
 	                						</figure><!-- End .store-media -->
 	                					</div><!-- End .col-xl-6 -->
 	                					<div class="col-sm-7 col-xl-6">
@@ -153,7 +153,7 @@
 	                				<div class="row">
 	                					<div class="col-sm-5 col-xl-6">
 	                						<figure class="store-media mb-2 mb-lg-0">
-	                							<img src="assets/images/stores/img-2.jpg" alt="image">
+	                							<img src="../../../public/assets/images/stores/img-2.jpg" alt="image">
 	                						</figure><!-- End .store-media -->
 	                					</div><!-- End .col-xl-6 -->
 

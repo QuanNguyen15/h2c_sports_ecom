@@ -7,7 +7,7 @@
     <?php
         include('layout/css_temp.blade.php');
     ?>
-    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+    <link rel="stylesheet" href="../../../public/assets/css/plugins/jquery.countdown.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <div class="col-md-9 col-lg-8">
                     <div class="soon-content text-center">
                         <div class="soon-content-wrapper">
-                            <img src="assets/images/logo-icon.png" alt="Logo" class="soon-logo mx-auto">
+                            <img src="../../../public/assets/images/logo-icon.png" alt="Logo" class="soon-logo mx-auto">
                             <h1 class="soon-title">Coming Soon</h1><!-- End .soon-title -->
                             <div class="coming-countdown countdown-separator"></div><!-- End .coming-countdown -->
                             <hr class="mt-2 mb-3 mt-md-3">
@@ -49,7 +49,7 @@
                 </div><!-- End .col-md-9 col-lg-8 -->
             </div><!-- End .row -->
         </div><!-- End .container -->
-        <div class="soon-bg bg-image" style="background-image: url(assets/images/backgrounds/soon-bg.jpg)"></div>
+        <div class="soon-bg bg-image" style="background-image: url(../../../public/assets/images/backgrounds/soon-bg.jpg)"></div>
         <!-- End .soon-bg bg-image -->
     </div><!-- End .soon -->
 
@@ -58,12 +58,12 @@
         include('layout/footer_pages.blade.php');
     ?>
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.plugin.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="../../../public/assets/js/jquery.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../public/assets/js/jquery.plugin.min.js"></script>
+    <script src="../../../public/assets/js/jquery.countdown.min.js"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../../../public/assets/js/main.js"></script>
     <script>
     $(function() {
         "use strict";

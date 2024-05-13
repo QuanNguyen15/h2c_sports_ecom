@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include(base_path('resources/views/user/layout/css_temp.blade.php'))?>
-    <link rel="stylesheet" href="{{('assets/css/skins/skin-demo-21.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/demos/demo-21.css')}}">
-    <link rel="stylesheet" href="{{('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css')}}">
+    <?php include('layout/css_temp.blade.php')?>
+    <link rel="stylesheet" href="assets/css/skins/skin-demo-21.css'">
+    <link rel="stylesheet" href="assets/css/demos/demo-21.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
 </head>
@@ -20,7 +20,7 @@
         </div>
 
         <!--Header-->
-        <?php include(base_path('resources/views/user/layout/header.blade.php')); ?>
+        <?php include('layout/header.blade.php'); ?>
 
         <main class="main">
             <div class="intro-slider-container mb-5">
@@ -94,7 +94,7 @@
             <div class="container banner-container">
                 <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                     <a href="category-fullwidth.blade.php">
-                        <img src="{{('resources/views/assets/images/banners/banner-aodm.jpg')}}">
+                        <img src="assets/images/banners/banner-aodm.jpg">
                     </a>
                     <div class="banner-content">
                         <div class="title">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                     <a href="category-fullwidth.blade.php">
-                        <img src="{{('resources/views/user/assets/images/banners/banner-giaydm.jpg')}}">
+                        <img src="assets/images/banners/banner-giaydm.jpg">
                     </a>
                     <div class="banner-content">
                         <div class="title">
@@ -1465,20 +1465,21 @@
         </main>
 
 
+
         <?php
-            include(base_path('resources/views/user/layout/footer.blade.php'));
+            include('layout/footer.blade.php');
         ?>
 
         <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
         <?php
-            include(base_path('resources/views/user/layout/mobile_menu.blade.php'));
+            include('layout/mobile_menu.blade.php');
         ?>
     </div>
 
     <!-- Sign in / Register Modal -->
     <?php
-        include(base_path('resources/views/user/layout/model_login.blade.php'));
+        include('layout/model_login.blade.php');
     ?>
 
     <div class="container newsletter-popup-container mfp-hide" id="newsletter-popup-form">
@@ -1534,7 +1535,7 @@
 
    </div>
     <?php
-        include(base_path('resources/views/user/layout/js_temp.blade.php'));
+        include('layout/js_temp.blade.php');
     ?>
    <script>
             document.getElementById('chat-box').addEventListener('click', function() {

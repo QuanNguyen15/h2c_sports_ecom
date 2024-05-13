@@ -17,7 +17,7 @@
         ?>
 
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        	<div class="page-header text-center" style="background-image: url('../../../public/assets/images/page-header-bg.jpg')">
         		<div class="container">
         			<h1 class="page-title">Wishlist<span>Shop</span></h1>
         		</div><!-- End .container -->
@@ -51,7 +51,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="#">
-												<img src="assets/images/products/table/product-1.jpg" alt="Product image">
+												<img src="../../../public/assets/images/products/table/product-1.jpg" alt="Product image">
 											</a>
 										</figure>
 
@@ -82,7 +82,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="#">
-												<img src="assets/images/products/table/product-2.jpg" alt="Product image">
+												<img src="../../../public/assets/images/products/table/product-2.jpg" alt="Product image">
 											</a>
 										</figure>
 
@@ -103,7 +103,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="#">
-												<img src="assets/images/products/table/product-3.jpg" alt="Product image">
+												<img src="../../../public/assets/images/products/table/product-3.jpg" alt="Product image">
 											</a>
 										</figure>
 
@@ -151,14 +151,14 @@
         include('layout/model_login.blade.php');
     ?>
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="../../../public/assets/js/jquery.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../public/assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="../../../public/assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../../public/assets/js/superfish.min.js"></script>
+    <script src="../../../public/assets/js/owl.carousel.min.js"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../../../public/assets/js/main.js"></script>
 </body>
 
 

@@ -17,7 +17,7 @@
     ?>
 
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        	<div class="page-header text-center" style="background-image: url('../../../public/assets/images/page-header-bg.jpg')">
         		<div class="container">
         			<h1 class="page-title">Giỏ hàng<span></span></h1>
         		</div><!-- End .container -->
@@ -54,7 +54,7 @@
 												<div class="product">
 													<figure class="product-media">
 														<a href="#">
-															<img src="assets/images/products/table/product-1.jpg" alt="Product image">
+															<img src="../../../public/assets/images/products/table/product-1.jpg" alt="Product image">
 														</a>
 													</figure>
 
@@ -77,7 +77,7 @@
 												<div class="product">
 													<figure class="product-media">
 														<a href="#">
-															<img src="assets/images/products/table/product-2.jpg" alt="Product image">
+															<img src="../../../public/assets/images/products/table/product-2.jpg" alt="Product image">
 														</a>
 													</figure>
 
@@ -383,7 +383,7 @@
         include('layout/js_temp.blade.php');
     ?>
 
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="../../../public/assets/js/bootstrap-input-spinner.js"></script>
     <!-- Main JS File -->
 </body>
 </html>

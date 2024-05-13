@@ -25,7 +25,7 @@
                 </div><!-- End .container -->
             </nav><!-- End .breadcrumb-nav -->
             <div class="container">
-	        	<div class="page-header page-header-big text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
+	        	<div class="page-header page-header-big text-center" style="background-image: url('../../../public/assets/images/Banners/banner-email.jpg')">
         			<h1 class="page-title text-white">Về chúng tôi<span class="text-white"></span></h1>
 	        	</div><!-- End .page-header -->
             </div><!-- End .container -->
@@ -64,8 +64,8 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
 
                             <div class="col-lg-6 offset-lg-1">
                                 <div class="about-images">
-                                    <img src="assets/images/about/img-1.jpg" alt="" class="about-img-front">
-                                    <img src="assets/images/about/img-2.jpg" alt="" class="about-img-back">
+                                    <img src="../../../public/assets/images/about/img-1.jpg" alt="" class="about-img-front">
+                                    <img src="../../../public/assets/images/about/img-2.jpg" alt="" class="about-img-back">
                                 </div><!-- End .about-images -->
                             </div><!-- End .col-lg-6 -->
                         </div><!-- End .row -->
@@ -85,55 +85,55 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                                 <div class="row justify-content-center">
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/1.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/1.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/2.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/2.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/3.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/3.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/4.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/4.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/5.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/5.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/6.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/6.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/7.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/7.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/8.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/8.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
 
                                     <div class="col-6 col-sm-4">
                                         <a href="#" class="brand">
-                                            <img src="assets/images/brands/9.png" alt="Brand Name">
+                                            <img src="../../../public/assets/images/brands/9.png" alt="Brand Name">
                                         </a>
                                     </div><!-- End .col-sm-4 -->
                                 </div><!-- End .row -->
@@ -149,7 +149,7 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                         <div class="col-md-4">
                             <div class="member member-anim text-center">
                                 <figure class="member-media">
-                                    <img src="assets/images/team/member-1.jpg" alt="member photo">
+                                    <img src="../../../public/assets/images/team/member-1.jpg" alt="member photo">
 
                                     <figcaption class="member-overlay">
                                         <div class="member-overlay-content">
@@ -172,7 +172,7 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                         <div class="col-md-4">
                             <div class="member member-anim text-center">
                                 <figure class="member-media">
-                                    <img src="assets/images/team/member-2.jpg" alt="member photo">
+                                    <img src="../../../public/assets/images/team/member-2.jpg" alt="member photo">
 
                                     <figcaption class="member-overlay">
                                         <div class="member-overlay-content">
@@ -195,7 +195,7 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                         <div class="col-md-4">
                             <div class="member member-anim text-center">
                                 <figure class="member-media">
-                                    <img src="assets/images/team/member-3.jpg" alt="member photo">
+                                    <img src="../../../public/assets/images/team/member-3.jpg" alt="member photo">
 
                                     <figcaption class="member-overlay">
                                         <div class="member-overlay-content">
@@ -236,7 +236,7 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                                 }
                             }'>
                             <blockquote class="testimonial text-center">
-                                <img src="assets/images/testimonials/user-1.jpg" alt="user">
+                                <img src="../../../public/assets/images/testimonials/user-1.jpg" alt="user">
                                 <p>“ Tôi thực sự ấn tượng với sự đa dạng và chất lượng sản phẩm tại H2C Sport. <br>Tôi đã tìm thấy đôi giày mà tôi luôn ao ước có được và chúng thực sự vượt qua mong đợi của tôi!. ”</p>
                                 <cite>
                                     Nguyễn Tùng
@@ -245,7 +245,7 @@ Chúng tôi mong muốn tạo ra một môi trường mua sắm thân thiện v�
                             </blockquote><!-- End .testimonial -->
 
                             <blockquote class="testimonial text-center">
-                                <img src="assets/images/testimonials/user-2.jpg" alt="user">
+                                <img src="../../../public/assets/images/testimonials/user-2.jpg" alt="user">
                                 <p>“Dịch vụ khách hàng tại H2C Sport thật sự tuyệt vời. Nhân viên thân thiện và nhiệt tình, luôn sẵn sàng giúp đỡ và tư vấn cho tôi lựa chọn sản phẩm phù hợp nhất. ”</p>
 
                                 <cite>

@@ -5,7 +5,7 @@
 <head>
     <?php include('layout/css_temp.blade.php');?>
 
-    <link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css">
+    <link rel="stylesheet" href="../../../public/assets/css/plugins/nouislider/nouislider.css">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                                         <div class="product-gallery">
                                             <figure class="product-main-image">
                                                 <span class="product-label label-top">Top</span>
-                                                <img id="product-zoom" src="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg" alt="product image">
+                                                <img id="product-zoom" src="../../../public/assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg" alt="product image">
 
                                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                     <i class="icon-arrows"></i>
@@ -56,19 +56,19 @@
 
                                             <div id="product-zoom-gallery" class="product-image-gallery">
                                                 <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
+                                                    <img src="../../../public/assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
                                                 </a>
 
                                                 <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/2.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/2-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
+                                                    <img src="../../../public/assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
                                                 </a>
 
                                                 <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/3.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/3-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
+                                                    <img src="../../../public/assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
                                                 </a>
 
                                                 <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/4-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
+                                                    <img src="../../../public/assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
                                                 </a>
                                             </div><!-- End .product-image-gallery -->
                                         </div><!-- End .product-gallery -->
@@ -306,7 +306,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -347,7 +347,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-out">Out of Stock</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-6.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-6.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -382,7 +382,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-top">Top</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-11.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-11.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -422,7 +422,7 @@
                                 <div class="product product-7 text-center">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-10.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-10.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -464,7 +464,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/1.jpg" alt="Product image" class="product-image">
+                                                    <img src="../../../public/assets/images/products/single/sidebar/1.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -480,7 +480,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/2.jpg" alt="Product image" class="product-image">
+                                                    <img src="../../../public/assets/images/products/single/sidebar/2.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -495,7 +495,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/3.jpg" alt="Product image" class="product-image">
+                                                    <img src="../../../public/assets/images/products/single/sidebar/3.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -510,7 +510,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/4.jpg" alt="Product image" class="product-image">
+                                                    <img src="../../../public/assets/images/products/single/sidebar/4.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -531,7 +531,7 @@
 
                                     <div class="banner-sidebar banner-overlay">
                                         <a href="#">
-                                            <img src="assets/images/blog/sidebar/banner.jpg" alt="banner">
+                                            <img src="../../../public/assets/images/blog/sidebar/banner.jpg" alt="banner">
                                         </a>
                                     </div><!-- End .banner-ad -->
                                 </div><!-- End .widget -->
@@ -559,18 +559,18 @@
     ?>
 
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.elevateZoom.min.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../public/assets/js/jquery.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../public/assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="../../../public/assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../../public/assets/js/superfish.min.js"></script>
+    <script src="../../../public/assets/js/owl.carousel.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap-input-spinner.js"></script>
+    <script src="../../../public/assets/js/jquery.elevateZoom.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap-input-spinner.js"></script>
+    <script src="../../../public/assets/js/jquery.magnific-popup.min.js"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../../../public/assets/js/main.js"></script>
 </body>
 
 

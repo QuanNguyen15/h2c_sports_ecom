@@ -12,7 +12,7 @@
         <?php include('layout/header.blade.php');?>
 
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        	<div class="page-header text-center" style="background-image: url('../../../public/assets/images/page-header-bg.jpg')">
         		<div class="container">
         			<h1 class="page-title">Thanh toán<span></span></h1>
         		</div><!-- End .container -->
@@ -204,7 +204,7 @@
 										            <h2 class="card-title">
 										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
 										                    Credit Card (Stripe)
-										                    <img src="assets/images/payments-summary.png" alt="payments cards">
+										                    <img src="../../../public/assets/images/payments-summary.png" alt="payments cards">
 										                </a>
 										            </h2>
 										        </div><!-- End .card-header -->
@@ -238,14 +238,14 @@
     <!-- Sign in / Register Modal -->
     <?php include('layout/model_login.blade.php');?>
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="../../../public/assets/js/jquery.min.js"></script>
+    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../public/assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="../../../public/assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../../public/assets/js/superfish.min.js"></script>
+    <script src="../../../public/assets/js/owl.carousel.min.js"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../../../public/assets/js/main.js"></script>
 </body>
 
 

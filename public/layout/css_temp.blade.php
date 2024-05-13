@@ -1,5 +1,5 @@
 <div>
-    <title>Molla - Bootstrap eCommerce Template</title>
+    <title>H2C SPORT - QUẦN ÁO THỂ THAO</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,11 +20,11 @@
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/plugins/owl-carousel/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{('assets/css/plugins/magnific-popup/magnific-popup.css?>')}}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v= <?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css?v= <?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css?v= <?php echo time(); ?>">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="{{('assets/css/style.css')}}">
+    <link rel="stylesheet" href="assets/css/style.css?v= <?php echo time(); ?>">
 
 
 </div>

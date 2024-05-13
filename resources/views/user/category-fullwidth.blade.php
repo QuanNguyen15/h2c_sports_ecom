@@ -5,7 +5,7 @@
     <?php
         include('layout/css_temp.blade.php');
     ?>
-    <link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css">
+    <link rel="stylesheet" href="../../../public/assets/css/plugins/nouislider/nouislider.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         ?>
 
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        	<div class="page-header text-center" style="background-image: url('../../../public/assets/images/page-header-bg.jpg')">
         		<div class="container-fluid">
         			<h1 class="page-title">Fullwidth No Sidebar<span>Shop</span></h1>
         		</div><!-- End .container-fluid -->
@@ -65,7 +65,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-1.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-1.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -106,7 +106,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-2.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-2.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -143,7 +143,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-sale">30% off</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-3.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-3.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -186,7 +186,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -228,7 +228,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-5.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-5.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -270,7 +270,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-out">Out of stock</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-6.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-6.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -306,7 +306,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-7.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-7.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -342,7 +342,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-8.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-8.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -383,7 +383,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-9.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-9.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -426,7 +426,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-10.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-10.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -463,7 +463,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-top">Top</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-11.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-11.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -505,7 +505,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-12.jpg" alt="Product image" class="product-image">
+                                            <img src="../../../public/assets/images/products/product-12.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -1000,8 +1000,8 @@
     <?php
         include('layout/js_temp.blade.php');
     ?>
-    <script src="assets/js/wNumb.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="../../../public/assets/js/wNumb.js"></script>
+    <script src="../../../public/assets/js/bootstrap-input-spinner.js"></script>
 </body>
 
 </html>

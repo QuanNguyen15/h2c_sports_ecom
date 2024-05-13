@@ -1,3 +1,4 @@
+@extends('')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,7 @@
                 </div><!-- End .container -->
             </nav><!-- End .breadcrumb-nav -->
 
-        	<div class="error-content text-center" style="background-image: url(assets/images/backgrounds/error-bg.jpg)">
+        	<div class="error-content text-center" style="background-image: url(../../../public/assets/images/backgrounds/error-bg.jpg)">
             	<div class="container">
             		<h1 class="error-title">Error 404</h1><!-- End .error-title -->
             		<p>We are sorry, the page you've requested is not available.</p>
