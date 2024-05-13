@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('product', function () {
     return view('admins.product');
 })->name('admins.product');
+
+Route::get('product', function () {
+    return view('admins.product');
+})->name('admins.product');
+
+Route::get('/dbcon', function () {
+    return view('user.dbcon');
+});
