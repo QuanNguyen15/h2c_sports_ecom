@@ -1,4 +1,4 @@
-@extends('')
+<!--test git -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +6,7 @@
 <head>
     <?php
         include('layout/css_temp.blade.php');
+
     ?>
 </head>
 
