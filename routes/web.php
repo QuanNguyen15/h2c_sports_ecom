@@ -52,3 +52,8 @@ Route::get('/home', function () {
 Route::get('/404-NOT-FOUNT', function () {
     return view('user.404');
 })->name('user.404');
+
+Route::get('/blog', function () {
+    return view('user.blog-listing');
+})->name('user.blog-listing');
+

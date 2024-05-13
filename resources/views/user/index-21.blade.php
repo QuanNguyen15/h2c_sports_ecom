@@ -182,7 +182,7 @@
                                                                         </ul>
                                                                     </li> -->
                                 <li>
-                                    <a href="blog-listing.blade.php" class="sf-with-ul">Tin tức</a>
+                                    <a href="{{route('user.blog-listing')}}" class="sf-with-ul">Tin tức</a>
 
                                 </li>
                             </ul><!-- End .menu -->
