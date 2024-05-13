@@ -38,3 +38,17 @@ Route::get('/sale', function () {
 Route::get('/thongke', function () {
     return view('admins.thongke');
 })->name('admins.thongke');
+
+
+Route::get('/san-pham', function () {
+    return view('user.category-boxed');
+})->name('user.category-boxed');
+
+Route::get('/home', function () {
+    return view('user.trangchu');
+})->name('user.trangchu');
+
+
+Route::get('/404-NOT-FOUNT', function () {
+    return view('user.404');
+})->name('user.404');

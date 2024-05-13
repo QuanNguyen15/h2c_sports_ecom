@@ -57,10 +57,10 @@
                         <nav class="main-nav">
                             <ul class="menu sf-arrows">
                                 <li class="megamenu-container active">
-                                    <a href="index-21.blade.php" class="sf-with-ul">Trang chủ</a>
+                                    <a href="{{route('user.trangchu')}}" class="sf-with-ul">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="category-boxed.blade.php" class="sf-with-ul df-ul">Sản phẩm</a>
+                                    <a href="{{route('user.category-boxed')}}" class="sf-with-ul df-ul">Sản phẩm</a>
 
                                     <div class="megamenu megamenu-md">
                                         <div class="row no-gutters">

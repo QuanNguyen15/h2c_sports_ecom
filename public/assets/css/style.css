@@ -1,16 +1,16 @@
-﻿@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
+﻿@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-size-adjust: 100%
+    font-size-adjust: 100%;
 }
 
-.reddit-sans-<uniquifier> {
+.reddit-sans-uniquifier {
                   font-family: "Reddit Sans", sans-serif;
                   font-optical-sizing: auto;
-                  font-weight: <weight>;
+                  font-weight:weight;
                   font-style: normal;
               }
 
@@ -3190,7 +3190,7 @@ p {
 
 .header-2 .header-top {
     font-weight: 300;
-   
+
     font-size: 1.4rem;
     background-color: #f8f8f8
 }
@@ -19968,7 +19968,7 @@ body{
     border-radius: 50%;
     color: #333;
     font-weight: 500;
-  
+
 }
 #Link-mess .mess-header  a:hover{
     background-color: #E9E9E9;
@@ -19984,7 +19984,7 @@ body{
     position: absolute;
     top: 46px;
     left: 47px;
-    
+
 }
 .content-mess h2{
     font-size: 30px;
@@ -19994,7 +19994,7 @@ body{
 .content-mess .mess-note{
     color: #B3B3B3;
     margin-bottom: 20px;
-    
+
 }
 .content-mess .hello-mess{
     font-size: 18px;
@@ -20015,19 +20015,19 @@ body{
     font-weight: 550;
     text-align: center;
     margin-bottom: 30px;
-  
+
 }
 .btn-mess:active .Link-mess{
     display: none;
-    
+
 }
 
 .footer-mess {
-  
+
 
     text-align: center;
 
-    
+
 }
 .footer-mess span{
     font-size: 15px;
