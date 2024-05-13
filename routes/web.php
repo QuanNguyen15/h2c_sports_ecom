@@ -12,18 +12,39 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::prefix('/admin')->group(function (){
 
-Route::get('/', function () {
-    return view('admin.layout.index');
+    Route::get('/trang-chu', function () {
+        return view('admins.thongke');
+    })->name('admins.thongke');
+
+    Route::get('/san-pham', function () {
+        return view('admins.product');
+    })->name('admins.product');
+
+    Route::get('/thong-ke', function () {
+        return view('admins.thongke');
+    })->name('admins.thongke');
+
+    Route::get('/danh-muc', function () {
+        return view('admins.categories');
+    })->name('admins.categories');
+
+    Route::get('/tai-khoan', function () {
+        return view('admins.account');
+    })->name('admins.account');
+
+    Route::get('/don-hang', function () {
+        return view('admins.order');
+    })->name('admins.order');
+
+    Route::get('/khuyen-mai', function () {
+        return view('admins.discount');
+    })->name('admins.discount');
+
 });
 
-Route::get('product', function () {
-    return view('admins.product');
-})->name('admins.product');
 
-Route::get('product', function () {
-    return view('admins.product');
-})->name('admins.product');
 
 //check ket noi
 Route::get('/dbcon', function () {
@@ -35,9 +56,6 @@ Route::get('/sale', function () {
 })->name('user.trangchu');
 
 
-Route::get('/thongke', function () {
-    return view('admins.thongke');
-})->name('admins.thongke');
 
 
 Route::get('/san-pham', function () {

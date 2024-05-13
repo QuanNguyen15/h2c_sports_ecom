@@ -94,12 +94,12 @@
     </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item " href="{{ route('admins.product') }}"><span class="app-menu__label">Trang chủ</span></a></li>
-        <li><a class="app-menu__item" href="{{ route('admins.product') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
-        <li><a class="app-menu__item" href="#"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
-        <li><a class="app-menu__item" href="#"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
-        <li><a class="app-menu__item" href="#"></i><span class="app-menu__label">Quản đơn hàng </span></a></li>
-        <li><a class="app-menu__item" href="#"></i><span class="app-menu__label">Quản lí khuyến mại </span></a></li>
+        <li><a class="app-menu__item " href="{{ route('admins.thongke') }}"><span class="app-menu__label">Trang chủ</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admins.categories') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
+        <li><a class="app-menu__item" href="{{route('admins.product')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admins.order') }}"></i><span class="app-menu__label">Quản đơn hàng </span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admins.discount') }}"></i><span class="app-menu__label">Quản lí khuyến mại </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.thongke') }}"></i><span class="app-menu__label">Quản lí thống kê và báo cáo</span></a></li>
         <li><a class="app-menu__item" href="#"></i><span class="app-menu__label">Quản lí cấu hình</span></a></li>
       </ul>
