@@ -33,3 +33,8 @@ Route::get('/dbcon', function () {
 Route::get('/sale', function () {
     return view('user.index-21');
 })->name('user.index-21');
+
+
+Route::get('/thongke', function () {
+    return view('admins.thongke');
+})->name('admins.thongke');

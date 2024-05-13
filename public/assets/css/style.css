@@ -7,18 +7,29 @@ html {
     font-size-adjust: 100%
 }
 
+.reddit-sans-<uniquifier> {
+                  font-family: "Reddit Sans", sans-serif;
+                  font-optical-sizing: auto;
+                  font-weight: <weight>;
+                  font-style: normal;
+              }
+
 html,
 body {
     height: 100%
 }
 
 body {
-    font: "Helvetica", sans-serif;
+    /*font: "Helvetica", sans-serif;*/
     color: #666;
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden
+    overflow-x: hidden;
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 ::-moz-selection {
