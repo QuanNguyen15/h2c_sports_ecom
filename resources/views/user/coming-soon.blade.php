@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-
-    <?php
-        include('layout/css_temp.blade.php');
-    ?>
-    <link rel="stylesheet" href="../../../public/assets/css/plugins/jquery.countdown.css">
-</head>
-
-<body>
-    <?php
-        include('layout/header.blade.php') ;
-    ?>
+@extends('user.index-21')
+@section('content')
     <div class="soon">
         <div class="container">
             <div class="row">
@@ -52,35 +38,4 @@
         <div class="soon-bg bg-image" style="background-image: url(../../../public/assets/images/backgrounds/soon-bg.jpg)"></div>
         <!-- End .soon-bg bg-image -->
     </div><!-- End .soon -->
-
-
-    <?php
-        include('layout/footer_pages.blade.php');
-    ?>
-    <!-- Plugins JS File -->
-    <script src="../../../public/assets/js/jquery.min.js"></script>
-    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../public/assets/js/jquery.plugin.min.js"></script>
-    <script src="../../../public/assets/js/jquery.countdown.min.js"></script>
-    <!-- Main JS File -->
-    <script src="../../../public/assets/js/main.js"></script>
-    <script>
-    $(function() {
-        "use strict";
-        if ($.fn.countdown) {
-            $('.coming-countdown').countdown({
-                until: new Date(2021, 7, 20), // 7th month = August / Months 0 - 11 (January  - December)
-                format: 'DHMS',
-                padZeroes: true
-            });
-
-            // Pause
-            // $('.coming-countdown').countdown('pause');
-        }
-    });
-    </script>
-</body>
-
-
-<!-- molla/coming-soon.html  22 Nov 2019 10:04:05 GMT -->
-</html>
+@endsection

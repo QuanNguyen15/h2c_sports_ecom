@@ -68,3 +68,11 @@ Route::get('/checkout', function () {
 Route::get('/contact', function () {
     return view('user.contact');
 })->name('user.contact');
+
+Route::get('/comming-soon', function () {
+    return view('user.comming-soon');
+})->name('user.comming-soon');
+
+Route::get('/about', function () {
+    return view('user.about');
+})->name('user.about');
