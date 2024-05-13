@@ -29,22 +29,12 @@
                         <div class="header-dropdown">
                             <!-- <a href="#">Usd</a> -->
                             <div class="header-menu">
-                                <!-- <ul>
-                                    <li><a href="#">Eur</a></li>
-                                    <li><a href="#">Usd</a></li>
-                                </ul> -->
+
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropdown -->
 
                         <div class="header-dropdown">
-                            <!-- <a href="#">Eng</a> -->
-                            <!-- <div class="header-menu">
-                                <ul>
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">Spanish</a></li>
-                                </ul>
-                            </div>End .header-menu -->
+
                         </div><!-- End .header-dropdown -->
                     </div><!-- End .header-left -->
 
@@ -109,19 +99,6 @@
 
                                                         <div class="col-md-6">
                                                             <div class="menu-title">Phụ kiện</div><!-- End .menu-title -->
-                                                            <!-- <ul>
-                                                                <li><a href="#">Product Category Boxed</a></li>
-                                                                <li><a href="product-category-fullwidth.php"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                            </ul> -->
-                                                            <!-- <div class="menu-title">Shop Pages</div>
-
-                                                            <ul>
-                                                                <li><a href="cart.php">Cart</a></li>
-                                                                <li><a href="checkout.php">Checkout</a></li>
-                                                                <li><a href="wishlist.php">Wishlist</a></li>
-                                                                <li><a href="dashboard.php">My Account</a></li>
-                                                                <li><a href="#">Lookbook</a></li>
-                                                            </ul> -->
                                                         </div><!-- End .col-md-6 -->
                                                     </div><!-- End .row -->
                                                 </div><!-- End .menu-col -->
@@ -135,19 +112,7 @@
                                 </li>
                                 <li>
                                     <a href="{{route('user.contact')}}" class="sf-with-ul">Liên hệ</a>
-                                    <!--
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="about.php" class="sf-with-ul">About</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="contact.php" class="sf-with-ul">Contact</a>
-                                                                            </li>
-                                                                            <li><a href="faq.php">FAQs</a></li>
-                                                                            <li><a href="404.php">Error 404</a></li>
-                                                                            <li><a href="coming-soon.php">Coming Soon</a></li>
-                                                                        </ul>
-                                                                    </li> -->
+
                                 <li>
                                     <a href="{{route('user.blog-listing')}}" class="sf-with-ul">Tin tức</a>
 
@@ -166,12 +131,7 @@
                                 </div><!-- End .header-search-wrapper -->
                             </form>
                         </div><!-- End .header-search -->
-                        <!-- <div class="wishlist">
-                            <a href="wishlist.php" title="Wishlist">
-                                <i class="icon-heart-o"></i>
-                                <span class="list-count">3</span>
-                            </a>
-                        </div>End .compare-dropdown -->
+
 
                         <div class="dropdown cart-dropdown">
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -383,27 +343,8 @@
 
    </div>
    <div id = "Link-mess" class= "contents">
-          <!-- <div class = "mess-header">
-              <div class="logo-mess">
-                <img src="assets/images/logo-1.jpg" alt="">
-              </div>
-              <a href="" onclick = "">X</a>
-          </div>
-          <div class="content-mess">
-            <h2>Chat với H2C SPORT</h2>
-            <p class = "mess-note">Thường trả lời trong vài giờ</p>
-            <p class="hello-mess">Xin chào! H2C SPORT có thể giúp gì cho bạn</p>
-          </div>
-          <a href="" class ="btn-mess">Chat ngay</a>
-          <div class ="footer-mess">
-                  <span><i class="fa-brands fa-facebook-messenger"></i></span>
-                  <span>Do Messsenger cung cấp</span>
-          </div> -->
-
    </div>
-    <?php
-        include('layout/js_temp.blade.php');
-    ?>
+    <?php include('layout/js_temp.blade.php'); ?>
    <script>
             document.getElementById('chat-box').addEventListener('click', function() {
           var contentDiv = document.getElementById('Link-mess');
@@ -436,30 +377,8 @@
                 <span>Do Messsenger cung cấp</span>
         </div>`;
         mess.appendChild(mess_block);
-            }
-//      const mess = document.getElementById('Link-mess');
-//   if(mess){
-//     const mess_block = document.createElement('div');
-//     mess_block.classList.add('Link-mess');
-//     mess_block.innerHTML = ` <div class = "mess-header">
-//     <div class="logo-mess">
-//       <img src="assets/images/logo-1.jpg" alt="">
-//     </div>
-//     <a href="" onclick = "">X</a>
-// </div>
-// <div class="content-mess">
-//   <h2>Chat với H2C SPORT</h2>
-//   <p class = "mess-note">Thường trả lời trong vài giờ</p>
-//   <p class="hello-mess">Xin chào! H2C SPORT có thể giúp gì cho bạn</p>
-// </div>
-// <a href="" class ="btn-mess">Chat ngay</a>
-// <div class ="footer-mess">
-//         <span><i class="fa-brands fa-facebook-messenger"></i></span>
-//         <span>Do Messsenger cung cấp</span>
-// </div>`;
-// mess.appendChild(mess_block);
 
-//   }
+            }
 
 
    </script>
