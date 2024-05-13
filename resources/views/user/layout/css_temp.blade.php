@@ -20,11 +20,11 @@
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v= <?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css?v= <?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css?v= <?php echo time(); ?>">
+    <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/plugins/owl-carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/plugins/magnific-popup/magnific-popup.css?>')}}">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="assets/css/style.css?v= <?php echo time(); ?>">
+    <link rel="stylesheet" href="{{('assets/css/style.css')}}">
 
 
 </div>

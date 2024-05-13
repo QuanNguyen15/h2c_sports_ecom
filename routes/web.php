@@ -25,6 +25,11 @@ Route::get('product', function () {
     return view('admins.product');
 })->name('admins.product');
 
+//check ket noi
 Route::get('/dbcon', function () {
     return view('user.dbcon');
 });
+
+Route::get('/sale', function () {
+    return view('user.index-21');
+})->name('user.index-21');

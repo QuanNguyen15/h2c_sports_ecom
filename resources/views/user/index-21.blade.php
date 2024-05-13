@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <?php include('layout/css_temp.blade.php')?>;
-    <link rel="stylesheet" href="assets/css/skins/skin-demo-21.css">
-    <link rel="stylesheet" href="assets/css/demos/demo-21.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <?php include(base_path('resources/views/user/layout/css_temp.blade.php'))?>
+    <link rel="stylesheet" href="{{('assets/css/skins/skin-demo-21.css')}}">
+    <link rel="stylesheet" href="{{('assets/css/demos/demo-21.css')}}">
+    <link rel="stylesheet" href="{{('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css')}}">
 
 
 </head>
@@ -21,9 +20,7 @@
         </div>
 
         <!--Header-->
-        <?php
-            include('layout/header.blade.php');
-        ?>
+        <?php include(base_path('resources/views/user/layout/header.blade.php')); ?>
 
         <main class="main">
             <div class="intro-slider-container mb-5">
@@ -97,7 +94,7 @@
             <div class="container banner-container">
                 <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                     <a href="category-fullwidth.blade.php">
-                        <img src="assets/images/banners/banner-aodm.jpg">
+                        <img src="{{('resources/views/assets/images/banners/banner-aodm.jpg')}}">
                     </a>
                     <div class="banner-content">
                         <div class="title">
@@ -117,7 +114,7 @@
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                     <a href="category-fullwidth.blade.php">
-                        <img src="assets/images/banners/banner-giaydm.jpg">
+                        <img src="{{('resources/views/user/assets/images/banners/banner-giaydm.jpg')}}">
                     </a>
                     <div class="banner-content">
                         <div class="title">
@@ -183,14 +180,6 @@
                             }
                         }
                     }'>
-
-
-
-
-
-
-
-
                 </div><!-- End .owl-carousel -->
             </div><!-- End .container -->
 
@@ -1477,21 +1466,19 @@
 
 
         <?php
-            include('layout/footer.blade.php');
+            include(base_path('resources/views/user/layout/footer.blade.php'));
         ?>
-
 
         <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
-
         <?php
-            include('layout/mobile_menu.blade.php');
+            include(base_path('resources/views/user/layout/mobile_menu.blade.php'));
         ?>
     </div>
 
     <!-- Sign in / Register Modal -->
     <?php
-        include('layout/model_login.blade.php');
+        include(base_path('resources/views/user/layout/model_login.blade.php'));
     ?>
 
     <div class="container newsletter-popup-container mfp-hide" id="newsletter-popup-form">
@@ -1547,44 +1534,41 @@
 
    </div>
     <?php
-        include('layout/js_temp.blade.php');
+        include(base_path('resources/views/user/layout/js_temp.blade.php'));
     ?>
    <script>
-    document.getElementById('chat-box').addEventListener('click', function() {
-  var contentDiv = document.getElementById('Link-mess');
-  if (contentDiv.style.display === 'none') {
-    contentDiv.style.display = 'block';
-  } else {
-    contentDiv.style.display = 'none';
-  }
-});
-    function  Show_mess(){
-        const mess = document.getElementById('Link-mess');
+            document.getElementById('chat-box').addEventListener('click', function() {
+          var contentDiv = document.getElementById('Link-mess');
+          if (contentDiv.style.display === 'none') {
+            contentDiv.style.display = 'block';
+          } else {
+            contentDiv.style.display = 'none';
+          }
+        });
+            function  Show_mess(){
+                const mess = document.getElementById('Link-mess');
 
 
-    const mess_block = document.createElement('div');
-    mess_block.classList.add('Link-mess');
-    mess_block.innerHTML = ` <div class = "mess-header">
-    <div class="logo-mess">
-      <img src="assets/images/logo-1.jpg" alt="">
-    </div>
-    <a href="" onclick = "">X</a>
-</div>
-<div class="content-mess">
-  <h2>Chat với H2C SPORT</h2>
-  <p class = "mess-note">Thường trả lời trong vài giờ</p>
-  <p class="hello-mess">Xin chào! H2C SPORT có thể giúp gì cho bạn</p>
-</div>
-<a href="" class ="btn-mess">Chat ngay</a>
-<div class ="footer-mess">
-        <span><i class="fa-brands fa-facebook-messenger"></i></span>
-        <span>Do Messsenger cung cấp</span>
-</div>`;
-mess.appendChild(mess_block);
-
-  }
-
-    }
+            const mess_block = document.createElement('div');
+            mess_block.classList.add('Link-mess');
+            mess_block.innerHTML = ` <div class = "mess-header">
+            <div class="logo-mess">
+              <img src="assets/images/logo-1.jpg" alt="">
+            </div>
+            <a href="" onclick = "">X</a>
+        </div>
+        <div class="content-mess">
+          <h2>Chat với H2C SPORT</h2>
+          <p class = "mess-note">Thường trả lời trong vài giờ</p>
+          <p class="hello-mess">Xin chào! H2C SPORT có thể giúp gì cho bạn</p>
+        </div>
+        <a href="" class ="btn-mess">Chat ngay</a>
+        <div class ="footer-mess">
+                <span><i class="fa-brands fa-facebook-messenger"></i></span>
+                <span>Do Messsenger cung cấp</span>
+        </div>`;
+        mess.appendChild(mess_block);
+            }
 //      const mess = document.getElementById('Link-mess');
 //   if(mess){
 //     const mess_block = document.createElement('div');
