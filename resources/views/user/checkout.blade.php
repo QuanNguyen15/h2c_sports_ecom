@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
-
-<!-- molla/checkout.html  22 Nov 2019 09:55:06 GMT -->
-<head>
-<?php include('layout/css_temp.blade.php');?>
-</head>
-
-<body>
-    <div class="page-wrapper">
-        <?php include('layout/header.blade.php');?>
-
+@extends('user.index-21')
+@section('content')
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('../../../public/assets/images/page-header-bg.jpg')">
+        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
         		<div class="container">
         			<h1 class="page-title">Thanh toán<span></span></h1>
         		</div><!-- End .container -->
@@ -204,7 +194,7 @@
 										            <h2 class="card-title">
 										                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
 										                    Credit Card (Stripe)
-										                    <img src="../../../public/assets/images/payments-summary.png" alt="payments cards">
+										                    <img src="assets/images/payments-summary.png" alt="payments cards">
 										                </a>
 										            </h2>
 										        </div><!-- End .card-header -->
@@ -228,26 +218,4 @@
             </div><!-- End .page-content -->
         </main><!-- End .main -->
 
-        <?php include('layout/footer_pages.blade.php');?>
-    </div><!-- End .page-wrapper -->
-    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
-
-    <!-- Mobile Menu -->
-    <?php include('layout/mobile_menu.blade.php');?>
-
-    <!-- Sign in / Register Modal -->
-    <?php include('layout/model_login.blade.php');?>
-    <!-- Plugins JS File -->
-    <script src="../../../public/assets/js/jquery.min.js"></script>
-    <script src="../../../public/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../public/assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="../../../public/assets/js/jquery.waypoints.min.js"></script>
-    <script src="../../../public/assets/js/superfish.min.js"></script>
-    <script src="../../../public/assets/js/owl.carousel.min.js"></script>
-    <!-- Main JS File -->
-    <script src="../../../public/assets/js/main.js"></script>
-</body>
-
-
-<!-- molla/checkout.html  22 Nov 2019 09:55:06 GMT -->
-</html>
+@endsection

@@ -55,7 +55,7 @@
                                 <ul>
                                     <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
                                     <li><a href="about.blade.php">Về chúng tôi</a></li>
-                                    <li><a href="contact.blade.php">Liên hệ</a></li>
+                                    <li><a href="{{route('user.contact')}}">Liên hệ</a></li>
                                     <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Đăng nhập</a></li>
                                 </ul>
                             </li>
@@ -167,7 +167,7 @@
                                                                         </div> -->
                                 </li>
                                 <li>
-                                    <a href="contact.blade.php" class="sf-with-ul">Liên hệ</a>
+                                    <a href="{{route('user.contact')}}" class="sf-with-ul">Liên hệ</a>
                                     <!--
                                                                         <ul>
                                                                             <li>
@@ -262,8 +262,8 @@
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
-                                    <a href="cart.blade.php" class="btn btn-primary">View Cart</a>
-                                    <a href="checkout.blade.php" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                                    <a href="{{route('user.cart')}}" class="btn btn-primary">View Cart</a>
+                                    <a href="{{route('user.checkout')}}" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->

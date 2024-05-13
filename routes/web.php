@@ -57,3 +57,14 @@ Route::get('/blog', function () {
     return view('user.blog-listing');
 })->name('user.blog-listing');
 
+Route::get('/cart', function () {
+    return view('user.cart');
+})->name('user.cart');
+
+Route::get('/checkout', function () {
+    return view('user.checkout');
+})->name('user.checkout');
+
+Route::get('/contact', function () {
+    return view('user.contact');
+})->name('user.contact');

@@ -1,14 +1,4 @@
-{{--<!DOCTYPE html>--}}
-{{--<html lang="en">--}}
 
-
-{{--<head>--}}
-{{--    <?php include('layout/css_temp.blade.php') ?>;--}}
-{{--</head>--}}
-
-{{--<body>--}}
-{{--    <div class="page-wrapper">--}}
-{{--        <?php include('layout/header.blade.php') ?>;--}}
 @extends('user.index-21')
 @section('content')
         <main class="main">
@@ -408,27 +398,3 @@
             </div><!-- End .page-content -->
         </main><!-- End .main -->
 @endsection
-{{--        <?php include('layout/footer.blade.php');?>--}}
-{{--    </div><!-- End .page-wrapper -->--}}
-{{--    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>--}}
-
-{{--    <!-- Mobile Menu -->--}}
-{{--    <?php include('layout/mobile_menu.blade.php'); ?>--}}
-
-{{--    <!-- Sign in / Register Modal -->--}}
-{{--    <?php include('layout/model_login.blade.php');?>--}}
-
-{{--    <!-- Plugins JS File -->--}}
-{{--    <script src="assets/js/jquery.min.js"></script>--}}
-{{--    <script src="assets/js/bootstrap.bundle.min.js"></script>--}}
-{{--    <script src="assets/js/jquery.hoverIntent.min.js"></script>--}}
-{{--    <script src="assets/js/jquery.waypoints.min.js"></script>--}}
-{{--    <script src="assets/js/superfish.min.js"></script>--}}
-{{--    <script src="assets/js/owl.carousel.min.js"></script>--}}
-{{--    <!-- Main JS File -->--}}
-{{--    <script src="assets/js/main.js"></script>--}}
-{{--</body>--}}
-
-
-{{--<!-- molla/blog-listing.html  22 Nov 2019 10:04:12 GMT -->--}}
-{{--</html>--}}
