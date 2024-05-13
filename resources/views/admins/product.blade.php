@@ -16,5 +16,17 @@
                 </div>
             </div>
         </form>
+
+
+        <?php
+        // Fetching data using Laravel's query builder
+        $results = \Illuminate\Support\Facades\DB::select("SELECT * FROM product");
+
+        // Displaying the data
+        foreach ($results as $result) {
+            // You can customize how you want to display each row of data
+            echo $result->column_name;
+        }
+        ?>
     </div>
 @endsection
