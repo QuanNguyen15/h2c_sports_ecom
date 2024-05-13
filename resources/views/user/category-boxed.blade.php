@@ -1,19 +1,5 @@
 @extends('user.index-21')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-
-
-<!-- molla/category-boxed.html  22 Nov 2019 10:03:00 GMT -->
-<head>
-{{--    <?php include('layout/css_temp.blade.php')?>;--}}
-    <link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css">
-</head>
-
-<body>
-    <div class="page-wrapper">
-{{--        <?php include('layout/header.blade.php') ?>;--}}
-
         <main class="main">
         	<div class="page-header text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
         		<div class="container">
@@ -64,7 +50,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-1.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -73,7 +59,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -83,7 +69,7 @@
                                         <div class="product-cat">
                                             <a href="#">Women</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Nunc dignissim risus</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Nunc dignissim risus</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $50.00
                                         </div><!-- End .product-price -->
@@ -105,7 +91,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-2.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -114,7 +100,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -124,7 +110,7 @@
                                         <div class="product-cat">
                                             <a href="#">Accessories</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Cras ornare tristique</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Cras ornare tristique</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $32.00
                                         </div><!-- End .product-price -->
@@ -142,7 +128,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <span class="product-label label-sale">30% off</span>
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-3.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -151,7 +137,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -161,7 +147,7 @@
                                         <div class="product-cat">
                                             <a href="#">Women</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Aliquam tincidunt mauris</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Aliquam tincidunt mauris</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             <span class="new-price">$50.00</span>
                                             <span class="old-price">$84.00</span>
@@ -185,7 +171,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -194,7 +180,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -204,7 +190,7 @@
                                         <div class="product-cat">
                                             <a href="#">Dresses</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $60.00
                                         </div><!-- End .product-price -->
@@ -227,7 +213,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-5.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -236,7 +222,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -246,7 +232,7 @@
                                         <div class="product-cat">
                                             <a href="#">Dresses</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Dark yellow lace cut out swing dress</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Dark yellow lace cut out swing dress</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $84.00
                                         </div><!-- End .product-price -->
@@ -269,7 +255,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <span class="product-label label-out">Out of stock</span>
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-6.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -278,7 +264,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -288,7 +274,7 @@
                                         <div class="product-cat">
                                             <a href="#">Jackets</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Khaki utility boiler jumpsuit</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Khaki utility boiler jumpsuit</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             <span class="out-price">$120.00</span>
                                         </div><!-- End .product-price -->
@@ -305,7 +291,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-7.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -314,7 +300,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -324,7 +310,7 @@
                                         <div class="product-cat">
                                             <a href="#">Jeans</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Blue utility pinafore denim dress</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Blue utility pinafore denim dress</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $76.00
                                         </div><!-- End .product-price -->
@@ -341,7 +327,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-8.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -350,7 +336,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -360,7 +346,7 @@
                                         <div class="product-cat">
                                             <a href="#">Shoes</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Beige knitted elastic runner shoes</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Beige knitted elastic runner shoes</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $84.00
                                         </div><!-- End .product-price -->
@@ -382,7 +368,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-9.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -391,7 +377,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -401,7 +387,7 @@
                                         <div class="product-cat">
                                             <a href="#">Bags</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Orange saddle lock front  chain cross body bag</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Orange saddle lock front  chain cross body bag</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $52.00
                                         </div><!-- End .product-price -->
@@ -425,7 +411,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-10.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -434,7 +420,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -444,7 +430,7 @@
                                         <div class="product-cat">
                                             <a href="#">Jumpers</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Yellow button front tea top</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Yellow button front tea top</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $56.00
                                         </div><!-- End .product-price -->
@@ -462,7 +448,7 @@
                                 <div class="product">
                                     <figure class="product-media">
                                         <span class="product-label label-top">Top</span>
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-11.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -471,7 +457,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -481,7 +467,7 @@
                                         <div class="product-cat">
                                             <a href="#">Shoes</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Light brown studded Wide fit wedges</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Light brown studded Wide fit wedges</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $110.00
                                         </div><!-- End .product-price -->
@@ -504,7 +490,7 @@
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                        <a href="product-sidebar.blade.php">
+                                        <a href="{{route('user.product-sidebar')}}">
                                             <img src="assets/images/products/product-12.jpg" alt="Product image" class="product-image">
                                         </a>
 
@@ -513,7 +499,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
@@ -523,7 +509,7 @@
                                         <div class="product-cat">
                                             <a href="#">Bags</a>
                                         </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="product-sidebar.blade.php">Black soft RI weekend travel bag</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Black soft RI weekend travel bag</a></h3><!-- End .product-title -->
                                         <div class="product-price">
                                             $68.00
                                         </div><!-- End .product-price -->
@@ -796,33 +782,4 @@
                 </div><!-- End .container -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
-
-{{--        <?php include('layout/footer_pages.blade.php');?>--}}
-    </div><!-- End .page-wrapper -->
-    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
-
-    <!-- Mobile Menu -->
-{{--    <?php include('layout/mobile_menu.blade.php');?>--}}
-
-    <!-- Sign in / Register Modal -->
-{{--    <?php include('layout/model_login.blade.php');?>--}}
-
-    <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/wNumb.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/nouislider.min.js"></script>
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-</body>
-
-
-<!-- molla/category-boxed.html  22 Nov 2019 10:03:02 GMT -->
-</html>
 @endsection

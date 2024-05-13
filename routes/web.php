@@ -76,3 +76,7 @@ Route::get('/comming-soon', function () {
 Route::get('/about', function () {
     return view('user.about');
 })->name('user.about');
+
+Route::get('/product-details', function () {
+    return view('user.product-sidebar');
+})->name('user.product-sidebar');
