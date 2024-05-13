@@ -236,9 +236,9 @@
                                 <li><a href="#">Áo câu lạc bộ</a></li>
                                 <li><a href="faq.blade.php">Áo đội tuyển quốc gia</a></li>
                                 <li><a href="contact.blade.php">Giày bóng đá</a></li>
-                                <li><a href="login.blade.php">Mizuno</a></li>
-                                <li><a href="login.blade.php">Adidas</a></li>
-                                <li><a href="login.blade.php">Puma</a></li>
+                                <li><a href="../admins/login.blade.php">Mizuno</a></li>
+                                <li><a href="../admins/login.blade.php">Adidas</a></li>
+                                <li><a href="../admins/login.blade.php">Puma</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
                     </div><!-- End .col-sm-4 col-lg-3 -->
@@ -265,7 +265,7 @@
                             <h4 class="widget-title">Tài khoản</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="login.blade.php">Đăng ký</a></li>
+                                <li><a href="../admins/login.blade.php">Đăng ký</a></li>
                                 <li><a href="cart.blade.php">Xem giỏ hàng</a></li>
 
                                 <li><a href="#">Theo dõi đơn hàng của tôi</a></li>

@@ -244,7 +244,7 @@
 {{--                            <li>--}}
 {{--                                <a href="contact.blade.php">Contact</a>--}}
 {{--                            </li>--}}
-{{--                            <li><a href="login.html">Login</a></li>--}}
+{{--                            <li><a href="login.blade.php">Login</a></li>--}}
 {{--                            <li><a href="faq.html">FAQs</a></li>--}}
 {{--                            <li><a href="404.blade.php">Error 404</a></li>--}}
 {{--                            <li><a href="coming-soon.html">Coming Soon</a></li>--}}

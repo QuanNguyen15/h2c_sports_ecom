@@ -14,7 +14,7 @@
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <title></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,7 @@
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="index.html">H2C-SPORTS</a>
+    <header class="app-header"><a class="app-header__logo" href="{{ route('admins.thongke') }}"></a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
@@ -79,9 +79,11 @@
         <!-- User Menu-->
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i>Cài đặt</a></li>
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i>Thông tin cá nhân</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i>Cài đặt</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i>Thông tin cá nhân</a></li>
+{{--            <li><a class="dropdown-item" href="{{ route('admins.login') }}"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>--}}
+              <li><a class="dropdown-item" href="#" id="logoutButton"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>
+
           </ul>
         </li>
       </ul>
@@ -90,13 +92,15 @@
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
       <div class="app-sidebar__user d-flex justify-content-center align-items-center">
-        <img src="{{ asset("logo/logo.jpg") }}" class="app-sidebar__user-avatar rounded-circle" alt="User Image" width="100px">
+          <a href="{{ route('admins.thongke') }}">
+              <img src="{{ asset("logo/logo.jpg") }}" class="app-sidebar__user-avatar rounded-circle" alt="User Image" width="100px">
+          </a>
     </div>
       </div>
       <ul class="app-menu">
         <li><a class="app-menu__item " href="{{ route('admins.thongke') }}"><span class="app-menu__label">Trang chủ</span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.categories') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
-        <li><a class="app-menu__item" href="{{route('admins.product')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('admins.product')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.order') }}"></i><span class="app-menu__label">Quản đơn hàng </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.discount') }}"></i><span class="app-menu__label">Quản lí khuyến mại </span></a></li>
@@ -186,5 +190,16 @@
       	ga('send', 'pageview');
       }
     </script>
+
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm('Bạn có chắc chắn muốn đăng xuất không?')) {
+                // Redirect or perform logout action here
+                window.location.href = "{{ route('admins.login') }}"; // Điều hướng đến route logout của admin
+            }
+        });
+    </script>
+
   </body>
 </html>
