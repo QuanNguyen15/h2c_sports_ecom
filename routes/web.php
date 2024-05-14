@@ -13,6 +13,7 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::prefix('/admin')->group(function (){
 
     Route::get('/trang-chu', function () {
@@ -57,7 +58,7 @@ Route::get('/dbcon', function () {
     return view('user.dbcon');
 });
 
-Route::get('/sale', function () {
+Route::get('/', function () {
     return view('user.trangchu');
 })->name('user.trangchu');
 
