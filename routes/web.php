@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +13,20 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/login', [AdminController::class, 'login'])->name('login');
 
-Route::prefix('/admin')->group(function (){
+Route::post('/login', [AdminController::class, 'postLoginAdmin'])->name('admin.login');
+
+
+Route::prefix('admin')->middleware('admin')->group(function(){
+
+    // Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::get('/', function(){
+        return view('admin.layout.index');
+    })->name('admin.home');
+
+
 
     Route::get('/trang-chu', function () {
         return view('admins.thongke');
@@ -43,9 +56,6 @@ Route::prefix('/admin')->group(function (){
         return view('admins.discount');
     })->name('admins.discount');
 
-    Route::get('/login', function () {
-        return view('admins.login');
-    })->name('admins.login');
 
 });
 
@@ -104,3 +114,9 @@ Route::get('/about', function () {
 Route::get('/product-details', function () {
     return view('user.product-sidebar');
 })->name('user.product-sidebar');
+
+
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
