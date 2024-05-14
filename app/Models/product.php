@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Categories;
 
-class Product extends Model
+class product extends Model
 {
     use HasFactory;
     protected $filltable = [
@@ -15,7 +15,7 @@ class Product extends Model
         'price',
         'image',
         'categoryID',
-   
+
 ];
 public function categories(){
     return $this-> belongsTo(Categories::class);
