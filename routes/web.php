@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,9 +64,10 @@ Route::get('/sale', function () {
 
 
 
-Route::get('/san-pham', function () {
-    return view('user.category-boxed');
-})->name('user.category-boxed');
+// Route::get('/san-pham', function () {
+    
+//     return view('user.category-boxed');
+// })->name('user.category-boxed');
 
 Route::get('/home', function () {
     return view('user.trangchu');
@@ -103,3 +105,13 @@ Route::get('/about', function () {
 Route::get('/product-details', function () {
     return view('user.product-sidebar');
 })->name('user.product-sidebar');
+
+
+
+Route::prefix('san-pham')->group(function (){
+      
+    Route::get('/',[ProductController::Class,'Hien_Thi_San_Pham'])->name('user.category-boxed');
+ 
+  
+
+});
