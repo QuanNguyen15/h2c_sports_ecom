@@ -52,10 +52,6 @@ Route::prefix('/admin')->group(function (){
         return view('admins.discount');
     })->name('admins.discount');
 
-    Route::get('/login', function () {
-        return view('admins.login');
-    })->name('admins.login');
-
 });
 
 
