@@ -26,11 +26,20 @@ class ProductController extends Controller
     //  inner JOIN
     //      categories c ON p.categoryID = c.ID;')->paginate(15);
     //      return view('user.category-boxed',compact('product'))->with('i',(request()->input('page',1)-1)*15);
-    $product = product::with('categories')->get();
-    $categories = categories::with('product')->get();
-    return view('user.category-boxed',compact('product','categories'));
+    $product = Product::with('category')->SelectRaw('ID,name,price,image,categoryID')->paginate(12);
 
+   
+    return view('user.category-boxed',compact('product'));
+  
     }
+    public function Chi_Tiet_San_Pham($id){
+      
+            $product_1 = Product::findOrFail($id);
+            return view('user.product-sidebar', compact('product_1'));
+            dd($product_1->toArray());
+        
+    }
+   
 
 
 }

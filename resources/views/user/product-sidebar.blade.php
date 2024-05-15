@@ -62,7 +62,7 @@
 
                                     <div class="col-md-6">
                                         <div class="product-details product-details-sidebar">
-                                            <h1 class="product-title">Black faux leather chain trim sandals</h1><!-- End .product-title -->
+                                            <h1 class="product-title"></h1><!-- End .product-title -->
 
                                             <div class="ratings-container">
                                                 <div class="ratings">

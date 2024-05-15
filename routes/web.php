@@ -116,7 +116,7 @@ Route::get('/product-details', function () {
 Route::prefix('san-pham')->group(function (){
       
     Route::get('/',[ProductController::Class,'Hien_Thi_San_Pham'])->name('user.category-boxed');
- 
+
   
 
 });
