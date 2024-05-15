@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\product;
 
+
 class categories extends Model
 {
+
     use HasFactory;
+    protected $table = 'categorires';
+
     protected array $filltable = [
               'ID',
               'category',
@@ -19,6 +23,9 @@ class categories extends Model
     {
           return $this-> hasMany(product::class,'categoryID','ID');
     }
+
+
+
     public $timestamps = false;
 
 }

@@ -8,7 +8,10 @@ use App\Models\Categories;
 
 class product extends Model
 {
+    
     use HasFactory;
+    protected $table = 'product';
+
     protected array $filltable = [
         'ID',
         'name',
