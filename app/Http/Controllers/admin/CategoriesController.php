@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\admin;
 
 
-use App\Models\categories;
+use App\Models\Categories;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller
 {
-   
+
     const PATH_VIEW = 'admins.categories.';
     public function index(Request $request)
     {
@@ -32,23 +32,23 @@ class CategoriesController extends Controller
         return view(self::PATH_VIEW.__FUNCTION__,compact('title'));
     }
 
-   
+
     public function store(Request $request)
     {
         $request->validate(
             [
                 'category'  => 'required',
                 'slug'  => 'required',
-               
+
             ],
             [
                 'category.required'  => 'Trường này không được để trống',
                 'slug.required'  => 'Trường này không được để trống',
-               
+
             ]
         );
         $data = $request->all();
-        
+
 
         Categories::create($data);
 
@@ -60,7 +60,7 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(categories $categories)
+    public function show(Categories $categories)
     {
         //
     }
@@ -68,10 +68,10 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(categories $categories, string $id)
+    public function edit(Categories $categories, string $id)
     {
         $title = 'Quản lí danh mục';
-     
+
         $categories = DB::table('categories')->where('ID',$id)->get()[0];
         // dd($categories);
         return view(self::PATH_VIEW.__FUNCTION__,compact('categories','title'));
@@ -86,21 +86,21 @@ class CategoriesController extends Controller
             [
                 'category'  => 'required',
                 'slug'  => 'required',
-               
+
             ],
             [
                 'category.required'  => 'Trường này không được để trống',
                 'slug.required'  => 'Trường này không được để trống',
-               
+
             ]
         );
-       
-        
+
+
         $data = [
         'category' => $request->category,
         'slug'=> $request->slug,
         ];
-      
+
         $cate = DB::table('categories')->where('ID', $id)->update($data);
 
 

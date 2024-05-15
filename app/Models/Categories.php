@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\product;
+use App\Models\Product;
 
 
-class categories extends Model
+class Categories extends Model
 {
 
     use HasFactory;
-    protected $table = 'categorires';
+    protected $table = 'categories';
 
     protected array $filltable = [
               'ID',
@@ -21,7 +21,7 @@ class categories extends Model
     ];
     public function product(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-          return $this-> hasMany(product::class,'categoryID','ID');
+          return $this-> hasMany(Product::class,'categoryID','ID');
     }
 
 
@@ -44,5 +44,5 @@ class categories extends Model
 //         'slug'
 //     ];
 //     public $timestamps = false;
-    
+
 // }

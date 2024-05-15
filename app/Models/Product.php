@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Categories;
 
-class product extends Model
+class Product extends Model
 {
-    
+
     use HasFactory;
     protected $table = 'product';
 
@@ -24,9 +24,9 @@ class product extends Model
         'branchID',
 
     ];
-    public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this-> belongsTo(Categories::class);
+        return $this->belongsTo(Categories::class, 'categoryID', 'ID');
     }
 }
 
@@ -66,5 +66,5 @@ class product extends Model
 //         'categoryID',
 //         'branchID',
 //     ];
-   
+
 // }
