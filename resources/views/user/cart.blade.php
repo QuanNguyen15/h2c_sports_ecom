@@ -1,20 +1,4 @@
-{{--<!DOCTYPE html>--}}
-{{--<html lang="en">--}}
 
-
-{{--<!-- molla/cart.html  22 Nov 2019 09:55:06 GMT -->--}}
-{{--<head>--}}
-{{--    <?php--}}
-{{--        include('layout/css_temp.blade.php');--}}
-{{--    ?>--}}
-{{--</head>--}}
-
-{{--<body>--}}
-{{--    <div class="page-wrapper">--}}
-
-{{--    <?php--}}
-{{--        include('layout/header.blade.php');--}}
-{{--    ?>--}}
 @extends('user.index-21')
 @section('content')
         <main class="main">
@@ -181,9 +165,7 @@
             </div><!-- End .page-content -->
         </main><!-- End .main -->
 @endsection
-{{--        <?php--}}
-{{--            include('layout/footer_pages.blade.php');--}}
-{{--        ?>--}}
+
 {{--    </div><!-- End .page-wrapper -->--}}
 {{--    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>--}}
 
@@ -380,9 +362,7 @@
 {{--    </div><!-- End .modal -->--}}
 
 {{--    <!-- Plugins JS File -->--}}
-{{--    <?php--}}
-{{--        include('layout/js_temp.blade.php');--}}
-{{--    ?>--}}
+
 
 {{--    <script src="assets/js/bootstrap-input-spinner.js"></script>--}}
 {{--    <!-- Main JS File -->--}}

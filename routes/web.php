@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\admin\CategoriesController as AdminCategoriesController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\admin\ProductController as AdminProductController;
+use App\Http\Controllers\admin\AccountController as AdminAccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
@@ -28,13 +32,17 @@ Route::prefix('/admin')->group(function (){
         return view('admins.thongke');
     })->name('admins.thongke');
 
-    Route::get('/danh-muc', function () {
-        return view('admins.categories');
-    })->name('admins.categories');
 
-    Route::get('/tai-khoan', function () {
-        return view('admins.account');
-    })->name('admins.account');
+    Route::resource('/danh-muc',AdminCategoriesController::class);
+    Route::resource('/san-pham',AdminProductController::class);
+
+    Route::post('/products/delete-multiple',[AdminProductController::class, 'deleteMultiple'])->name('products.deleteMultiple');
+
+    Route::get('/tai-khoan',[AdminAccountController::class, 'index'])->name('admins.account');
+    Route::delete('/tai-khoan/{id}',[AdminAccountController::class, 'destroy'])->name('admins.destroy');
+
+        
+
 
     Route::get('/don-hang', function () {
         return view('admins.order');
