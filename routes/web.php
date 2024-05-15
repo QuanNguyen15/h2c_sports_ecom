@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\client\loginController;
-
+use App\Http\Controllers\client\ProductController;
 
 
 /*
@@ -18,7 +18,9 @@ use App\Http\Controllers\client\loginController;
 */
 
 
+// Route::any('/viewproduct', [ProductController::class, 'index']);
 
+Route::any('/product', [ProductController::class, 'index']);
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 
@@ -65,6 +67,10 @@ Route::prefix('admin')->middleware('admin')->group(function(){
 
 });
 
+Route::prefix('client')->group(function(){
+
+
+});
 
 
 
@@ -81,7 +87,7 @@ Route::get('/', function () {
 
 
 Route::get('/san-pham', function () {
-    return view('user.category-boxed');
+    return view('user.products');
 })->name('user.category-boxed');
 
 Route::get('/home', function () {
