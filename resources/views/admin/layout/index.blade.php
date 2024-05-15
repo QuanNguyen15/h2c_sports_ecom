@@ -191,15 +191,6 @@
       }
     </script>
 
-    <script>
-        document.getElementById('logoutButton').addEventListener('click', function(event) {
-            event.preventDefault();
-            if (confirm('Bạn có chắc chắn muốn đăng xuất không?')) {
-                // Redirect or perform logout action here
-                window.location.href = "{{ route('admins.login') }}"; // Điều hướng đến route logout của admin
-            }
-        });
-    </script>
 
   </body>
 </html>
