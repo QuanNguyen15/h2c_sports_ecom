@@ -9,12 +9,13 @@ use App\Models\product;
 class categories extends Model
 {
     use HasFactory;
-    protected $filltable = [
+    protected array $filltable = [
               'ID',
               'category',
-         
+
     ];
-    public function product(){
+    public function product(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
           return $this-> hasMany(product::class,'categoryID','ID');
     }
 }

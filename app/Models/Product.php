@@ -9,15 +9,16 @@ use App\Models\Categories;
 class product extends Model
 {
     use HasFactory;
-    protected $filltable = [
+    protected array $filltable = [
         'ID',
         'name',
         'price',
         'image',
         'categoryID',
 
-];
-public function categories(){
-    return $this-> belongsTo(Categories::class);
-}
+    ];
+    public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this-> belongsTo(Categories::class);
+    }
 }

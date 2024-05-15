@@ -10,7 +10,8 @@ use App\Models\product;
 class ProductController extends Controller
 {
     //
-    public function Hien_Thi_San_Pham(){
+    public function Hien_Thi_San_Pham(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
     //      $product = DB::select('SELECT
 
     //      p.name,
