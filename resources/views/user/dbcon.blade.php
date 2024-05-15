@@ -8,11 +8,7 @@
     <title>Laravel vs MySql Connection</title>
 </head>
 <body>
-    <?php
-        if (\Illuminate\Support\Facades\DB::connection()->getPdo()){
-            echo ("Connected ".\Illuminate\Support\Facades\DB::connection()->getDatabaseName());
-        }
-    ?>
+  
 
 </body>
 </html>

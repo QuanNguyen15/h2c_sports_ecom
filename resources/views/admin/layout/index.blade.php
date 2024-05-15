@@ -81,7 +81,7 @@
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i>Cài đặt</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i>Thông tin cá nhân</a></li>
-{{--            <li><a class="dropdown-item" href="{{ route('admins.login') }}"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>--}}
+{{--            <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>--}}
               <li><a class="dropdown-item" href="#" id="logoutButton"><i class="fa fa-sign-out fa-lg"></i>Đăng xuất</a></li>
 
           </ul>
@@ -98,10 +98,10 @@
     </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item " href="{{ route('admins.thongke') }}"><span class="app-menu__label">Trang chủ</span></a></li>
-        <li><a class="app-menu__item" href="{{ route('admins.categories') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
-        <li><a class="app-menu__item" href="{{ route('admins.product')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
-        <li><a class="app-menu__item" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
+        <li><a class="app-menu__item "  href="{{ route('admins.thongke') }}"><span class="app-menu__label">Trang chủ</span></a></li>
+        <li><a class="app-menu__item @if ($title === 'Quản lí danh mục') active @endif" href="{{ route('danh-muc.index') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
+        <li><a class="app-menu__item @if ($title === 'Quản lí sản phẩm') active @endif" href="{{ route('san-pham.index')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
+        <li><a class="app-menu__item @if ($title === 'Quản lí tài khoản') active @endif" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.order') }}"></i><span class="app-menu__label">Quản đơn hàng </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.discount') }}"></i><span class="app-menu__label">Quản lí khuyến mại </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.thongke') }}"></i><span class="app-menu__label">Quản lí thống kê và báo cáo</span></a></li>
@@ -191,15 +191,6 @@
       }
     </script>
 
-    <script>
-        document.getElementById('logoutButton').addEventListener('click', function(event) {
-            event.preventDefault();
-            if (confirm('Bạn có chắc chắn muốn đăng xuất không?')) {
-                // Redirect or perform logout action here
-                window.location.href = "{{ route('admins.login') }}"; // Điều hướng đến route logout của admin
-            }
-        });
-    </script>
 
   </body>
 </html>
