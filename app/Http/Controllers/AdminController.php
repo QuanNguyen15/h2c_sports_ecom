@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserAccount;
@@ -38,15 +39,12 @@ class AdminController extends Controller
 
             $request->session()->regenerate();
 
-            return redirect()->route('admin.home');
+            return redirect()->route('admin.dashboard');
         }
 
         // Nếu xác thực thất bại, chuyển hướng lại với thông báo lỗi
-        return back()->withErrors([
-            'loginError' => 'Thông tin đăng nhập không đúng.',
-        ])->withInput();
+        return back()->with('fail', 'Account not exist!');
     }
-
 
 
 
@@ -54,4 +52,13 @@ class AdminController extends Controller
     {
         return view('admin.layout.index');
     }
+
+    // public function logout()
+    // {
+    //     Auth::logout(); // Đăng xuất người dùng
+
+    //     return redirect()->route('login'); // Chuyển hướng về trang đăng nhập ban đầu
+    // }
+
+
 }

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\client\loginController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +16,21 @@ use App\Http\Controllers\AdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 
-Route::post('/login', [AdminController::class, 'postLoginAdmin'])->name('admin.login');
+Route::any('/login-admin', [AdminController::class, 'postLoginAdmin'])->name('admin.login');
+
+// Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+
 
 
 Route::prefix('admin')->middleware('admin')->group(function(){
 
-    // Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-
-    Route::get('/', function(){
-        return view('admin.layout.index');
-    })->name('admin.home');
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
 
 
@@ -116,7 +122,3 @@ Route::get('/product-details', function () {
 })->name('user.product-sidebar');
 
 
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -265,8 +265,12 @@
             <form action="{{route('admin.login')}}" method="POST">
                 @csrf
 
-                <input type="text" id="login" class="fadeIn second" name="account" placeholder="username">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="text" id="login" class="fadeIn second" name="account" placeholder="username" value="">
+                <span class="text-danger">@error('account'){{$message}}@enderror</span>
+
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="">
+                <span class="text-danger">@error('password'){{$message}}@enderror</span>
+
                 <input type="submit" class="fadeIn fourth" value="Log In">
             </form>
 
