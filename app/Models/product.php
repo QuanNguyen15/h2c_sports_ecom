@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Categories;
 
-class Product extends Model
+class product extends Model
 {
     use HasFactory;
-    protected $table = 'product';
-    protected $fillable = [
+    protected array $filltable = [
         'ID',
         'name',
         'description',
@@ -18,17 +17,14 @@ class Product extends Model
         'price',
         'image',
         'featured',
-        'create_at',
-        'update_at',
-        'delete_at',
         'categoryID',
         'branchID',
 
     ];
-
-public function category(){
-    return $this->belongsTo(Categories::class, 'categoryID', 'ID');
-}
+    public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this-> belongsTo(Categories::class);
+    }
 }
 
 // class product extends Model
