@@ -9,15 +9,24 @@ use App\Models\Categories;
 class Product extends Model
 {
     use HasFactory;
-    protected $filltable = [
+    protected $table = 'product';
+    protected $fillable = [
         'ID',
         'name',
+        'description',
+        'status',
         'price',
         'image',
+        'featured',
+        'create_at',
+        'update_at',
+        'delete_at',
         'categoryID',
-   
-];
-public function categories(){
-    return $this-> belongsTo(Categories::class);
+        'branchID',
+
+    ];
+  
+public function category(){
+    return $this->belongsTo(Categories::class, 'categoryID', 'ID');
 }
 }
