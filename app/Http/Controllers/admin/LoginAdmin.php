@@ -41,7 +41,7 @@ class LoginAdmin extends Controller
     public function dashboard(Request $request): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $user = $request->session()->get('user');
-        // dd($user);
+         dd($user);
 
         return view('admin.layout.index', compact('user'));
     }

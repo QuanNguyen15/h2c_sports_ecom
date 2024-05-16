@@ -14,12 +14,10 @@ use App\Http\Controllers\admin\LogoutAdmin;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/login', [LoginAdmin::class, 'login'])->name('login');
-
 Route::post('/login', [LoginAdmin::class, 'postLoginAdmin'])->name('admins.login');
 
-Route::middleware('admin')->prefix('/admin')->group(function() {
+Route::middleware('admin')->prefix('admin')->group(function() {
 
     Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
 
@@ -52,9 +50,6 @@ Route::middleware('admin')->prefix('/admin')->group(function() {
     Route::get('/khuyen-mai', function () {
         return view('admins.discount');
     })->name('admins.discount');
-
-
-
 });
 
 
