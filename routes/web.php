@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\client\ProductController;
 use App\Http\Controllers\admin\LoginAdmin;
 use App\Http\Controllers\admin\LogoutAdmin;
 /*
@@ -14,6 +14,15 @@ use App\Http\Controllers\admin\LogoutAdmin;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// client
+
+Route::get('/san-pham', [ProductController::class, 'index'])->name('user.category-boxed');
+
+Route::get('/product/{id}', [ProductController::class, 'productDetail'])->name('user.product-sidebar');
+
+
+// admin
 
 Route::get('/login', [LoginAdmin::class, 'login'])->name('login');
 
@@ -71,11 +80,7 @@ Route::get('/', function () {
 
 
 
-
-// Route::get('/san-pham', function () {
-
-//     return view('user.category-boxed');
-// })->name('user.category-boxed');
+// client
 
 Route::get('/home', function () {
     return view('user.trangchu');
@@ -110,16 +115,8 @@ Route::get('/about', function () {
     return view('user.about');
 })->name('user.about');
 
-Route::get('/product-details', function () {
-    return view('user.product-sidebar');
-})->name('user.product-sidebar');
 
 
 
-Route::prefix('san-pham')->group(function (){
-
-    Route::get('/',[ProductController::Class,'Hien_Thi_San_Pham'])->name('user.category-boxed');
 
 
-
-});

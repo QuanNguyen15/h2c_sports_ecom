@@ -48,20 +48,20 @@
         				</div><!-- End .toolbox-right -->
         			</div><!-- End .toolbox -->
 
-                    <div class="products">
+                <div class="products">
                         <div class="row">
-                         @if(!empty($product))
-                               @foreach($product as $products)
-                                
+                         {{-- @if(!empty($products)) --}}
+                            @foreach($products as $product)
+
 
                             <div class="col-6 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product">
                                     <figure class="product-media">
-                                         
+
                                         <span class="product-label label-new">Mới</span>
-                                        <a href="{{route('user.product-sidebar')}}">
-                                            <img src="assets/images/products/{{$products -> category -> category}}/{{$products -> image}}" alt="Product image" class="product-image">
-                                     
+                                        <a href="{{route('user.product-sidebar', ['id' => $product->ID])}}">
+                                            <img src="assets/images/products/{{$product->category->category}}/{{$product -> image}}" alt="Product image" class="product-image">
+
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -69,25 +69,21 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action action-icon-top">
-                                            <a href="{{route('user.product-sidebar')}}" class="btn-product btn-cart" type = "submit"><span>Xem chi tiết</span></a>
+                                            <a href="{{route('user.product-sidebar', ['id' => $product->ID])}}" class="btn-product btn-cart" type = "submit"><span>Xem chi tiết</span></a>
                                             <!-- <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                             <a href="#" class="btn-product btn-compare" title="Compare"><span>compare</span></a> -->
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
+
                                     <div class="product-body">
                                         <div class="product-cat">
-                                            <a href="#" style = "font-size: 18px;">Danh mục: {{$products -> category -> category}}</a>
+                                            <a href="#" style = "font-size: 18px;">Danh mục: {{$product -> category -> category}}</a>
                                         </div><!-- End .product-cat -->
-                                        <h2 class="product-title"><a href="{{route('user.product-sidebar')}}" style = "font-size: 25px;">{{$products -> name}}</a></h2><!-- End .product-title -->
+                                        <h2 class="product-title"><a href="{{route('user.product-sidebar', ['id' => $product->ID])}}" style = "font-size: 25px;">{{$product -> name}}</a></h2><!-- End .product-title -->
                                         <div class="product-price">
-                                            {{$products -> price}} đồng
+                                            {{$product -> price}} đồng
                                         </div><!-- End .product-price -->
-                                        
-
-
-
-
                                         <div class="ratings-container">
                                             <div class="ratings">
                                                 <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
@@ -100,24 +96,22 @@
                                 </div><!-- End .product -->
                             </div><!-- End .col-sm-6 col-lg-4 col-xl-3 -->
                             @endforeach
-                        
-                       
-                            @else
-                                <h1>fdsfd</h1>
-                            @endif
-</div>
-</div>
-</div>
-                        </div><!-- End .row -->
-<style>
-     .pagination{
-        justify-content: center;
-     }
-</style>
 
-                      <div style = "text-align: center;">
-                      {{$product ->links('pagination::bootstrap-4')}}
-                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End .row -->
+                    <style>
+                        .pagination {
+                            justify-content: center;
+                            margin-top: 20px; /* Thêm margin-top để căn giữa phân trang */
+                        }
+                    </style>
+
+                    <div class="pagination">
+                        {{ $products->links('pagination::bootstrap-4') }}
+                    </div>
+
 
                      <!-- End .load-more-container -->
                     </div><!-- End .products -->

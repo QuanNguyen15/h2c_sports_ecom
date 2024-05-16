@@ -20,7 +20,7 @@
         </div>
 
         <!--Header-->
-{{--        <?php include('layout/header.blade.php'); ?>--}}
+{{--     <?php include('layout/header.blade.php'); ?>--}}
         <link rel="stylesheet" href="resources/views/user/assets/css/demos/demo-21.css?v= <?php echo time(); ?>">
         <header class="header">
             <div class="header-top">

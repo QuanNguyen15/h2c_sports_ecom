@@ -40,7 +40,7 @@
                                                 </a>
                                             </figure><!-- End .product-main-image -->
 
-                                            <div id="product-zoom-gallery" class="product-image-gallery">
+                                            {{-- <div id="product-zoom-gallery" class="product-image-gallery">
                                                 <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg">
                                                     <img src="assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
                                                 </a>
@@ -55,14 +55,19 @@
 
                                                 <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/4-big.jpg">
                                                     <img src="assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
-                                                </a>
+                                                </a> --}}
+                                                @foreach($product->productImages as $images)
+                                                    <a class="product-gallery-item {{ $loop->first ? 'active' : '' }}" href="#" data-image="{{ asset($images->image) }}" data-zoom-image="{{ asset($images->image) }}">
+                                                        <img src="{{ asset($images->image) }}" alt="product image">
+                                                    </a>
+                                                @endforeach
                                             </div><!-- End .product-image-gallery -->
                                         </div><!-- End .product-gallery -->
                                     </div><!-- End .col-md-6 -->
 
                                     <div class="col-md-6">
                                         <div class="product-details product-details-sidebar">
-                                            <h1 class="product-title"></h1><!-- End .product-title -->
+                                            <h1 class="product-title">{{$product->name}}</h1><!-- End .product-title -->
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -72,7 +77,7 @@
                                             </div><!-- End .rating-container -->
 
                                             <div class="product-price">
-                                                $90.00
+                                                {{{$product->price}}}
                                             </div><!-- End .product-price -->
 
                                             <div class="product-content">
@@ -528,4 +533,5 @@
                 </div><!-- End .container -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
+
 @endsection

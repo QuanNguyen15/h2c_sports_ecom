@@ -15,13 +15,11 @@ class Categories extends Model
         'ID',
         'category',
         'slug',
-       
+
 
     ];
 
 
-
-    
     public function product(){
         return $this->hasMany(Product::class, 'categoryID', 'ID');
     }
