@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AdminAuthenticate
 {
@@ -23,7 +23,7 @@ class AdminAuthenticate
             return $next($request);
         }
         // Nếu không phải admin hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-        dd("xác thực là cần đăng nhập");
+        dd("Xác thực là cần đăng nhập");
         return redirect()->route('login');
     }
 

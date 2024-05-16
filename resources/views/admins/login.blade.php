@@ -258,11 +258,11 @@
             <!-- Icon -->
             <div class="fadeIn first">
                 <h3>Login</h3>
-                </br>
+                <br>
             </div>
 
             <!-- Login Form -->
-            <form action="{{route('admins.login')}}" method="post">
+            <form action="{{ route('admins.login') }}" method="post">
                 @csrf
 
                 <input type="text" id="login" class="fadeIn second" name="account" placeholder="username" value="">
