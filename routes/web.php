@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\admin\LoginAdmin;
+use App\Http\Controllers\admin\LogoutAdmin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,15 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::prefix('/admin')->group(function (){
+Route::get('/login', [LoginAdmin::class, 'login'])->name('login');
+
+Route::post('/login', [LoginAdmin::class, 'postLoginAdmin'])->name('admins.login');
+
+Route::middleware('admin')->prefix('/admin')->group(function() {
+
+    Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::get('/logout-admin', [LogoutAdmin::class, 'logout'])->name('admins.logout');
 
     Route::get('/trang-chu', function () {
         return view('admins.thongke');
@@ -44,9 +53,7 @@ Route::prefix('/admin')->group(function (){
         return view('admins.discount');
     })->name('admins.discount');
 
-    Route::get('/login', function () {
-        return view('admins.login');
-    })->name('admins.login');
+
 
 });
 
@@ -66,7 +73,7 @@ Route::get('/', function () {
 
 
 // Route::get('/san-pham', function () {
-    
+
 //     return view('user.category-boxed');
 // })->name('user.category-boxed');
 
@@ -110,9 +117,9 @@ Route::get('/product-details', function () {
 
 
 Route::prefix('san-pham')->group(function (){
-      
+
     Route::get('/',[ProductController::Class,'Hien_Thi_San_Pham'])->name('user.category-boxed');
 
-  
+
 
 });
