@@ -41,7 +41,7 @@ Route::prefix('/admin')->group(function (){
     Route::get('/tai-khoan',[AdminAccountController::class, 'index'])->name('admins.account');
     Route::delete('/tai-khoan/{id}',[AdminAccountController::class, 'destroy'])->name('admins.destroy');
 
-        
+
 
 
     Route::get('/don-hang', function () {
@@ -70,7 +70,7 @@ Route::get('/', function () {
 
 
 // Route::get('/san-pham', function () {
-    
+
 //     return view('user.category-boxed');
 // })->name('user.category-boxed');
 
@@ -114,7 +114,7 @@ Route::get('/product-details', function () {
 
 
 Route::prefix('san-pham')->group(function (){
-      
+
     Route::get('/',[ProductController::Class,'Hien_Thi_San_Pham'])->name('user.category-boxed');
 
   
