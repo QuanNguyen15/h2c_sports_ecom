@@ -5,13 +5,13 @@
 	            	<div class="row">
 	            		<div class="col-sm-6 col-lg-3">
 	            			<div class="widget widget-about">
-	            				<img src="assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
+	            				<img src="../../assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
 	            				<p>Mục tiêu của chúng tôi là mang đến sự hài lòng cho khách hàng. </p>
 
 
 								<figure class="footer-payments">
 
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        			<img src="../assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure>
 
 	            			</div><!-- End .widget about-widget -->

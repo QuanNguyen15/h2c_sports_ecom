@@ -5,7 +5,7 @@
 @extends('user.index-21')
 @section('content')
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
+        	<div class="page-header text-center" style="background-image: url('../assets/images/Banners/banner-email.jpg')">
         		<div class="container">
         			<h1 class="page-title">Cửa hàng<span></span></h1>
         		</div><!-- End .container -->
@@ -58,9 +58,9 @@
                                 <div class="product">
                                     <figure class="product-media">
 
-                                        <span class="product-label label-new">Mới</span>
+                                        {{-- <span class="product-label label-new">Mới</span> --}}
                                         <a href="{{route('user.product-sidebar', ['id' => $product->ID])}}">
-                                            <img src="assets/images/products/{{$product->category->category}}/{{$product -> image}}" alt="Product image" class="product-image">
+                                            <img src="../assets/images/products/{{$product->category->category}}/{{$product -> image}}" alt="Product image" class="product-image">
 
                                         </a>
 

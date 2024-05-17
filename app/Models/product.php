@@ -30,7 +30,7 @@ class Product extends Model
 
     public function getById($id)
     {
-        return Product::find($id); // Sử dụng Eloquent để lấy sản phẩm theo ID
+        return Product::findOrFail($id); // Sử dụng Eloquent để lấy sản phẩm theo ID
     }
 
     public function getAll()
@@ -51,5 +51,6 @@ class Product extends Model
     {
         return $this->hasMany(ProductImage::class, 'productID');
     }
+
 
 }
