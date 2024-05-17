@@ -115,6 +115,10 @@ Route::get('/about', function () {
     return view('user.about');
 })->name('user.about');
 
+// chinh sach kiem hang
+Route::get('/chinh-sach-kiem-hang', function () {
+    return view('user.kiemHang');
+})->name('user.kiemHang');
 
 
 

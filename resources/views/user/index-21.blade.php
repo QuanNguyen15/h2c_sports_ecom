@@ -67,7 +67,7 @@
 
                         <nav class="main-nav">
                             <ul class="menu sf-arrows">
-                                <li class="megamenu-container active">
+                                <li class="megamenu-container active menu-title">
                                     <a href="{{route('user.trangchu')}}" class="sf-with-ul">Trang chủ</a>
                                 </li>
                                 <li>
@@ -246,7 +246,7 @@
                             <h4 class="widget-title">Chính sách và bảo mật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="#">Chính sách kiểm hàng</a></li>
+                                <li><a href="{{route('user.kiemHang')}}">Chính sách kiểm hàng</a></li>
                                 <li><a href="#">Chính sách bảo hàng quần áo và phụ kiện</a></li>
                                 <li><a href="#">Chính sách bảo hàng giày</a></li>
                                 <li><a href="#">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
