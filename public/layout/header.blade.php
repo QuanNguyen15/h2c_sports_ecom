@@ -1,5 +1,5 @@
 <div>
-<link rel="stylesheet" href="resources/views/user/assets/css/demos/demo-21.css?v= <?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/demos/demo-21.css?v= <?php echo time(); ?>">
     <header class="header">
             <div class="header-top">
                 <div class="container">
@@ -51,7 +51,7 @@
                         </button>
 
                         <a href="index-21.blade.php" class="logo">
-                            <img src="assets/images/logo-1.jpg" alt="Molla Logo" width="100" height="25">
+                            <img src="../assets/images/logo-1.jpg" alt="Molla Logo" width="100" height="25">
                         </a>
 
                         <nav class="main-nav">
@@ -206,7 +206,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.blade.php" class="product-image">
-                                                <img src="{{('assets/images/products/cart/product-1.jpg')}}" alt="product">
+                                                <img src="{{('../assets/images/products/cart/product-1.jpg')}}" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -226,7 +226,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.blade.php" class="product-image">
-                                                <img src="assets/images/products/cart/product-2.jpg" alt="product">
+                                                <img src="../assets/images/products/cart/product-2.jpg" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>

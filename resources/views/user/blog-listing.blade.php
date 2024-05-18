@@ -2,11 +2,11 @@
 @extends('user.index-21')
 @section('content')
         <main class="main">
-        	<div class="page-header text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
+        	<!-- <div class="page-header text-center" style="background-image: url('assets/images/Banners/banner-email.jpg')">
         		<div class="container">
         			<h1 class="page-title">Tin tức<span></span></h1>
-        		</div><!-- End .container -->
-        	</div><!-- End .page-header -->
+        		</div>
+        	</div> -->
             <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
                 <div class="container">
                     <ol class="breadcrumb">

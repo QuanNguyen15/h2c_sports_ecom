@@ -33,7 +33,7 @@
                                         <div class="product-gallery">
                                             <figure class="product-main-image">
                                                 <span class="product-label label-top">Top</span>
-                                                <img id="product-zoom" src="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg" alt="product image">
+                                                <img id="product-zoom" src="../assets/images/products/{{$product->category->category}}/{{$product -> productImages->first()->image}}" data-zoom-image="../assets/images/products/{{$product->category->category}}/{{$product -> productImages->first()->image}}" alt="product image">
 
                                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                     <i class="icon-arrows"></i>
@@ -41,28 +41,35 @@
                                             </figure><!-- End .product-main-image -->
 
                                             <div id="product-zoom-gallery" class="product-image-gallery">
-                                                <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
+                                                {{-- <a class="product-gallery-item active" href="#" data-image="../assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/1-big.jpg">
+                                                    <img src="../assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
                                                 </a>
 
-                                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/2.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/2-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
+                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/2.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/2-big.jpg">
+                                                    <img src="../assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
                                                 </a>
 
-                                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/3.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/3-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
+                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/3.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/3-big.jpg">
+                                                    <img src="../assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
                                                 </a>
 
-                                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/4-big.jpg">
-                                                    <img src="assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
-                                                </a>
+                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/4-big.jpg">
+                                                    <img src="../assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
+                                                </a> --}}
+                                                @foreach($product->productImages as $images)
+                                                    {{-- <a class="product-gallery-item {{ $loop->first ? 'active' : '' }}" href="#" data-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}" data-zoom-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}"> --}}
+
+                                                    <a class="product-gallery-item {{ $loop->first ? 'active' : '' }}" href="#" data-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}" data-zoom-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}">
+                                                        <img src="../assets/images/products/{{$product->category->category}}/{{$images -> image}}" alt="product image">
+                                                    </a>
+                                                @endforeach
                                             </div><!-- End .product-image-gallery -->
                                         </div><!-- End .product-gallery -->
                                     </div><!-- End .col-md-6 -->
 
                                     <div class="col-md-6">
                                         <div class="product-details product-details-sidebar">
-                                            <h1 class="product-title"></h1><!-- End .product-title -->
+                                            <h1 class="product-title">{{$product->name}}</h1><!-- End .product-title -->
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -72,7 +79,7 @@
                                             </div><!-- End .rating-container -->
 
                                             <div class="product-price">
-                                                $90.00
+                                                {{{$product->price}}}
                                             </div><!-- End .product-price -->
 
                                             <div class="product-content">
@@ -111,6 +118,7 @@
                                                     </div><!-- End .product-details-quantity -->
 
                                                     <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></a>
+                                                    {{-- <a href="{{route('user.cart', ['id' => $product->ID])}}" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></a> --}}
                                                 </div><!-- End .details-action-col -->
 
                                                 <div class="details-action-wrapper">
@@ -292,7 +300,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                            <img src="../assets/images/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -333,7 +341,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-out">Out of Stock</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-6.jpg" alt="Product image" class="product-image">
+                                            <img src="../assets/images/products/product-6.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -368,7 +376,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-top">Top</span>
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-11.jpg" alt="Product image" class="product-image">
+                                            <img src="../assets/images/products/product-11.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -408,7 +416,7 @@
                                 <div class="product product-7 text-center">
                                     <figure class="product-media">
                                         <a href="product.html">
-                                            <img src="assets/images/products/product-10.jpg" alt="Product image" class="product-image">
+                                            <img src="../assets/images/products/product-10.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -450,8 +458,12 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/1.jpg" alt="Product image" class="product-image">
-                                                </a>
+                                                    @if($product->category && $product->category->category && $product->image)
+                                                    <img src="{{ asset('assets/images/products/' . $product->category->category . '/' . $product->image) }}" alt="Product image" class="product-image">
+                                                    @else
+                                                        <p>Image not available</p>
+                                                    @endif
+                                                    </a>
                                             </figure>
 
                                             <div class="product-body">
@@ -466,7 +478,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/2.jpg" alt="Product image" class="product-image">
+                                                    <img src="../assets/images/products/single/sidebar/2.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -481,7 +493,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/3.jpg" alt="Product image" class="product-image">
+                                                    <img src="../assets/images/products/single/sidebar/3.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -496,7 +508,7 @@
                                         <div class="product product-sm">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/single/sidebar/4.jpg" alt="Product image" class="product-image">
+                                                    <img src="../assets/images/products/single/sidebar/4.jpg" alt="Product image" class="product-image">
                                                 </a>
                                             </figure>
 
@@ -517,7 +529,7 @@
 
                                     <div class="banner-sidebar banner-overlay">
                                         <a href="#">
-                                            <img src="assets/images/blog/sidebar/banner.jpg" alt="banner">
+                                            <img src="../assets/images/blog/sidebar/banner.jpg" alt="banner">
                                         </a>
                                     </div><!-- End .banner-ad -->
                                 </div><!-- End .widget -->
@@ -528,4 +540,5 @@
                 </div><!-- End .container -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
+
 @endsection

@@ -5,13 +5,13 @@
 	            	<div class="row">
 	            		<div class="col-sm-6 col-lg-3">
 	            			<div class="widget widget-about">
-	            				<img src="assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
+	            				<img src="../../assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
 	            				<p>Mục tiêu của chúng tôi là mang đến sự hài lòng cho khách hàng. </p>
 
 
 								<figure class="footer-payments">
 
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        			<img src="../assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure>
 
 	            			</div><!-- End .widget about-widget -->
@@ -39,7 +39,7 @@
 	            				<h4 class="widget-title">Chính sách và bảo mật</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-								<li><a href="#">Chính sách kiểm hàng</a></li>
+								<li><a href="{{route('user.kiemHang')}}">Chính sách kiểm hàng</a></li>
                                 <li><a href="#">Chính sách bảo hàng quần áo và phụ kiện</a></li>
                                 <li><a href="#">Chính sách bảo hàng giày</a></li>
                                 <li><a href="#">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
