@@ -135,7 +135,7 @@
                         <div class="dropdown cart-dropdown">
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="icon-shopping-cart"></i>
-                                <span class="cart-count">2</span>
+                                <span class="cart-count">{{$cart->getTotalQuantity()}}</span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right">
@@ -188,7 +188,7 @@
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
-                                    <a href="{{route('user.cart')}}" class="btn btn-primary">View Cart</a>
+                                    <a href="{{route('cart.index')}}" class="btn btn-primary">View Cart</a>
                                     <a href="{{route('user.checkout')}}" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
