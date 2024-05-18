@@ -98,9 +98,9 @@
     </div>
         <ul class="app-menu">
         <li><a class="app-menu__item " href="{{ route('admins.thongke') }}"><span class="app-menu__label">Trang chủ</span></a></li>
-            <li><a class="app-menu__item @if ($title === 'Quản lí danh mục') active @endif" href="{{ route('danh-muc.index') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
-            <li><a class="app-menu__item @if ($title === 'Quản lí sản phẩm') active @endif" href="{{ route('san-pham.index')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
-            <li><a class="app-menu__item @if ($title === 'Quản lí tài khoản') active @endif" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
+            <li><a class="app-menu__item @if ( $title === 'Quản lí danh mục') active @endif" href="{{ route('danh-muc.index') }}"></i><span class="app-menu__label">Quản lí danh mục sản phẩm</span></a></li>
+            <li><a class="app-menu__item @if ( $title === 'Quản lí sản phẩm') active @endif" href="{{ route('san-pham.index')}}"></i><span class="app-menu__label">Quản lí sản phẩm</span></a></li>
+            <li><a class="app-menu__item @if ( $title === 'Quản lí tài khoản') active @endif" href="{{ route('admins.account') }}"></i><span class="app-menu__label">Quản lí tài khoản</span></a></li>
             <li><a class="app-menu__item" href="{{ route('admins.order') }}"><span class="app-menu__label">Quản đơn hàng </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.discount') }}"><span class="app-menu__label">Quản lí khuyến mại </span></a></li>
         <li><a class="app-menu__item" href="{{ route('admins.thongke') }}"><span class="app-menu__label">Quản lí thống kê và báo cáo</span></a></li>
