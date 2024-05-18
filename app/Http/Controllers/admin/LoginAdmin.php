@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
+use JetBrains\PhpStorm\NoReturn;
 use Ramsey\Uuid\Rfc4122\Validator;
 use mysql_xdevapi\Session;
 
@@ -18,7 +19,7 @@ class LoginAdmin extends Controller
         return view('admins.login');
     }
 
-    public function postLoginAdmin(Request $request): RedirectResponse
+    public function postLoginAdmin(Request $request)
     {
         if(Auth::attempt(['account' => $request->account, 'password' => $request->password, 'roleID' => 1]))
         {
@@ -29,19 +30,21 @@ class LoginAdmin extends Controller
             $request->session()->put('loginID', $user->id);
             $request->session()->put('user', $user);
 
-            $user = $request;
+//            $user = $request;
             // dd($user);
-            return redirect()->route('admin.dashboard');
+//            return redirect()->route('admin.dashboard');
+            return view('admin.layout.index', compact('user'));
+
         }
 
         return redirect()->back()->with('error', 'Sai thông tin');
     }
 
 
-    public function dashboard(Request $request): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    #[NoReturn] public function dashboard(Request $request): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $user = $request->session()->get('user');
-         dd($user);
+//         dd($user);
 
         return view('admin.layout.index', compact('user'));
     }
