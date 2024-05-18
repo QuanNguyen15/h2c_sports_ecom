@@ -26,14 +26,14 @@ class CategoriesController extends Controller
         return view(self::PATH_VIEW.__FUNCTION__,compact('data','title'));
     }
 
-    public function create()
+    public function create(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $title = 'Quản lí danh mục';
         return view(self::PATH_VIEW.__FUNCTION__,compact('title'));
     }
 
 
-    public function store(Request $request)
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
         $request->validate(
             [
@@ -68,7 +68,7 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categories $categories, string $id)
+    public function edit(Categories $categories, string $id): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $title = 'Quản lí danh mục';
 
@@ -80,7 +80,7 @@ class CategoriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): \Illuminate\Http\RedirectResponse
     {
         $request->validate(
             [
@@ -110,7 +110,7 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id): \Illuminate\Http\RedirectResponse
     {
         $cate = DB::table('categories')->where('ID', $id)->delete();
         return back()->with('msg', 'Xóa thành công');
