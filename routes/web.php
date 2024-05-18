@@ -74,17 +74,15 @@ Route::get('/dbcon', function () {
     return view('user.dbcon');
 });
 
-Route::get('/', function () {
-    return view('user.trangchu');
-})->name('user.trangchu');
-
 
 
 // client
 
-Route::get('/home', function () {
-    return view('user.trangchu');
-})->name('user.trangchu');
+
+
+// route product bán chạy
+Route::get('/',[ProductController::class,'productBestSale'])->name('user.trangchu');
+
 
 
 Route::get('/404-NOT-FOUNT', function () {

@@ -25,7 +25,11 @@ class ProductController extends Controller
         $product = $para->getById($id);
         return view('user.product-sidebar', compact('product'));
     }
-
-
+    public function productBestSale(){
+        $productbestsale = Product::where('featured', '1')->get();
+    
+       
+        return view('user.trangchu', compact('productbestsale'));
+    }
+ 
 }
-
