@@ -120,7 +120,40 @@ Route::get('/chinh-sach-kiem-hang', function () {
     return view('user.kiemHang');
 })->name('user.kiemHang');
 
+// chinh sach bao hanh quan ao va phu kien
+Route::get('/chinh-sach-bao-hanh-quan-ao-phu-kien', function () {
+    return view('user.baoHanhQAPK');
+})->name('user.baoHanhQAPK');
 
 
+//chinh sach bao hanh giay
+Route::get('/chinh-sach-bao-hanh-giay', function () {
+    return view('user.baoHanhGiay');
+})->name('user.baoHanhGiay');
+
+//chinh sach bao hanh in an quan ao bong da
+Route::get('/chinh-sach-bao-hanh-in-an-quan-ao-bong-da', function () {
+    return view('user.baoHanhInAnQABD');
+})->name('user.baoHanhInAnQABD');
+
+//chinh sach doi hang
+Route::get('/chinh-sach-doi-hang', function () {
+    return view('user.doiHang');
+})->name('user.doiHang');
+
+//chinh sach van chuyen
+Route::get('/chinh-sach-van-chuyen', function () {
+    return view('user.vanChuyen');
+})->name('user.vanChuyen');
+
+//chinh sach thanh toán
+Route::get('/chinh-sach-thanh-toan', function () {
+    return view('user.thanhToan');
+})->name('user.thanhToan');
+
+//chính sách bảo mật thông tin
+Route::get('/chinh-sach-bao-mat-thong-tin', function () {
+    return view('user.baoMatThongTin');
+})->name('user.baoMatThongTin');
 
 
