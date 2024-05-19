@@ -87,6 +87,7 @@ Route::get('/dbcon', function () {
 // route product bán chạy
 Route::get('/san-pham',[ProductController::class,'index'])->name('cuahang');
 Route::get('/',[ProductController::class,'productBestSale'])->name('user.trangchu');
+
 Route::get('san-pham/Áo-bóng-đá',[ProductController::class,'Ao'])->name('Ao');
 Route::get('san-pham/Giày-bóng-đá',[ProductController::class,'Giay'])->name('Giay');
 Route::get('san-pham/Ao-doi-tuyen-quoc-gia',[ProductController::class,'Ao_Cau_Doi_Tuyen_Quoc_Gia'])->name('ao_doi_tuyen_quoc_gia');

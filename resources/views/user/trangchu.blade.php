@@ -64,7 +64,7 @@
 
         <div class="container banner-container">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="{{route('user.category-boxed',['title' => 'Áo'])}}">
+                <a href="{{route('Ao')}}">
                     <img src="../assets/images/banners/banner-aodm.jpg">
                 </a>
                 <div class="banner-content">
@@ -84,7 +84,7 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="{{route('user.category-boxed',['title' => 'Giày'])}}">
+                <a href="{{route('Giay')}}">
                     <img src="../assets/images/banners/banner-giaydm.jpg">
                 </a>
                 <div class="banner-content">
@@ -104,7 +104,7 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="{{route('user.category-boxed',['title' => 'Phụ kiện'])}}">
+                <a href="{{route('PhuKien')}}">
                     <img src="../assets/images/banners/banner-phukiendm.jpg">
                 </a>
                 <div class="banner-content">
@@ -215,7 +215,7 @@
                         </div><!-- End .product-nav -->
 
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Xem chi tiết</span></a>
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
                             <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
                         </div><!-- End .product-action -->
 
@@ -244,15 +244,13 @@
         <div class="choose-style">
             <div class="container row">
                 <div class="banner-intro col-lg-5">
-                    <h3 class="title">Lấy cảm hứng<br>của bạn<br>từ trên sân cỏ.</h3>
+                    <h3 class="title">Mùa hè sôi động<br>cùng các khuyến mãi<br></h3>
 
-                    <p class="darkWhite">Những mẫu giày chất lượng <br>nhất</p>
-                    <h4 class="content darkWhite">• Độ ôm chân vừa phải</h4>
-                    <h4 class="content darkWhite">• Bám sân tốt</h4>
-                    <h4 class="content darkWhite">• Độ bền tốt sau nhiều trận <br>đấu</h4>
-                    <p class="price darkWhite">800.000 - 1.000.000</p>
+                    <p class="darkWhite">Combo chất lượng<br>nhất</p>
+                 
+                    <p class="price darkWhite"> Giá ưu đãi chỉ từ 800.000 - 1.000.000</p>
 
-                    <a href="" class="btn btn-demoprimary">
+                    <a href="{{route('cuahang')}}" class="btn btn-demoprimary">
                         <span>Tới cửa hàng</span>
                         <i class="icon-long-arrow-right"></i>
                     </a>
@@ -263,11 +261,13 @@
                         <!-- <p class="content">Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis</p> -->
                     </div>
                     <div class="row">
+               
+                    @foreach($khuyen_mai as $khuyen_mai)
                         <div class="col-lg-4 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-1.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar',['id' => $khuyen_mai->ID])}}">
+                                        <img src="../assets/images/products/{{$khuyen_mai ->category->category}}/{{$khuyen_mai->image}}" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -276,20 +276,20 @@
                                     <div class="product-cat">
                                         <a href="#">Tops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Stowell Hood Fleece</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' => $khuyen_mai->ID])}}">{{$khuyen_mai -> name}}</a></h3><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="cur-price">$55.99</span>
+                                        <span class="cur-price">{{$khuyen_mai -> price}}đồng</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
                                             <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
+                                        <span class="ratings-text">( 2 Bình luận )</span>
                                     </div><!-- End .rating-container -->
 
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
+                                        <a href="{{route('user.product-sidebar', ['id' => $khuyen_mai->ID])}}" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
                                     </div><!-- End .product-action -->
 
                                     <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
@@ -298,77 +298,441 @@
                             </div><!-- End .product -->
 
                         </div>
-                        <div class="col-lg-4 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-countdown" data-until="+9h" data-format="HMS" data-relative="true" data-labels-short="true"></div><!-- End .product-countdown -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Bags</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Force Tight</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$135.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Accessories</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Blitzing 3.0 Cap</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$29.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 0 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
+                   @endforeach
                     </div>
                 </div>
             </div>
         </div>
       
+            
+        <div class="container new-arrivals">
 
+<hr class="mb-5 mt-8">
+
+<div class="heading heading-center mb-3">
+    <h2 class="title" style = "margin-bottom: 80px;">Sản phẩm mới nhất </h2><!-- End .title -->
+
+    <
+</div><!-- End .heading -->
+
+<div class="tab-content tab-content-carousel">
+    <div class="tab-pane p-0 fade show active" id="All" role="tabpanel" aria-labelledby="arrivals-all-link">
+        <div class="row">
+        {{-- @if(!empty($NewproductsAll)) --}}
+                            @foreach($NewproductsAll as $product)
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', $product ->ID)}}">
+                            <img src="../assets/images/products/{{$product -> category->category}}/{{$product -> image}}" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#"></a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', $product ->ID)}}">{{$product -> name}} đồng</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">{{$product -> price}}</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Bình luận )</span>
+                        </div><!-- End .rating-container -->
+
+                      
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+           @endforeach
+        </div>
+    </div><!-- .End .tab-pane -->
+    <div class="tab-pane p-0 fade" id="Ao" role="tabpanel" aria-labelledby="arrivals-women-link">
+        <div class="row">
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <span class="product-label label-sale">Sale</span>
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Jackets & Vests</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="new-price">$76.99</span>
+                            <span class="old-price">Was $109.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+                        <!--
+                                                                <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Tops</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$34.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-nav product-nav-dots">
+                            <a href="#" class="active" style="background: #d64042;"><span class="sr-only">Color name</span></a>
+                            <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                        </div><!-- End .product-nav -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+        </div>
+    </div><!-- .End .tab-pane -->
+
+    <div class="tab-pane p-0 fade" id="Giay" role="tabpanel" aria-labelledby="arrivals-men-link">
+        <div class="row">
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Jackets & Vests</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Watertight Jacket</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$76.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+        </div>
+    </div><!-- .End .tab-pane -->
+
+    <div class="tab-pane p-0 fade" id="PhuKien" role="tabpanel" aria-labelledby="arrivals-shoes-link">
+        <div class="row">
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Shoes</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">UA Spawn Low</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$77.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-nav product-nav-dots">
+                            <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
+                            <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                        </div><!-- End .product-nav -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Shoes</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$52.66</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <span class="product-label label-sale">Sale</span>
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Shoes</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="new-price">$239.99</span>
+                            <span class="old-price">Was $400.00</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Shoes</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">On Cloudflyer</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$127.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+        </div>
+    </div><!-- .End .tab-pane -->
+
+    <div class="tab-pane p-0 fade" id="arrivals-acc-tab" role="tabpanel" aria-labelledby="arrivals-acc-link">
+        <div class="row">
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <span class="product-label label-sale">Sale</span>
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Bags</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Osprey Talia</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="new-price">$67.50</span>
+                            <span class="old-price">Was $150.00</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+                        <!--
+                                                                <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Accessories</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$299.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+                        <!--
+                                                                <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+            <div class="col-xl-5col col-lg-3 col-md-4 col-6">
+                <div class="product demo21">
+                    <figure class="product-media">
+                        <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                            <img src="../assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
+                        </a>
+
+                    </figure><!-- End .product-media -->
+
+                    <div class="product-body text-center">
+                        <div class="product-cat">
+                            <a href="#">Bags</a>
+                        </div><!-- End .product-cat -->
+                        <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
+                        <div class="product-price">
+                            <span class="cur-price">$59.99</span>
+                        </div><!-- End .product-price -->
+                        <div class="ratings-container">
+                            <div class="ratings">
+                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                            </div><!-- End .ratings -->
+                            <span class="ratings-text">( 2 Reviews )</span>
+                        </div><!-- End .rating-container -->
+
+                        <div class="product-action">
+                            <a href="#" class="btn-product btn-cart" title="Xem chi tiết"><span>Xem chi tiết</span></a>
+                        </div><!-- End .product-action -->
+
+                        <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
+
+                    </div><!-- End .product-body -->
+                </div><!-- End .product -->
+            </div>
+
+        </div>
+    </div><!-- .End .tab-pane -->
+</div><!-- End .tab-content -->
+<div class="text-center">
+    <a href="{{route('cuahang')}}" class="btn btn-viewMore">
+        <span>Tới cửa hàng</span>
+        <i class="icon-long-arrow-right"></i>
+    </a>
+</div>
+</div><!-- End .container QUAN-->
    
 
         <div class="container newsletter">

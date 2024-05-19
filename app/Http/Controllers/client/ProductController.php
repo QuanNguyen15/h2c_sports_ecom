@@ -144,13 +144,28 @@ return view('user.category-boxed', compact('products','title'));
     {
         $para = new Product();
         $product = $para->getById($id);
-        return view('user.product-sidebar', compact('product'));
+      return view('user.product-sidebar',compact('product'));
+      
     }
     public function productBestSale(){
         $productbestsale = Product::where('featured', '1')->get();
-    
+        $categories = ['Áo đội tuyển quốc gia', 'Giày', 'Phụ kiện'];
+        $NewproductsAll =  Product::select('product.*')
+        ->join('categories', 'product.categoryID', '=', 'categories.ID')
+        ->whereIn('categories.category', $categories)
+        ->orderBy('product.ID', 'desc')
+        ->take(10)
+        ->get();
+        $khuyen_mai = Product::select('product.*')
+        ->join('categories', 'product.categoryID', '=', 'categories.ID')
+        ->whereIn('categories.category',['Puma'])
+        ->orderBy('product.ID', 'desc')
+        ->take(3)
+        ->get();
+        return view('user.trangchu', compact('productbestsale','NewproductsAll','khuyen_mai'));
        
-        return view('user.trangchu', compact('productbestsale'));
+
     }
- 
+   
+  
 }
