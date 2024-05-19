@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use JetBrains\PhpStorm\NoReturn;
 use Ramsey\Uuid\Rfc4122\Validator;
-use mysql_xdevapi\Session;
+use Illuminate\Support\Facades\Session;
 
 class LoginAdmin extends Controller
 {
@@ -19,7 +18,7 @@ class LoginAdmin extends Controller
         return view('admins.login');
     }
 
-    public function postLoginAdmin(Request $request)
+    public function postLoginAdmin(Request $request): RedirectResponse
     {
         if(Auth::attempt(['account' => $request->account, 'password' => $request->password, 'roleID' => 1]))
         {
@@ -32,8 +31,7 @@ class LoginAdmin extends Controller
 
             $user = $request;
             // dd($user);
-//            return redirect()->route('admin.dashboard');
-            return view('admin.layout.index', compact('user'));
+            return redirect()->route('admin.dashboard');
 
         }
 
@@ -41,10 +39,10 @@ class LoginAdmin extends Controller
     }
 
 
-    #[NoReturn] public function dashboard(Request $request): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function dashboard(Request $request)
     {
         $user = $request->session()->get('user');
-//         dd($user);
+        // dd($user);
 
         return view('admin.layout.index', compact('user'));
     }

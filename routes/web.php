@@ -39,7 +39,7 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 
 
-  
+
     Route::get('/{title}', [ProductController::class, 'index'])->name('user.category-boxed');
 
 
@@ -49,14 +49,14 @@ Route::get('/product/{id}', [ProductController::class, 'productDetail'])->name('
 // admin
 
 Route::get('/login', [LoginAdmin::class, 'login'])->name('login');
+
 Route::post('/login', [LoginAdmin::class, 'postLoginAdmin'])->name('admins.login');
 
-Route::middleware('admin')->prefix('admin')->group(function() {
+Route::middleware('admin')->prefix('/admin')->group(function() {
 
-//    Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
 
     Route::get('/logout-admin', [LogoutAdmin::class, 'logout'])->name('admins.logout');
-
  //Quản lí thống kê
     Route::get('/', [StatisticalsController::class, 'index'])->name('admins.thongke');
 
