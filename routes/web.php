@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\client\ProductController;
 use App\Http\Controllers\client\CartController;
+use App\Http\Controllers\client\CheckoutController;
 use App\Http\Controllers\admin\LoginAdmin;
 use App\Http\Controllers\admin\LogoutAdmin;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
@@ -21,6 +22,13 @@ use App\Http\Controllers\admin\AccountController as AdminAccountController;
 */
 
 // client
+Route::get('/order-success', function () {
+    return view('user.order-success');
+})->name('order.success');
+
+Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
+
+Route::get('/checkout',  [CheckoutController::class, 'index'])->name('checkout.index');
 
 Route::post('/add-cart', [CartController::class, 'add'])->name('cart.add');
 
@@ -115,9 +123,9 @@ Route::get('/blog', function () {
 //     return view('user.cart');
 // })->name('user.cart');
 
-Route::get('/checkout', function () {
-    return view('user.checkout');
-})->name('user.checkout');
+// Route::get('/checkout', function () {
+//     return view('user.checkout');
+// })->name('user.checkout');
 
 Route::get('/contact', function () {
     return view('user.contact');

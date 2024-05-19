@@ -64,7 +64,7 @@
                                             </div><!-- End .rating-container -->
 
                                             <div class="product-price">
-                                                {{{$product->price}}}
+                                                {{{number_format($product->price)}}} đ
                                             </div><!-- End .product-price -->
 
                                             <div class="product-content">

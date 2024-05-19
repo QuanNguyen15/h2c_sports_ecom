@@ -26,73 +26,73 @@
             					<label for="checkout-discount-input" class="text-truncate">Nếu bạn có mã giảm giá....<span>Bấm vào đây để nhập và áp dụng</span></label>
             				</form>
             			</div><!-- End .checkout-discount -->
-            			<form action="#">
+            			<form action="{{route ('checkout.place-order')}}" method="post">
+                            @csrf
 		                	<div class="row">
-		                		<div class="col-lg-9">
+		                		<div class="col-lg-6">
 		                			<h2 class="checkout-title">Chi tiết hoá đơn</h2><!-- End .checkout-title -->
-		                				<div class="row">
-		                					<div class="col-sm-6">
+		                				{{-- <div class="row"> --}}
+		                					{{-- <div class="col-sm-6">
 		                						<label>Họ *</label>
 		                						<input type="text" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
+		                					</div><!-- End .col-sm-6 --> --}}
 
-		                					<div class="col-sm-6">
+		                					{{-- <div class="col-sm-6">
 		                						<label>Tên *</label>
 		                						<input type="text" class="form-control" required>
 		                					</div><!-- End .col-sm-6 -->
-		                				</div><!-- End .row -->
+		                				</div><!-- End .row --> --}}
+                                        {{-- <form action="{{route ('checkout.place-order')}}" method="post">
+                                            @csrf --}}
 
-	            						<label>Tên công ty</label>
-	            						<input type="text" class="form-control">
+                                            <label>Họ tên người nhận *</label>
+                                            <input type="text" class="form-control" name="full_name" required>
 
-	            						<label>Quốc gia *</label>
-	            						<input type="text" class="form-control" required>
+                                            <label>Địa chỉ *</label>
+                                            <input type="text" class="form-control" name="address" required>
 
-	            						<label>Địa chỉ *</label>
-	            						<input type="text" class="form-control" placeholder="Số nhà hoặc tên đường" required>
-	            						<input type="text" class="form-control" placeholder="Toà nhà,chung cư ..." required>
+                                            <!-- <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label>Town / City *</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div> -->
+                                                 <!--
+                                                <div class="col-sm-6">
+                                                    <label>State / County *</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                            </div> -->
 
-	            						<!-- <div class="row">
-		                					<div class="col-sm-6">
-		                						<label>Town / City *</label>
-		                						<input type="text" class="form-control" required>
-		                					</div> -->
-<!--
-		                					<div class="col-sm-6">
-		                						<label>State / County *</label>
-		                						<input type="text" class="form-control" required>
-		                					</div>
-		                				</div> -->
+                                            {{-- <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label>Mã bưu điện *</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div><!-- End .col-sm-6 --> --}}
 
-		                				<div class="row">
-		                					<div class="col-sm-6">
-		                						<label>Mã bưu điện *</label>
-		                						<input type="text" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
+                                                {{-- <div class="col-sm-6"> --}}
+                                            <label>Số điện thoại *</label>
+                                            <input type="tel" class="form-control" name="phone_num" required>
+                                                {{-- </div><!-- End .col-sm-6 --> --}}
+                                            {{-- </div><!-- End .row --> --}}
 
-		                					<div class="col-sm-6">
-		                						<label>Số điện thoại *</label>
-		                						<input type="tel" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
-		                				</div><!-- End .row -->
+                                            <label>Email *</label>
+                                            <input type="email" class="form-control" name="email" required>
 
-	                					<label>Email *</label>
-	        							<input type="email" class="form-control" required>
+                                            {{-- <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkout-create-acc">
+                                                <!-- <label class="custom-control-label" for="checkout-create-acc">Create an account?</label> -->
+                                            </div><!-- End .custom-checkbox --> --}}
 
-	        							<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="checkout-create-acc">
-											<!-- <label class="custom-control-label" for="checkout-create-acc">Create an account?</label> -->
-										</div><!-- End .custom-checkbox -->
+                                            {{-- <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkout-diff-address">
+                                                <label class="custom-control-label" for="checkout-diff-address">Giao tới một địa chỉ khác?</label>
+                                            </div><!-- End .custom-checkbox --> --}}
 
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="checkout-diff-address">
-											<label class="custom-control-label" for="checkout-diff-address">Giao tới một địa chỉ khác?</label>
-										</div><!-- End .custom-checkbox -->
-
-	                					<label>Ghi chú</label>
-	        							<textarea class="form-control" cols="30" rows="4" placeholder="Ghi chú thêm về đơn hàng của bạn"></textarea>
+                                            <label>Ghi chú</label>
+                                            <textarea class="form-control" name="note" cols="30" rows="4" placeholder="Ghi chú thêm về đơn hàng của bạn"></textarea>
+                                        {{-- </form> --}}
 		                		</div><!-- End .col-lg-9 -->
-		                		<aside class="col-lg-3">
+		                		<aside class="col-lg-6">
 		                			<div class="summary">
 		                				<h3 class="summary-title">Đơn hàng của bạn</h3><!-- End .summary-title -->
 
@@ -105,29 +105,151 @@
 		                					</thead>
 
 		                					<tbody>
-		                						<tr>
-		                							<td><a href="#">Beige knitted elastic runner shoes</a></td>
-		                							<td>$84.00</td>
-		                						</tr>
+                                                @foreach ($cart->list() as $key => $value)
+                                                    <tr>
+                                                        <td><a href="#">{{ $value['name'] }}: {{$value['quantity']}} sản phẩm</a></td>
+                                                        <td>{{ number_format($value['price'] * $value['quantity']) }} VND</td>
+                                                    </tr>
+                                                @endforeach
 
-		                						<tr>
-		                							<td><a href="#">Blue utility pinafore denimdress</a></td>
-		                							<td>$76,00</td>
-		                						</tr>
-		                						<tr class="summary-subtotal">
-		                							<td>Tạm tính:</td>
-		                							<td>$160.00</td>
-		                						</tr><!-- End .summary-subtotal -->
-		                						<tr>
-		                							<td>Phí giao hàng:</td>
-		                							<td>Miên phí</td>
-		                						</tr>
-		                						<tr class="summary-total">
-		                							<td>Tổng:</td>
-		                							<td>$160.00</td>
-		                						</tr><!-- End .summary-total -->
-		                					</tbody>
+                                                <tr class="summary-subtotal">
+                                                    <td>Tạm tính:</td>
+                                                    <td>{{ number_format($totalProductPrice) }} VND</td>
+                                                </tr><!-- End .summary-subtotal -->
+
+                                                <tr>
+                                                    <td>
+                                                        @if ($shippingFee == 0)
+                                                            Miễn phí vận chuyển
+                                                        @else
+                                                            Phí ship: {{ number_format($shippingFee) }} VND
+                                                        @endif
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="summary-total">
+                                                    <td>Tổng:</td>
+                                                    <td>{{ number_format($shippingFee + $totalProductPrice) }} VND</td>
+                                                </tr><!-- End .summary-total -->
+                                            </tbody>
+
 		                				</table><!-- End .table table-summary -->
+
+                                        <style>
+                                            .table.table-summary thead th:last-child, .table.table-summary tbody td:last-child {
+                                                text-align: right;
+                                                min-width: 100px;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table.table-summary thead th, .table.table-summary tbody td {
+                                                vertical-align: middle;
+                                                border-top: none;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table.table-summary tbody td {
+                                                padding: 0;
+                                                height: 70px;
+                                                border-bottom: .1rem solid #ebebeb;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table td {
+                                                padding-top: 3rem;
+                                                padding-bottom: 3rem;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table td {
+                                                vertical-align: middle;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table th, .table td {
+                                                padding-left: 0;
+                                                padding-right: 0;
+                                                padding-top: 1.4rem;
+                                                padding-bottom: 1.4rem;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table th, .table thead th, .table td {
+                                                border-top: none;
+                                                border-bottom: .1rem solid #ebebeb;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table td, .table th {
+                                                padding: .75rem;
+                                                vertical-align: top;
+                                                border-top: 1px solid #dee2e6;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            *, ::after, ::before {
+                                                box-sizing: border-box;
+                                            }
+
+                                            *, ::after, ::before {
+                                                box-sizing: border-box;
+                                            }
+
+                                            user agent stylesheet
+                                            td {
+                                                display: table-cell;
+                                                vertical-align: inherit;
+                                                unicode-bidi: isolate;
+                                            }
+
+                                            .table.table-summary {
+                                                line-height: 1.43;
+                                                color: #666;
+                                                border: none;
+                                                margin-bottom: 0;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            .table {
+                                                width: 100%;
+                                                margin-bottom: 1rem;
+                                                color: #212529;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            table {
+                                                border-collapse: collapse;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            table {
+                                                border-collapse: collapse;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+                                            user agent stylesheet
+                                            table {
+                                                border-collapse: separate;
+                                                text-indent: initial;
+                                                border-spacing: 2px;
+                                            }
+
+                                            body {
+                                                color: #666;
+                                                background-color: #fff;
+                                                -webkit-font-smoothing: antialiased;
+                                                -moz-osx-font-smoothing: grayscale;
+                                                overflow-x: hidden;
+                                                font-family: "Reddit Sans", sans-serif;
+                                                font-optical-sizing: auto;
+                                                font-weight: weight;
+                                                font-style: normal;
+                                                font-size: 1.5rem; /* Tăng cỡ chữ lên 1.5 rem */
+                                            }
+
+
+                                        </style>
+
 
 		                				<div class="accordion-summary" id="accordion-payment">
 										    <div class="card">
@@ -205,7 +327,7 @@
 										    </div><!-- End .card -->
 										</div><!-- End .accordion -->
 
-		                				<button type="submit" class="btn btn-outline-primary-2 btn-order btn-block">
+		                				<button type="submit" href="{{route('checkout.place-order')}}" class="btn btn-outline-primary-2 btn-order btn-block">
 		                					<span class="btn-text">Thanh toán</span>
 		                					<span class="btn-hover-text">Đặt hàng</span>
 		                				</button>
