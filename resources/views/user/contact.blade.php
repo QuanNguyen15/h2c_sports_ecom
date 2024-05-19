@@ -38,7 +38,11 @@
                 							</li>
                 							<li>
                 								<i class="icon-envelope"></i>
-                								<a href="mailto:#">Nguyenduchung@gmail.com</a>
+                								<a href="mailto:#">nguyenduchung@gmail.com</a>
+                							</li>
+											<li>
+                								<i class="icon-facebook"></i>
+                								<a href="">Fanpage: H2C SPORTS</a>
                 							</li>
                 						</ul><!-- End .contact-list -->
                 					</div><!-- End .contact-info -->

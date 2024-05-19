@@ -2,15 +2,15 @@
 <html>
 <head>
     <?php include('layout/css_temp.blade.php')?>
-    <link rel="stylesheet" href="assets/css/skins/skin-demo-21.css'">
-    <link rel="stylesheet" href="assets/css/demos/demo-21.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/skins/skin-demo-21.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/demos/demo-21.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
  <!-- ffwefjwe frfe -->
 
 </head>
 <body>
     <div class="page-wrapper">
-        <div class="notification" style="background-image: url(assets/images/demos/demo-21/notification-back.jpg)">
+        <div class="notification" style="background-image: url(../assets/images/demos/demo-21/notification-back.jpg)">
             <div class="notify-content">
                 <h3>Miễn phí vận chuyển cho tất cả các đơn hàng từ 1.000.000 đồng</h3>
             </div>
@@ -18,10 +18,9 @@
                 <a href="#"><i class="icon-close"></i></a>
             </div>
         </div>
-
         <!--Header-->
-{{--        <?php include('layout/header.blade.php'); ?>--}}
-        <link rel="stylesheet" href="resources/views/user/assets/css/demos/demo-21.css?v= <?php echo time(); ?>">
+{{--     <?php include('layout/header.blade.php'); ?>--}}
+        <link rel="stylesheet" href="../assets/css/demos/demo-21.css?v= <?php echo time(); ?>">
         <header class="header">
             <div class="header-top">
                 <div class="container">
@@ -63,12 +62,12 @@
                         </button>
 
                         <a href="index-21.blade.php" class="logo">
-                            <img src="assets/images/logo-1.jpg" alt="Molla Logo" width="100" height="25">
+                            <img src="{{ asset('assets/images/logo-1.jpg') }}" alt="Molla Logo" width="100" height="25">
                         </a>
 
                         <nav class="main-nav">
                             <ul class="menu sf-arrows">
-                                <li class="megamenu-container active">
+                                <li class="megamenu-container active menu-title">
                                     <a href="{{route('user.trangchu')}}" class="sf-with-ul">Trang chủ</a>
                                 </li>
                                 <li>
@@ -155,7 +154,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.blade.php" class="product-image">
-                                                <img src="{{('assets/images/products/cart/product-1.jpg')}}" alt="product">
+                                                <img src="{{('../assets/images/products/cart/product-1.jpg')}}" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -175,7 +174,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.blade.php" class="product-image">
-                                                <img src="assets/images/products/cart/product-2.jpg" alt="product">
+                                                <img src="{{('../assets/images/products/cart/product-2.jpg')}}" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -207,9 +206,8 @@
                 <div class="row">
                     <div class="col-2xl-5col col-md-12">
                         <div class="widget widget-about">
-                            <img src="assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="100" height="25">
+                            <img src="{{ asset('assets/images/logo-1.jpg') }}" class="footer-logo" alt="Footer Logo" width="100" height="25">
                             <p>Mang lại sự hài lòng cho khách hàng là mục tiêu đầu tiên của  chúng tôi. </p>
-
                             <div class="widget-about-info">
                                 <div class="row">
                                     <div class="col-sm-6 col-md-4 phoneNum">
@@ -219,7 +217,7 @@
                                     <div class="col-sm-6 col-md-8 payment">
                                         <span class="widget-about-title">Phương thức thanh toán</span>
                                         <figure class="footer-payments">
-                                            <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                                            <img src="../assets/images/payments.png" alt="Payment methods" width="272" height="20">
                                         </figure><!-- End .footer-payments -->
                                     </div><!-- End .col-sm-6 -->
                                 </div><!-- End .row -->
@@ -241,21 +239,21 @@
                                 <li><a href="../admins/login.blade.php">Puma</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
-                    </div><!-- End .col-sm-4 col-lg-3 -->
+                    </div><!-- Ensd .col-sm-4 col-lg-3 -->
 
                     <div class="col-xl-5col col-sm-4 col-md-6=4">
                         <div class="widget">
                             <h4 class="widget-title">Chính sách và bảo mật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="#">Chính sách kiểm hàng</a></li>
-                                <li><a href="#">Chính sách bảo hàng quần áo và phụ kiện</a></li>
-                                <li><a href="#">Chính sách bảo hàng giày</a></li>
-                                <li><a href="#">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
-                                <li><a href="#">Chính sách đổi hàng</a></li>
-                                <li><a href="#">Chính sách vận chuyển</a></li>
-                                <li><a href="#">Chính sách thanh toán</a></li>
-                                <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                                <li><a href="{{route('user.kiemHang')}}">Chính sách kiểm hàng</a></li>
+                                <li><a href="{{route('user.baoHanhQAPK')}}">Chính sách bảo hàng quần áo và phụ kiện</a></li>
+                                <li><a href="{{route('user.baoHanhGiay')}}">Chính sách bảo hàng giày</a></li>
+                                <li><a href="{{route('user.baoHanhInAnQABD')}}">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
+                                <li><a href="{{route('user.doiHang')}}">Chính sách đổi hàng</a></li>
+                                <li><a href="{{route('user.vanChuyen')}}">Chính sách vận chuyển</a></li>
+                                <li><a href="{{route('user.thanhToan')}}">Chính sách thanh toán</a></li>
+                                <li><a href="{{route('user.baoMatThongTin')}}">Chính sách bảo mật thông tin</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
                     </div><!-- End .col-sm-4 col-lg-3 -->
@@ -315,7 +313,7 @@
                 <div class="row no-gutters bg-white newsletter-popup-content">
                     <div class="col-xl-3-5col col-lg-7 banner-content-wrap">
                         <div class="banner-content text-center">
-                            <img src="assets/images/logo-1.jpg" class="logo" alt="logo" width="60" height="15">
+                            <img src="{{ asset('assets/images/logo-1.jpg') }}" class="logo" alt="logo" width="60" height="15">
                             <h2 class="banner-title">Giảm<span> 25<light>%</light></span></h2>
                             <p>Chào mừng bạn đến với shop quần áo bóng đá của chúng tôi! Chúng tôi đang tổ chức chương trình giảm giá đặc biệt, giúp bạn sở hữu những bộ trang phục chất lượng với mức giá ưu đãi. Hãy nhanh chân đến với chúng tôi để không bỏ lỡ cơ hội này!</p>
                             <form action="#">
@@ -332,7 +330,7 @@
                         </div>
                     </div>
                     <div class="col-xl-2-5col col-lg-5 ">
-                        <img src="assets/images/Banners/banner-giay-2.jpg" class="newsletter-img" alt="newsletter">
+                        <img src="../assets/images/Banners/banner-giay-2.jpg" class="newsletter-img" alt="newsletter">
                     </div>
                 </div>
             </div>
@@ -362,7 +360,7 @@
             mess_block.classList.add('Link-mess');
             mess_block.innerHTML = ` <div class = "mess-header">
             <div class="logo-mess">
-              <img src="assets/images/logo-1.jpg" alt="">
+              <img src="{{ asset('assets/images/logo-1.jpg') }}" alt="">
             </div>
             <a href="" onclick = "">X</a>
         </div>

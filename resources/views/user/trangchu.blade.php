@@ -15,7 +15,7 @@
                             }
                         }
                     }'>
-                <div class="intro-slide" style="background-image: url(assets/images/banners/Banner-3.jpg);">
+                <div class="intro-slide" style="background-image: url(../assets/images/banners/Banner-3.jpg);">
                     <div class="container intro-content">
                         <div class="row">
 
@@ -31,7 +31,7 @@
                     </div><!-- End .intro-content -->
                 </div><!-- End .intro-slide -->
 
-                <div class="intro-slide" style="background-image: url(assets/images/demos/demo-21/slider/slide-2.jpg);">
+                <div class="intro-slide" style="background-image: url(../assets/images/demos/demo-21/slider/slide-2.jpg);">
                     <div class="container intro-content">
                         <div class="row">
                             <div class="intro">
@@ -65,7 +65,7 @@
         <div class="container banner-container">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                 <a href="{{route('user.category-boxed')}}">
-                    <img src="assets/images/banners/banner-aodm.jpg">
+                    <img src="../assets/images/banners/banner-aodm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
@@ -85,7 +85,7 @@
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                 <a href="{{route('user.category-boxed')}}">
-                    <img src="assets/images/banners/banner-giaydm.jpg">
+                    <img src="../assets/images/banners/banner-giaydm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
@@ -105,7 +105,7 @@
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
                 <a href="category-fullwidth.php">
-                    <img src="assets/images/banners/banner-phukiendm.jpg">
+                    <img src="../assets/images/banners/banner-phukiendm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
@@ -179,24 +179,28 @@
                             }
                         }
                     }'>
+                    @if(!empty($productbestsale) )
+                           @foreach($productbestsale as $productbestsale)
+
                 <div class="product demo21">
+            
                     <figure class="product-media">
                         <span class="product-label label-sale">Sale</span>
-                        <a href="{{route('user.product-sidebar')}}">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-1-1.jpg" alt="Product image" class="product-image">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-1-2.jpg" alt="Product image" class="product-image-hover">
+                        <a href="{{route('user.product-sidebar',$productbestsale->ID)}}">
+                            <img src="../assets/images/products/{{$productbestsale->category->category}}/{{$productbestsale->image}}" alt="Product image" class="product-image">
                         </a>
 
                     </figure><!-- End .product-media -->
 
                     <div class="product-body text-center">
                         <div class="product-cat">
-                            <a href="#">Shoes</a>
+                    
                         </div><!-- End .product-cat -->
-                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Nike Renew Arena</a></h3><!-- End .product-title -->
+                        <!-- {{route('user.product-sidebar', ['id' =>1 ])}} -->
+                        <h3 class="product-title"><a href="">{{$productbestsale->name}}</a></h3><!-- End .product-title -->
                         <div class="product-price">
-                            <span class="new-price">$58.99</span>
-                            <span class="old-price">Was $75.00</span>
+                          
+                            <span class="old-price">{{$productbestsale->price}} đồng</span>
                         </div><!-- End .product-price -->
                         <div class="ratings-container">
                             <div class="ratings">
@@ -211,160 +215,24 @@
                         </div><!-- End .product-nav -->
 
                         <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
+                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Xem chi tiết</span></a>
                             <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
                         </div><!-- End .product-action -->
 
 
                     </div><!-- End .product-body -->
                 </div><!-- End .product -->
+              
+               
+                     @endforeach
+               
+                     @else 
+                      <h1>rỗng</h1>
+                     @endif
 
-                <div class="product demo21">
-                    <figure class="product-media">
-                        <span class="product-label label-new">New</span>
-                        <a href="{{route('user.product-sidebar')}}">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-2-1.jpg" alt="Product image" class="product-image">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-2-2.jpg" alt="Product image" class="product-image-hover">
-                        </a>
+              
 
-                        <div class="product-countdown" data-until="+9h" data-format="HMS" data-relative="true" data-labels-short="true"></div><!-- End .product-countdown -->
-                    </figure><!-- End .product-media -->
-
-                    <div class="product-body text-center">
-                        <div class="product-cat">
-                            <a href="#">Jackets & Vests</a>
-                        </div><!-- End .product-cat -->
-                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Advanced Skin 12 Set</a></h3><!-- End .product-title -->
-                        <div class="product-price">
-                            <span class="cur-price">$199.99</span>
-                        </div><!-- End .product-price -->
-                        <div class="ratings-container">
-                            <div class="ratings">
-                                <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                            </div><!-- End .ratings -->
-                            <span class="ratings-text">( 4 Reviews )</span>
-                        </div><!-- End .rating-container -->
-
-                        <div class="product-nav product-nav-dots" style="visibility: hidden;">
-                            <a href="#" class="active" style="background: #db7e6c;"><span class="sr-only">Color name</span></a>
-                        </div><!-- End .product-nav -->
-
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                            <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-                        </div><!-- End .product-action -->
-
-                    </div><!-- End .product-body -->
-                </div><!-- End .product -->
-
-                <div class="product demo21">
-                    <figure class="product-media">
-                        <a href="{{route('user.product-sidebar')}}">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-3-1.jpg" alt="Product image" class="product-image">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-3-2.jpg" alt="Product image" class="product-image-hover">
-                        </a>
-
-                    </figure><!-- End .product-media -->
-
-                    <div class="product-body text-center">
-                        <div class="product-cat">
-                            <a href="#">Tops</a>
-                        </div><!-- End .product-cat -->
-                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">On Performance-T Shirt</a></h3><!-- End .product-title -->
-                        <div class="product-price">
-                            <span class="cur-price">$99.99</span>
-                        </div><!-- End .product-price -->
-                        <div class="ratings-container">
-                            <div class="ratings">
-                                <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                            </div><!-- End .ratings -->
-                            <span class="ratings-text">( 0 Reviews )</span>
-                        </div><!-- End .rating-container -->
-
-                        <div class="product-nav product-nav-dots">
-                            <a href="#" class="active" style="background: #db7e6c;"><span class="sr-only">Color name</span></a>
-                            <a href="#" style="background: #5a7399;"><span class="sr-only">Color name</span></a>
-                        </div><!-- End .product-nav -->
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                            <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-                        </div><!-- End .product-action -->
-
-                    </div><!-- End .product-body -->
-                </div><!-- End .product -->
-
-                <div class="product demo21">
-                    <figure class="product-media">
-                        <a href="{{route('user.product-sidebar')}}">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-4-1.jpg" alt="Product image" class="product-image">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-4-2.jpg" alt="Product image" class="product-image-hover">
-                        </a>
-
-                    </figure><!-- End .product-media -->
-
-                    <div class="product-body text-center">
-                        <div class="product-cat">
-                            <a href="#">Bottoms</a>
-                        </div><!-- End .product-cat -->
-                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">CB Carbon 2 Cycling Short</a></h3><!-- End .product-title -->
-                        <div class="product-price">
-                            <span class="cur-price">$159.99</span>
-                        </div><!-- End .product-price -->
-                        <div class="ratings-container">
-                            <div class="ratings">
-                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                            </div><!-- End .ratings -->
-                            <span class="ratings-text">( 12 Reviews )</span>
-                        </div><!-- End .rating-container -->
-                        <div class="product-nav product-nav-dots" style="visibility: hidden;">
-                            <a href="#" class="active" style="background: #db7e6c;"><span class="sr-only">Color name</span></a>
-                        </div><!-- End .product-nav -->
-
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                            <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-                        </div><!-- End .product-action -->
-
-                    </div><!-- End .product-body -->
-                </div><!-- End .product -->
-
-                <div class="product demo21">
-                    <figure class="product-media">
-                        <a href="{{route('user.product-sidebar')}}">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-1-1.jpg" alt="Product image" class="product-image">
-                            <img src="assets/images/demos/demo-21/bestSellers/product-1-2.jpg" alt="Product image" class="product-image-hover">
-                        </a>
-
-                        <div class="product-countdown" data-until="+7h" data-format="HMS" data-relative="true" data-labels-short="true"></div><!-- End .product-countdown -->
-
-                    </figure><!-- End .product-media -->
-
-                    <div class="product-body text-center">
-                        <div class="product-cat">
-                            <a href="#">Tops</a>
-                        </div><!-- End .product-cat -->
-                        <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">On Performance-T Shirt</a></h3><!-- End .product-title -->
-                        <div class="product-price">
-                            <span class="cur-price">$99.99</span>
-                        </div><!-- End .product-price -->
-                        <div class="ratings-container">
-                            <div class="ratings">
-                                <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                            </div><!-- End .ratings -->
-                            <span class="ratings-text">( 0 Reviews )</span>
-                        </div><!-- End .rating-container -->
-
-                        <div class="product-nav product-nav-dots">
-                            <a href="#" class="active" style="background: #db7e6c;"><span class="sr-only">Color name</span></a>
-                            <a href="#" style="background: #5a7399;"><span class="sr-only">Color name</span></a>
-                        </div><!-- End .product-nav -->
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                            <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-                        </div><!-- End .product-action -->
-
-                    </div><!-- End .product-body -->
-                </div><!-- End .product -->
+               
 
             </div><!-- End .owl-carousel -->
         </div>
@@ -398,8 +266,8 @@
                         <div class="col-lg-4 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/chooseStyle/product-1.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-1.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -408,7 +276,7 @@
                                     <div class="product-cat">
                                         <a href="#">Tops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Stowell Hood Fleece</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Stowell Hood Fleece</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$55.99</span>
                                     </div><!-- End .product-price -->
@@ -433,8 +301,8 @@
                         <div class="col-lg-4 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/chooseStyle/product-2.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-2.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-countdown" data-until="+9h" data-format="HMS" data-relative="true" data-labels-short="true"></div><!-- End .product-countdown -->
@@ -444,7 +312,7 @@
                                     <div class="product-cat">
                                         <a href="#">Bags</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Force Tight</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Force Tight</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$135.99</span>
                                     </div><!-- End .product-price -->
@@ -466,8 +334,8 @@
                         <div class="col-lg-4 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/chooseStyle/product-3.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/chooseStyle/product-3.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -476,7 +344,7 @@
                                     <div class="product-cat">
                                         <a href="#">Accessories</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Blitzing 3.0 Cap</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Blitzing 3.0 Cap</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$29.99</span>
                                     </div><!-- End .product-price -->
@@ -499,49 +367,7 @@
                 </div>
             </div>
         </div>
-        <div class="container category-banner">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="{{route('user.category-boxed')}}">
-                        <img src="assets/images/demos/demo-21/banner/footware.jpg">
-                    </a>
-                    <div class="banner-content">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="category"> Nike </h3></a>
-                        <a href="{{route('user.category-boxed')}}" class="action">Tới cửa hàng</a>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="{{route('user.category-boxed')}}">
-                        <img src="assets/images/demos/demo-21/banner/accessories.jpg">
-                    </a>
-                    <div class="banner-content">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="category"> Puma </h3></a>
-                        <a href="{{route('user.category-boxed')}}" class="action">Tới cửa hàng</a>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6" >
-                    <a href="{{route('user.category-boxed')}}">
-                        <img src="assets/images/demos/demo-21/banner/mens.jpg">
-                    </a>
-                    <div class="banner-content">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="category"> Mizuno </h3></a>
-                        <a href="{{route('user.category-boxed')}}" class="action">Tới cửa hàng</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <a href="{{route('user.category-boxed')}}">
-                        <img src="assets/images/demos/demo-21/banner/womens.jpg">
-                    </a>
-                    <div class="banner-content">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="category"> Áo câu lạc bộ </h3></a>
-                        <a href="{{route('user.category-boxed')}}" class="action">Tới cửa hàng</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+      
 
         <div class="container new-arrivals">
 
@@ -574,8 +400,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -584,7 +410,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">UA Spawn Low</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">UA Spawn Low</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$77.99</span>
                                     </div><!-- End .product-price -->
@@ -613,8 +439,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -623,7 +449,7 @@
                                     <div class="product-cat">
                                         <a href="#">Jackets & Vests</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$76.99</span>
                                         <span class="old-price">Was $109.99</span>
@@ -648,8 +474,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -658,7 +484,7 @@
                                     <div class="product-cat">
                                         <a href="#">Bags</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Osprey Talia</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Osprey Talia</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$67.50</span>
                                         <span class="old-price">Was $150.00</span>
@@ -682,8 +508,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -692,7 +518,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$52.66</span>
                                     </div><!-- End .product-price -->
@@ -715,8 +541,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -725,7 +551,7 @@
                                     <div class="product-cat">
                                         <a href="#">Accessories</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$299.99</span>
                                     </div><!-- End .product-price -->
@@ -748,8 +574,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -758,7 +584,7 @@
                                     <div class="product-cat">
                                         <a href="#">Tops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$34.99</span>
                                     </div><!-- End .product-price -->
@@ -786,8 +612,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -796,7 +622,7 @@
                                     <div class="product-cat">
                                         <a href="#">Jackets & Vests</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Watertight Jacket</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Watertight Jacket</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$76.99</span>
                                     </div><!-- End .product-price -->
@@ -820,8 +646,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -830,7 +656,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$239.99</span>
                                         <span class="old-price">Was $400.00</span>
@@ -854,8 +680,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -864,7 +690,7 @@
                                     <div class="product-cat">
                                         <a href="#">Bags</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$59.99</span>
                                     </div><!-- End .product-price -->
@@ -887,8 +713,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -897,7 +723,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">On Cloudflyer</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">On Cloudflyer</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$127.99</span>
                                     </div><!-- End .product-price -->
@@ -925,8 +751,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -935,7 +761,7 @@
                                     <div class="product-cat">
                                         <a href="#">Jackets & Vests</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$76.99</span>
                                         <span class="old-price">Was $109.99</span>
@@ -959,8 +785,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -969,7 +795,7 @@
                                     <div class="product-cat">
                                         <a href="#">Tops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$34.99</span>
                                     </div><!-- End .product-price -->
@@ -1002,8 +828,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1012,7 +838,7 @@
                                     <div class="product-cat">
                                         <a href="#">Jackets & Vests</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Watertight Jacket</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Watertight Jacket</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$76.99</span>
                                     </div><!-- End .product-price -->
@@ -1041,8 +867,8 @@
 
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1051,7 +877,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">UA Spawn Low</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">UA Spawn Low</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$77.99</span>
                                     </div><!-- End .product-price -->
@@ -1079,8 +905,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1089,7 +915,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$52.66</span>
                                     </div><!-- End .product-price -->
@@ -1113,8 +939,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1123,7 +949,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$239.99</span>
                                         <span class="old-price">Was $400.00</span>
@@ -1147,8 +973,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1157,7 +983,7 @@
                                     <div class="product-cat">
                                         <a href="#">Shoes</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">On Cloudflyer</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">On Cloudflyer</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$127.99</span>
                                     </div><!-- End .product-price -->
@@ -1186,8 +1012,8 @@
                             <div class="product demo21">
                                 <figure class="product-media">
                                     <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1196,7 +1022,7 @@
                                     <div class="product-cat">
                                         <a href="#">Bags</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Osprey Talia</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Osprey Talia</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$67.50</span>
                                         <span class="old-price">Was $150.00</span>
@@ -1220,8 +1046,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1230,7 +1056,7 @@
                                     <div class="product-cat">
                                         <a href="#">Accessories</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$299.99</span>
                                     </div><!-- End .product-price -->
@@ -1253,8 +1079,8 @@
                         <div class="col-xl-5col col-lg-3 col-md-4 col-6">
                             <div class="product demo21">
                                 <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar')}}">
-                                        <img src="assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
+                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
+                                        <img src="../assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
                                     </a>
 
                                 </figure><!-- End .product-media -->
@@ -1263,7 +1089,7 @@
                                     <div class="product-cat">
                                         <a href="#">Bags</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar')}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="cur-price">$59.99</span>
                                     </div><!-- End .product-price -->
@@ -1296,7 +1122,7 @@
         </div><!-- End .container -->
 
         <div class="container newsletter">
-            <div class="background" style="background-image: url(assets/images/banners/banner-email.jpg);">
+            <div class="background" style="background-image: url(../assets/images/banners/banner-email.jpg);">
                 <div class="subscribe">
                     <div class="subscribe-title text-center">
                         <h1 class="intro-title2nd">Đăng ký với email để biết thêm nhiều điều về chúng tôi</h1>
@@ -1368,70 +1194,7 @@
             </div><!-- End .col-sm-6 col-lg-4 -->
         </div>
 
-        <div class="container instagram-store text-center">
-            <hr>
-            <div class="heading">
-                <h2 class="title">Hình ảnh từ khách hàng</h2><!-- End .title -->
-            </div>
-            <div class="row">
-                <div class="col-sm-3 banner-sm-div">
-                    <div class="banner-sm col-12 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-1.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                    <div class="banner-sm col-12 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-2.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 banner-lg instagram-feed">
-                    <img src="assets/images/demos/demo-21/instagramStore/banner-3.jpg">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
-                    </div>
-                </div>
-                <div class="col-sm-3 banner-sm-div">
-                    <div class="banner-sm col-6 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-4.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                    <div class="banner-sm col-6 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-6.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 banner-sm-div">
-                    <div class="banner-sm col-6 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-5.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                    <div class="banner-sm col-6 instagram-feed">
-                        <img src="assets/images/demos/demo-21/instagramStore/banner-7.jpg">
-                        <div class="instagram-feed-content">
-                            <a href="#"><i class="icon-heart-o"></i>280</a>
-                            <a href="#"><i class="icon-comments"></i>22</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
 
     </main>
 

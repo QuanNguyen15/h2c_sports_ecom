@@ -5,13 +5,13 @@
 	            	<div class="row">
 	            		<div class="col-sm-6 col-lg-3">
 	            			<div class="widget widget-about">
-	            				<img src="assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
+	            				<img src="../../assets/images/logo-1.jpg" class="footer-logo" alt="Footer Logo" width="105" height="25">
 	            				<p>Mục tiêu của chúng tôi là mang đến sự hài lòng cho khách hàng. </p>
 
 
 								<figure class="footer-payments">
 
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        			<img src="../assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure>
 
 	            			</div><!-- End .widget about-widget -->
@@ -39,14 +39,14 @@
 	            				<h4 class="widget-title">Chính sách và bảo mật</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-								<li><a href="#">Chính sách kiểm hàng</a></li>
-                                <li><a href="#">Chính sách bảo hàng quần áo và phụ kiện</a></li>
-                                <li><a href="#">Chính sách bảo hàng giày</a></li>
-                                <li><a href="#">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
-                                <li><a href="#">Chính sách đổi hàng</a></li>
-                                <li><a href="#">Chính sách vận chuyển</a></li>
-                                <li><a href="#">Chính sách thanh toán</a></li>
-                                <li><a href="#">Chính sách bảo mật thông tin</a></li>
+								<li><a href="{{route('user.kiemHang')}}">Chính sách kiểm hàng</a></li>
+                                <li><a href="{{route('user.baoHanhQAPK')}}">Chính sách bảo hàng quần áo và phụ kiện</a></li>
+                                <li><a href="{{route('user.baoHanhGiay')}}">Chính sách bảo hàng giày</a></li>
+                                <li><a href="{{route('user.baoHanhInAnQABD')}}">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
+                                <li><a href="{{route('user.doiHang')}}">Chính sách đổi hàng</a></li>
+                                <li><a href="{{route('user.vanChuyen')}}">Chính sách vận chuyển</a></li>
+                                <li><a href="{{route('user.thanhToan')}}">Chính sách thanh toán</a></li>
+                                <li><a href="{{route('user.baoMatThongTin')}}">Chính sách bảo mật thông tin</a></li>
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->
 	            		</div><!-- End .col-sm-6 col-lg-3 -->
