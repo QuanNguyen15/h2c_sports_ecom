@@ -21,7 +21,7 @@
 
                             <div class="intro">
                                 <div class="action">
-                                    <a href="{{route('user.category-boxed')}}" class="btn btn-primary">
+                                    <a href="" class="btn btn-primary">
                                         <span>DISCOVER NOW</span>
                                     </a>
                                 </div>
@@ -45,7 +45,7 @@
                                     <h3 class="darkWhite">SAVE UP TO 15%</h3>
                                 </div>
                                 <div class="action">
-                                    <a href="{{route('user.category-boxed')}}" class="btn btn-primary">
+                                    <a href="" class="btn btn-primary">
                                         <span>Tới cửa hàng</span>
                                     </a>
                                 </div>
@@ -64,12 +64,12 @@
 
         <div class="container banner-container">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="{{route('user.category-boxed')}}">
+                <a href="{{route('user.category-boxed',['title' => 'Áo'])}}">
                     <img src="../assets/images/banners/banner-aodm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="darkWhite"></h3></a>
+                        <a href=""><h3 class="darkWhite"></h3></a>
                     </div>
                     <div class="content">
                         <!-- <a href="category-fullwidth.php"><h3>Quần áo</h3></a>
@@ -84,12 +84,12 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="{{route('user.category-boxed')}}">
+                <a href="{{route('user.category-boxed',['title' => 'Giày'])}}">
                     <img src="../assets/images/banners/banner-giaydm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="darkWhite"></h3></a>
+                        <a href=""><h3 class="darkWhite"></h3></a>
                     </div>
                     <div class="content">
                         <!-- <a href="category-fullwidth.php"><h3>Giày</h3></a>
@@ -104,12 +104,12 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="category-fullwidth.php">
+                <a href="{{route('user.category-boxed',['title' => 'Phụ kiện'])}}">
                     <img src="../assets/images/banners/banner-phukiendm.jpg">
                 </a>
                 <div class="banner-content">
                     <div class="title">
-                        <a href="{{route('user.category-boxed')}}"><h3 class="darkWhite"></h3></a>
+                        <a href=""><h3 class="darkWhite"></h3></a>
                     </div>
                     <div class="content">
                         <!-- <a href="category-fullwidth.php"><h3>Phụ kiện</h3></a>
@@ -183,7 +183,7 @@
                            @foreach($productbestsale as $productbestsale)
 
                 <div class="product demo21">
-
+            
                     <figure class="product-media">
                         <span class="product-label label-sale">Sale</span>
                         <a href="{{route('user.product-sidebar',$productbestsale->ID)}}">
@@ -194,12 +194,12 @@
 
                     <div class="product-body text-center">
                         <div class="product-cat">
-
+                    
                         </div><!-- End .product-cat -->
                         <!-- {{route('user.product-sidebar', ['id' =>1 ])}} -->
                         <h3 class="product-title"><a href="">{{$productbestsale->name}}</a></h3><!-- End .product-title -->
                         <div class="product-price">
-
+                          
                             <span class="old-price">{{$productbestsale->price}} đồng</span>
                         </div><!-- End .product-price -->
                         <div class="ratings-container">
@@ -222,17 +222,17 @@
 
                     </div><!-- End .product-body -->
                 </div><!-- End .product -->
-
-
+              
+               
                      @endforeach
-
-                     @else
+               
+                     @else 
                       <h1>rỗng</h1>
                      @endif
 
+              
 
-
-
+               
 
             </div><!-- End .owl-carousel -->
         </div>
@@ -252,7 +252,7 @@
                     <h4 class="content darkWhite">• Độ bền tốt sau nhiều trận <br>đấu</h4>
                     <p class="price darkWhite">800.000 - 1.000.000</p>
 
-                    <a href="{{route('user.category-boxed')}}" class="btn btn-demoprimary">
+                    <a href="" class="btn btn-demoprimary">
                         <span>Tới cửa hàng</span>
                         <i class="icon-long-arrow-right"></i>
                     </a>
@@ -367,759 +367,9 @@
                 </div>
             </div>
         </div>
+      
 
-
-        <div class="container new-arrivals">
-
-            <hr class="mb-5 mt-8">
-
-            <div class="heading heading-center mb-3">
-                <h2 class="title">Sản phẩm mới nhất </h2><!-- End .title -->
-
-                <ul class="nav nav-pills justify-content-center" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="arrivals-all-link" data-toggle="tab" href="#arrivals-all-tab" role="tab" aria-controls="arrivals-all-tab" aria-selected="true">Tất cả</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="arrivals-women-link" data-toggle="tab" href="#arrivals-women-tab" role="tab" aria-controls="arrivals-women-tab" aria-selected="false">Quần áo bóng đá</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="arrivals-men-link" data-toggle="tab" href="#arrivals-men-tab" role="tab" aria-controls="arrivals-men-tab" aria-selected="false">Giày bóng đá</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="arrivals-shoes-link" data-toggle="tab" href="#arrivals-shoes-tab" role="tab" aria-controls="arrivals-shoes-tab" aria-selected="false">Phụ kiện</a>
-                    </li>
-                    <li class="nav-item">
-                    </li>
-                </ul>
-            </div><!-- End .heading -->
-
-            <div class="tab-content tab-content-carousel">
-                <div class="tab-pane p-0 fade show active" id="arrivals-all-tab" role="tabpanel" aria-labelledby="arrivals-all-link">
-                    <div class="row">
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">UA Spawn Low</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$77.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Jackets & Vests</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$76.99</span>
-                                        <span class="old-price">Was $109.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Bags</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Osprey Talia</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$67.50</span>
-                                        <span class="old-price">Was $150.00</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$52.66</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Accessories</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$299.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!--
-                                                                            <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Tops</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$34.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #d64042;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Jackets & Vests</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Watertight Jacket</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$76.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$239.99</span>
-                                        <span class="old-price">Was $400.00</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Bags</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$59.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">On Cloudflyer</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$127.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                    </div>
-                </div><!-- .End .tab-pane -->
-                <div class="tab-pane p-0 fade" id="arrivals-women-tab" role="tabpanel" aria-labelledby="arrivals-women-link">
-                    <div class="row">
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Jackets & Vests</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">The North Face Fanorak 2.0</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$76.99</span>
-                                        <span class="old-price">Was $109.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!--
-                                                                            <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Tops</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Alphaskin Sport Bra</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$34.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #d64042;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                    </div>
-                </div><!-- .End .tab-pane -->
-
-                <div class="tab-pane p-0 fade" id="arrivals-men-tab" role="tabpanel" aria-labelledby="arrivals-men-link">
-                    <div class="row">
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-7.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Jackets & Vests</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Watertight Jacket</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$76.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                    </div>
-                </div><!-- .End .tab-pane -->
-
-                <div class="tab-pane p-0 fade" id="arrivals-shoes-tab" role="tabpanel" aria-labelledby="arrivals-shoes-link">
-                    <div class="row">
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">UA Spawn Low</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$77.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Ignite Limitless Leather</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$52.66</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-8.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Y-3 by Yohji Yamamoto</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$239.99</span>
-                                        <span class="old-price">Was $400.00</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-10.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Shoes</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">On Cloudflyer</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$127.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                    </div>
-                </div><!-- .End .tab-pane -->
-
-                <div class="tab-pane p-0 fade" id="arrivals-acc-tab" role="tabpanel" aria-labelledby="arrivals-acc-link">
-                    <div class="row">
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <span class="product-label label-sale">Sale</span>
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Bags</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Osprey Talia</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$67.50</span>
-                                        <span class="old-price">Was $150.00</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!--
-                                                                            <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Accessories</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Small Sleeping Bag</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$299.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-                                    <!--
-                                                                            <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-                        <div class="col-xl-5col col-lg-3 col-md-4 col-6">
-                            <div class="product demo21">
-                                <figure class="product-media">
-                                    <a href="{{route('user.product-sidebar', ['id' =>1 ])}}">
-                                        <img src="../assets/images/demos/demo-21/newArrivals/product-9.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body text-center">
-                                    <div class="product-cat">
-                                        <a href="#">Bags</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{route('user.product-sidebar', ['id' =>1 ])}}">Marmot Empire Daypack</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="cur-price">$59.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Thêm vào giỏ hàng"><span>Thêm vào giỏ hàng</span></a>
-                                    </div><!-- End .product-action -->
-
-                                    <!-- <a href="#" class="btn-addtolist"><span>&nbsp;Add to Wishlist</span></a> -->
-
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div>
-
-                    </div>
-                </div><!-- .End .tab-pane -->
-            </div><!-- End .tab-content -->
-            <div class="text-center">
-                <a href="{{route('user.category-boxed')}}" class="btn btn-viewMore">
-                    <span>Tới cửa hàng</span>
-                    <i class="icon-long-arrow-right"></i>
-                </a>
-            </div>
-        </div><!-- End .container QUAN-->
+   
 
         <div class="container newsletter">
             <div class="background" style="background-image: url(../assets/images/banners/banner-email.jpg);">
@@ -1194,7 +444,7 @@
             </div><!-- End .col-sm-6 col-lg-4 -->
         </div>
 
-
+      
 
     </main>
 

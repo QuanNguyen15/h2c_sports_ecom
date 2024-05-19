@@ -517,7 +517,7 @@
                                         </div><!-- End .product product-sm -->
                                     </div><!-- End .products -->
 
-                                    <a href="{{ route('user.category-boxed') }}" class="btn btn-outline-dark-3"><span>Tới cửa hàng</span><i class="icon-long-arrow-right"></i></a>
+                                    <a href="" class="btn btn-outline-dark-3"><span>Tới cửa hàng</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .widget widget-products -->
 
                                 <div class="widget widget-banner-sidebar">

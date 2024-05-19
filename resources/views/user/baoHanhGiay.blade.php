@@ -8,7 +8,7 @@
 
 <span>Quý khách khi mua các sản phẩm giày được bán trên website </span><a href="https://h2csport.id.vn/" target="_blank" rel="noopener">h2csport.id.vn</a><span> sẽ được bảo hành miễn phí trong vòng 30 ngày đối với các trường hợp sau: </span><span ">Sản phẩm bị hư hỏng do lỗi kỹ thuật từ nhà sản xuất như: hở keo, tróc đế, bung chỉ.</span>
 
-<br>ss
+<br>
 <strong><strong>2. Điều kiện bảo hành:
 </strong></strong>
 <ul>

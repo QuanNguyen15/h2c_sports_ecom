@@ -22,13 +22,14 @@
 	            				<h4 class="widget-title">Danh mục nổi bật</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-	            					<li><a href="about.html">Áo bóng đá</a></li>
-	            					<li><a href="#">Áo đội tuyển quốc gia</a></li>
-	            					<li><a href="#">ÁO không logo</a></li>
-	            					<li><a href="contact.html">Giày</a></li>
-	            					<li><a href="login.html">Adidas</a></li>
-									<li><a href="login.html">Puma</a></li>
-									<li><a href="login.html">Nike</a></li>
+	            					<li><a href="{{route('user.category-boxed',['title' => 'Áo'])}}">Áo bóng đá</a></li>
+	            					<li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}">Áo đội tuyển quốc gia</a></li>
+	            					<li><a href="{{route('user.category-boxed',['title' => 'Áo thiết kế theo yêu cầu'])}}">ÁO thiết kế theo yêu cầu</a></li>
+									<li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}">Áo ngoại hạng anh</a></li>
+	            					<li><a href="{{route('user.category-boxed',['title' => 'Giày'])}}">Giày</a></li>
+	            					<li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}">Adidas</a></li>
+									<li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}">Puma</a></li>
+									<li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}">Nike</a></li>
 
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->

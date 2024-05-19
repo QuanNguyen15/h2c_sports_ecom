@@ -7,14 +7,14 @@
         <main class="main">
         	<div class="page-header text-center" style="background-image: url('../assets/images/Banners/banner-email.jpg')">
         		<div class="container">
-        			<h1 class="page-title">Cửa hàng<span></span></h1>
+        			<h1 class="page-title">{{$title}}<span></span></h1>
         		</div><!-- End .container -->
         	</div><!-- End .page-header -->
             <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                        <li class="breadcrumb-item"><a href="#">Cửa hàng</a></li>
+                        <li class="breadcrumb-item"><a href="#">{{$title}}</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">No Sidebar</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Boxed</li> -->
                     </ol>
