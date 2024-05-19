@@ -82,7 +82,7 @@
                                         </div><!-- End .product-cat -->
                                         <h2 class="product-title"><a href="{{route('user.product-sidebar', ['id' => $product->ID])}}" style = "font-size: 25px;">{{$product -> name}}</a></h2><!-- End .product-title -->
                                         <div class="product-price">
-                                            {{$product -> price}} đồng
+                                            {{number_format($product -> price)}} đ
                                         </div><!-- End .product-price -->
                                         <div class="ratings-container">
                                             <div class="ratings">

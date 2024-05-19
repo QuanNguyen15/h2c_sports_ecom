@@ -12,7 +12,6 @@ class Cart
     public function __construct()
     {
         $this->items = session('cart') ? session('cart') : [];
-
     }
 
     // lấy danh sách sản phẩm trong giỏ hàng
@@ -33,7 +32,9 @@ class Cart
             'image' => $product->image,
             'quantity' => $quantity,
             'color' => $color->color,
-            'size' => $size->size
+            'size' => $size->size,
+            'color_id' => $color->ID,
+            'size_id' => $size->ID
         ];
 
         // dd($item);
@@ -79,7 +80,6 @@ class Cart
         return $totalQuantity;
 
     }
-
 
 
 }

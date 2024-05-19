@@ -97,13 +97,13 @@
 
                                                     </style>
                                                     <td class="size-col">{{$value['size']}}</td>
-                                                    <td class="price-col">{{ number_format($value['price'], 2)}}VND</td>
+                                                    <td class="price-col">{{ number_format($value['price'], 2)}} đ</td>
                                                     <td class="quantity-col">
                                                         <div class="cart-product-quantity">
                                                             <input type="number" class="form-control" name="quantity[{{ $value['productID'] }}]" value="{{$value['quantity']}}" min="1" step="1" data-decimals="0" required>
                                                         </div><!-- End .cart-product-quantity -->
                                                     </td>
-                                                    <td class="total-col">{{number_format($value['price'] * $value['quantity'], 2)}}VND</td>
+                                                    <td class="total-col">{{number_format($value['price'] * $value['quantity'], 2)}} đ</td>
                                                     <td class="remove-col">
                                                         {{-- <form method="post" action="{{ route('cart.remove', $product->id) }}">
                                                             @csrf
@@ -144,7 +144,7 @@
 	                					<tbody>
 	                						<tr class="summary-subtotal">
 	                							<td>Tạm tính:</td>
-	                							<td>{{number_format($cart->getTotalProductPrice())}}</td>
+	                							<td>{{number_format($cart->getTotalProductPrice())}} đ</td>
 	                						</tr><!-- End .summary-subtotal -->
 	                						<tr class="summary-shipping">
 	                							<td>Phí giao hàng:</td>
@@ -205,12 +205,12 @@
 
 	                						<tr class="summary-total">
 	                							<td>Tổng:</td>
-	                							<td>{{$shippingFee + $totalProductPrice}}</td>
+	                							<td>{{number_format($shippingFee + $totalProductPrice)}} đ</td>
 	                						</tr><!-- End .summary-total -->
 	                					</tbody>
 	                				</table><!-- End .table table-summary -->
 
-	                				<a href="{{route('user.checkout')}}" class="btn btn-outline-primary-2 btn-order btn-block">TỚI TRANG THANH TOÁN</a>
+	                				<a href="{{route('checkout.index')}}" class="btn btn-outline-primary-2 btn-order btn-block">TỚI TRANG THANH TOÁN</a>
 	                			</div><!-- End .summary -->
 
 		            			<a href="category-boxed.blade.php" class="btn btn-outline-dark-2 btn-block mb-3"><span>Tiếp tục mua sắm</span><i class="icon-refresh"></i></a>
