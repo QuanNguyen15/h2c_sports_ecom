@@ -30,7 +30,7 @@ class LoginAdmin extends Controller
             $request->session()->put('loginID', $user->id);
             $request->session()->put('user', $user);
 
-//            $user = $request;
+            $user = $request;
             // dd($user);
 //            return redirect()->route('admin.dashboard');
             return view('admin.layout.index', compact('user'));
