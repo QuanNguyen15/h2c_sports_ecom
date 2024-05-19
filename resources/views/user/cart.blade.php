@@ -26,62 +26,100 @@
 									<thead>
 										<tr>
 											<th>Sản phẩm</th>
+                                            <th>Màu</th>
+                                            <th>Size</th>
 											<th>Giá</th>
 											<th>Số lượng</th>
 											<th>Tổng</th>
 											<th></th>
 										</tr>
 									</thead>
+                                    <table class="table table-wishlist">
+                                        <tbody>
+                                            @foreach ($cart->list() as $key=>$value)
+                                                <tr>
+                                                    <td class="product-col">
+                                                        <div class="product">
+                                                            <figure class="product-media">
+                                                                <a href="#">
+                                                                    <img src="{{ asset('../assets/images/products')}}/{{$value['category']}}/{{$value['image']}}" alt="Product image">
+                                                                </a>
+                                                            </figure>
+                                                            <h3 class="product-title">
+                                                                <a href="{{route('user.product-sidebar', ['id' => $value['productID']])}}">{{ $value['name'] }}</a>
+                                                            </h3><!-- End .product-title -->
+                                                        </div><!-- End .product -->
+                                                    </td>
+                                                    <td class="color-col">{{$value['color']}}</td>
+                                                    <style>
+                                                        .table .price-col {
+                                                            font-size: calc(4/5 * 1.6rem); /* Giảm cỡ chữ xuống còn 2/3 so với cỡ chữ ban đầu */
+                                                        }
+                                                        .table .total-col {
+                                                            font-size: calc(4/5 * 1.6rem);
+                                                        }
+                                                        .table .color-col {
+                                                            font-size: calc(4/5 * 1.6rem);
+                                                        }
+                                                        .table .size-col {
+                                                            font-size: calc(4/5 * 1.6rem);
+                                                        }
+                                                        .table th:nth-child(1),
+                                                        .table td.product-col {
+                                                            text-align: center;
+                                                        }
 
-									<tbody>
-										<tr>
-											<td class="product-col">
-												<div class="product">
-													<figure class="product-media">
-														<a href="#">
-															<img src="assets/images/products/table/product-1.jpg" alt="Product image">
-														</a>
-													</figure>
+                                                        .table th:nth-child(2),
+                                                        .table td.color-col {
+                                                            text-align: center;
+                                                        }
 
-													<h3 class="product-title">
-														<a href="#">Beige knitted elastic runner shoes</a>
-													</h3><!-- End .product-title -->
-												</div><!-- End .product -->
-											</td>
-											<td class="price-col">$84.00</td>
-											<td class="quantity-col">
-                                                <div class="cart-product-quantity">
-                                                    <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                                                </div><!-- End .cart-product-quantity -->
-                                            </td>
-											<td class="total-col">$84.00</td>
-											<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
-										</tr>
-										<tr>
-											<td class="product-col">
-												<div class="product">
-													<figure class="product-media">
-														<a href="#">
-															<img src="assets/images/products/table/product-2.jpg" alt="Product image">
-														</a>
-													</figure>
+                                                        .table th:nth-child(3),
+                                                        .table td.size-col {
+                                                            text-align: center;
+                                                        }
 
-													<h3 class="product-title">
-														<a href="#">Blue utility pinafore denim dress</a>
-													</h3><!-- End .product-title -->
-												</div><!-- End .product -->
-											</td>
-											<td class="price-col">$76.00</td>
-											<td class="quantity-col">
-                                                <div class="cart-product-quantity">
-                                                    <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                                                </div><!-- End .cart-product-quantity -->
-                                            </td>
-											<td class="total-col">$76.00</td>
-											<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
-										</tr>
-									</tbody>
-								</table><!-- End .table table-wishlist -->
+                                                        .table th:nth-child(4),
+                                                        .table td.price-col {
+                                                            text-align: center;
+                                                        }
+
+                                                        .table th:nth-child(5),
+                                                        .table td.quantity-col {
+                                                            text-align: center;
+                                                        }
+
+                                                        .table th:nth-child(6),
+                                                        .table td.total-col {
+                                                            text-align: center;
+                                                        }
+
+
+                                                    </style>
+                                                    <td class="size-col">{{$value['size']}}</td>
+                                                    <td class="price-col">{{ number_format($value['price'], 2)}}VND</td>
+                                                    <td class="quantity-col">
+                                                        <div class="cart-product-quantity">
+                                                            <input type="number" class="form-control" name="quantity[{{ $value['productID'] }}]" value="{{$value['quantity']}}" min="1" step="1" data-decimals="0" required>
+                                                        </div><!-- End .cart-product-quantity -->
+                                                    </td>
+                                                    <td class="total-col">{{number_format($value['price'] * $value['quantity'], 2)}}VND</td>
+                                                    <td class="remove-col">
+                                                        {{-- <form method="post" action="{{ route('cart.remove', $product->id) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn-remove"><i class="icon-close"></i></button>
+                                                        </form>
+                                                    </td> --}}
+                                                    <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
+
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table><!-- End .table table-wishlist -->
+
+                                    <!--sản phẩm new-->
+
 
 	                			<div class="cart-bottom">
 			            			<div class="cart-discount">
@@ -106,14 +144,14 @@
 	                					<tbody>
 	                						<tr class="summary-subtotal">
 	                							<td>Tạm tính:</td>
-	                							<td>$160.00</td>
+	                							<td>{{number_format($cart->getTotalProductPrice())}}</td>
 	                						</tr><!-- End .summary-subtotal -->
 	                						<tr class="summary-shipping">
 	                							<td>Phí giao hàng:</td>
 	                							<td>&nbsp;</td>
 	                						</tr>
 
-	                						<tr class="summary-shipping-row">
+	                						{{-- <tr class="summary-shipping-row">
 	                							<td>
 													<div class="custom-control custom-radio">
 														<input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
@@ -131,7 +169,7 @@
 													</div><!-- End .custom-control -->
 	                							</td>
 	                							<td>30.000 đồng</td>
-	                						</tr><!-- End .summary-shipping-row -->
+	                						</tr><!-- End .summary-shipping-row --> --}}
 
 	                						<!-- <tr class="summary-shipping-row">
 	                							<td>
@@ -147,9 +185,27 @@
 	                							<td>Estimate for Your Country<br> <a href="dashboard.html">Change address</a></td>
 	                							<td>&nbsp;</td>
 	                						</tr> -->
+
+                                            <tr class="summary-shipping-row">
+                                                <td>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
+                                                        <label class="custom-control-label" for="free-shipping">
+                                                            @if ($shippingFee == 0)
+                                                                Miễn phí vận chuyển
+                                                            @else
+                                                                Phí ship sẽ đồng giá
+                                                            @endif
+                                                        </label>
+                                                    </div><!-- End .custom-control -->
+                                                </td>
+                                                <td>{{ number_format($shippingFee) }} đồng</td>
+                                            </tr><!-- End .summary-shipping-row -->
+
+
 	                						<tr class="summary-total">
 	                							<td>Tổng:</td>
-	                							<td>$160.00</td>
+	                							<td>{{$shippingFee + $totalProductPrice}}</td>
 	                						</tr><!-- End .summary-total -->
 	                					</tbody>
 	                				</table><!-- End .table table-summary -->

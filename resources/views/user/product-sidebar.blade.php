@@ -41,21 +41,6 @@
                                             </figure><!-- End .product-main-image -->
 
                                             <div id="product-zoom-gallery" class="product-image-gallery">
-                                                {{-- <a class="product-gallery-item active" href="#" data-image="../assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/1-big.jpg">
-                                                    <img src="../assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
-                                                </a>
-
-                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/2.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/2-big.jpg">
-                                                    <img src="../assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
-                                                </a>
-
-                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/3.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/3-big.jpg">
-                                                    <img src="../assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
-                                                </a>
-
-                                                <a class="product-gallery-item" href="#" data-image="../assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="../assets/images/products/single/sidebar-gallery/4-big.jpg">
-                                                    <img src="../assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
-                                                </a> --}}
                                                 @foreach($product->productImages as $images)
                                                     {{-- <a class="product-gallery-item {{ $loop->first ? 'active' : '' }}" href="#" data-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}" data-zoom-image="../assets/images/products/{{$product->category->category}}/{{$images -> image}}"> --}}
 
@@ -85,48 +70,59 @@
                                             <div class="product-content">
                                                 <p>Sed egestas, ante et vulputate volutpat, eros semper est, vitae luctus metus libero eu augue.</p>
                                             </div><!-- End .product-content -->
+                                            <form action="{{route('cart.add')}}" method="post">
+                                                @csrf
 
-                                            <div class="details-filter-row details-row-size">
-                                                <label>Color:</label>
+                                                <div class="details-filter-row details-row-size">
+                                                    <label for="color">Color:</label>
 
-                                                <div class="product-nav product-nav-dots">
-                                                    <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                                    <a href="#" style="background: #efe7db;"><span class="sr-only">Color name</span></a>
-                                                </div><!-- End .product-nav -->
-                                            </div><!-- End .details-filter-row -->
+                                                    <div class="select-custom">
+                                                        <select name="color" id="color" class="form-control">
+                                                            {{-- <option value="">Chọn màu</option> --}}
+                                                            @foreach ($colors as $color)
+                                                                <option name="color" value="{{ $color->ID }}" style="background: {{ $color->color }};">{{ $color->color }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div><!-- End .select-custom -->
+                                                </div><!-- End .details-filter-row -->
+                                                <br>
 
-                                            <div class="details-filter-row details-row-size">
-                                                <label for="size">Size:</label>
-                                                <div class="select-custom">
-                                                    <select name="size" id="size" class="form-control">
-                                                        <option value="#" selected="selected">Chọn size</option>
-                                                        <option value="s">Small</option>
-                                                        <option value="m">Medium</option>
-                                                        <option value="l">Large</option>
-                                                        <option value="xl">Extra Large</option>
-                                                    </select>
-                                                </div><!-- End .select-custom -->
+                                                <div class="details-filter-row details-row-size">
+                                                    <label for="size">Size:</label>
+                                                    <div class="select-custom">
+                                                        <select name="size" id="size" class="form-control">
+                                                            {{-- <option value="">Chọn size</option> --}}
+                                                            @foreach ($sizes as $size)
+                                                                <option name = "size" value="{{ $size->ID }}" style="background: {{ $size->size }};">{{ $size->size }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div><!-- End .select-custom -->
 
-                                                <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
-                                            </div><!-- End .details-filter-row -->
+                                                    <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
+                                                </div><!-- End .details-filter-row -->
 
-                                            <div class="product-details-action">
-                                                <div class="details-action-col">
-                                                    <label for="qty">Qty:</label>
-                                                    <div class="product-details-quantity">
-                                                        <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                                                    </div><!-- End .product-details-quantity -->
+                                                <div class="product-details-action">
+                                                    <div class="details-action-col">
+                                                        {{-- <form method="post" action="{{route('cart.add')}}">
+                                                            @csrf --}}
+                                                            <input type="hidden" name="id" value="{{$product->ID}}">
+                                                            <label for="qty">Số lượng:</label>
+                                                            <div class="product-details-quantity">
+                                                                {{-- <input type="number" id="qty" class="form-control" value="1" min="1" max="100" step="1" data-decimals="0" required> --}}
+                                                                <input type="number" name="quantity" class="form-control" value="1" min="1" step="1" data-decimals="0" required>
+                                                            </div><!-- End .product-details-quantity -->
 
-                                                    <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></a>
-                                                    {{-- <a href="{{route('user.cart', ['id' => $product->ID])}}" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></a> --}}
-                                                </div><!-- End .details-action-col -->
+                                                            {{-- <a href="product-sidebar.blade.php" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></a> --}}
+                                                            <button type="submit" class="btn-product btn-cart"><span>Thêm vào giỏ hàng</span></button>
 
-                                                <div class="details-action-wrapper">
-                                                    <!-- <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a> -->
-                                                    <!-- <a href="#" class="btn-product btn-compare" title="Compare"><span>Add to Compare</span></a> -->
-                                                </div><!-- End .details-action-wrapper -->
-                                            </div><!-- End .product-details-action -->
+                                                    </div><!-- End .details-action-col -->
 
+                                                    <div class="details-action-wrapper">
+                                                        <!-- <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a> -->
+                                                        <!-- <a href="#" class="btn-product btn-compare" title="Compare"><span>Add to Compare</span></a> -->
+                                                    </div><!-- End .details-action-wrapper -->
+                                                </div><!-- End .product-details-action -->
+                                            </form>
                                             <div class="product-details-footer details-footer-col">
                                                 <div class="product-cat">
                                                     <span>Danh mục:</span>
