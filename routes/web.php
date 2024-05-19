@@ -26,7 +26,11 @@ Route::post('/add-cart', [CartController::class, 'add'])->name('cart.add');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
-Route::get('/san-pham', [ProductController::class, 'index'])->name('user.category-boxed');
+
+
+  
+    Route::get('/{title}', [ProductController::class, 'index'])->name('user.category-boxed');
+
 
 Route::get('/product/{id}', [ProductController::class, 'productDetail'])->name('user.product-sidebar');
 

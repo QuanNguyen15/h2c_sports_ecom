@@ -31,13 +31,13 @@
                             <h4 class="widget-title">Danh mục nổi bật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="about.blade.php">Áo bóng đá</a></li>
-                                <li><a href="#">Áo câu lạc bộ</a></li>
-                                <li><a href="faq.blade.php">Áo đội tuyển quốc gia</a></li>
-                                <li><a href="contact.blade.php">Giày bóng đá</a></li>
-                                <li><a href="login.blade.php">Mizuno</a></li>
-                                <li><a href="login.blade.php">Adidas</a></li>
-                                <li><a href="login.blade.php">Puma</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo'])}}">Áo bóng đá</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}">Áo ngoại hạng anh</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}">Áo đội tuyển quốc gia</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Giày'])}}">Giày bóng đá</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}">Nike</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}">Adidas</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}">Puma</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
                     </div><!-- End .col-sm-4 col-lg-3 -->
@@ -47,7 +47,7 @@
                             <h4 class="widget-title">Chính sách và bảo mật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="{{route('user.kiemHang')}}">Chính sách kiểm hàng</a></li>
+                                <li><a href="">Chính sách kiểm hàng</a></li>
                                 <li><a href="{{route('user.baoHanhQAPK')}}">Chính sách bảo hàng quần áo và phụ kiện</a></li>
                                 <li><a href="{{route('user.baoHanhGiay')}}">Chính sách bảo hàng giày</a></li>
                                 <li><a href="{{route('user.baoHanhInAnQABD')}}">Chính sách bảo hành in ấn quần áo bóng đá</a></li>
