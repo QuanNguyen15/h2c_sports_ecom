@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\client;
 
-use App\Models\Product;
+use App\Models\product;
 use App\Models\ProductColor;
 use App\Models\ProductSize;
 use App\Models\ProductInventory;
@@ -17,15 +17,15 @@ class ProductController extends Controller
     public function index()
     {
         // $products = Product::all(); // Lấy tất cả sản phẩm từ model Product
-        $product = new Product();
-        $products = Product::paginate(12);
+        $product = new product();
+        $products = product::paginate(12);
 
         return view('user.category-boxed', compact('products')); // Truyền dữ liệu sản phẩm đến view viewproduct
     }
 
     public function productDetail($id)
     {
-        $para = new Product();
+        $para = new product();
         $product = $para->getById($id);
 
         $para1 = new ProductInventory();
@@ -43,10 +43,10 @@ class ProductController extends Controller
 
     }
     public function productBestSale(){
-        $productbestsale = Product::where('featured', '1')->get();
-    
-       
+        $productbestsale = product::where('featured', '1')->get();
+
+
         return view('user.trangchu', compact('productbestsale'));
     }
- 
+
 }

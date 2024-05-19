@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Routing\Controller;
 
 
-use App\Models\Product;
+use App\Models\product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;

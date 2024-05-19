@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Routing\Controller;
 
 
-use App\Models\Product;
+use App\Models\product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -23,25 +23,25 @@ class ProductController extends Controller
         $cate = DB::table('categories')->get();
         $query = $request->input('query');
         $categoryID = $request->input('categoryID');
-    
+
         // Bắt đầu truy vấn từ bảng 'product'
         $dataQuery = DB::table('product');
-    
+
         // Thêm điều kiện tìm kiếm nếu có từ khóa query
         if ($query) {
             $dataQuery->where('name', 'LIKE', '%' . $query . '%');
         }
-    
+
         // Thêm điều kiện lọc theo categoryID nếu có categoryID được chọn từ select box
         if ($categoryID) {
             $dataQuery->where('categoryID', $categoryID);
         }
-    
+
         // Thực hiện truy vấn và lấy dữ liệu với phân trang
         $data = $dataQuery->orderBy('ID', 'desc')->paginate(5);
-    
+
         return view(self::PATH_VIEW . 'index', compact('data', 'title', 'query', 'cate')) ;
-     
+
 
     }
 
@@ -61,7 +61,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $request->validate(
             [
                 'name' => 'required',
@@ -89,7 +89,7 @@ class ProductController extends Controller
         );
         // dd($request->all());
         $data = $request->except('image');
-      
+
         if($request->hasFile('image')){
             $data['image'] = Storage::put(self::PATH_UPLOAD, $request->file('image'));
         }
@@ -106,7 +106,7 @@ class ProductController extends Controller
             'branchID' => $data["branchID"],
         ]
        );
-      
+
 
 
         return back()->with('msg','Thêm thành công');
@@ -118,20 +118,20 @@ class ProductController extends Controller
     public function show(String $id, Request $request)
     {
         $title = 'Quản lí sản phẩm';
-      
+
         // dd($id);
         $product = DB::table('product')->where('ID',$id)->get()[0];
         $category = DB::table('categories')->where('ID',$product->categoryID)->get()[0];
         $brand = DB::table('brands')->where('ID',$product->branchID)->get()[0];
-      
-       
+
+
         return view(self::PATH_VIEW.__FUNCTION__, compact('title', 'category','product','brand'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product, String $id)
+    public function edit(product $product, String $id)
     {
         $title = 'Quản lí sản phẩm';
         $category = DB::table('categories')->get();
@@ -154,7 +154,7 @@ class ProductController extends Controller
                 'featured' => 'required',
                 'categoryID' => 'required',
                 'branchID' => 'required',
-               
+
             ],
             [
                 'name.required' => 'Tên không được để trống',
@@ -164,17 +164,17 @@ class ProductController extends Controller
                 'featured.required' => 'Sản phẩm nổi bật không được để trống',
                 'categoryID.required' => 'Danh mục không được để trống',
                 'branchID.required' => 'Chi nhánh không được để trống',
-               
+
             ]
         );
 
-        
-        $data = $request->except('image');
-        
 
-       
+        $data = $request->except('image');
+
+
+
         $product = DB::table('product')->where('ID',$id)->get()[0];
-       
+
         $oldPathImg = $product->image;
         $data = [
             'name' => $request->name,
@@ -189,7 +189,7 @@ class ProductController extends Controller
         if($request->hasFile('image')){
             $data['image'] = Storage::put(self::PATH_UPLOAD,$request->file('image'));
         }
-        
+
         $product = DB::table('product')->where('ID', $id)->update($data);
 
         if ($request->hasFile('image')) {
@@ -205,14 +205,14 @@ class ProductController extends Controller
     public function destroy(String $id, Request $request)
     {
         $product_img = DB::table('product')->find($id);
-       
+
         $product = DB::table('product')->where('ID',$id)->delete();
-        
+
         if (Storage::exists($product_img->image)|$request->hasFile('image')) {
 
             Storage::delete($product_img->image);
         }
-        
+
         return back()->with('msg', 'Xóa thành công');
     }
 
@@ -222,7 +222,7 @@ class ProductController extends Controller
 
     foreach ($selectedProducts as $productId) {
         // Xóa sản phẩm
-       
+
         $product = DB::table('product')->where('id', $productId)->delete();
     }
 

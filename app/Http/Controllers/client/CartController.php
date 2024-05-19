@@ -38,7 +38,7 @@ class CartController extends Controller
         // dd($request->all());
         // $para = new Product();
         // $product = $para->getById($request->id);
-        $product = Product::with('category')->findOrFail($request->id);
+        $product = product::with('category')->findOrFail($request->id);
 
         $para2 = new ProductColor();
         $color = $para2->getById($request->color);

@@ -24,6 +24,6 @@ class ProductImage extends Model
     // Định nghĩa mối quan hệ với model Product
     public function productImage()
     {
-        return $this->belongsTo(Product::class, 'productID');
+        return $this->belongsTo(product::class, 'productID');
     }
 }

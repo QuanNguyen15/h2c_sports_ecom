@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Categories;
 
-class Product extends Model
+class product extends Model
 {
     use HasFactory;
     protected $table = 'product';
@@ -30,17 +30,17 @@ class Product extends Model
 
     public function getById($id)
     {
-        return Product::findOrFail($id); // Sử dụng Eloquent để lấy sản phẩm theo ID
+        return product::findOrFail($id); // Sử dụng Eloquent để lấy sản phẩm theo ID
     }
 
     public function getAll()
     {
-        return Product::all();
+        return product::all();
     }
 
     public function getByCategory($cateID)
     {
-        return Product::where('categoryID', $cateID)->get();
+        return product::where('categoryID', $cateID)->get();
     }
 
     public function category(){

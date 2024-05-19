@@ -28,7 +28,7 @@ class ProductInventory extends Model
 
     public function product()
     {
-        return $this->belongsTo(Product::class, 'productID', 'ID');
+        return $this->belongsTo(product::class, 'productID', 'ID');
     }
 
     public function sizes()
