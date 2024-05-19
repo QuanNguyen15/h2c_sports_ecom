@@ -63,7 +63,7 @@
                             <i class="icon-bars"></i>
                         </button>
 
-                        <a href="index-21.blade.php" class="logo">
+                        <a href="" class="logo">
                             <img src="{{ asset('assets/images/logo-1.jpg') }}" alt="Molla Logo" width="100" height="25">
                         </a>
 
@@ -99,7 +99,7 @@
                                                         </div><!-- End .col-md-6 -->
 
                                                         <div class="col-md-6">
-                                                            <div class="menu-title" data-title = "Phụ kiện">Phụ kiện</div><!-- End .menu-title -->
+                                                            <a class="menu-title" href = "{{route('user.category-boxed',['title' => 'Phụ kiện'])}}">Phụ kiện</a><!-- End .menu-title -->
                                                         </div><!-- End .col-md-6 -->
                                                     </div><!-- End .row -->
                                                 </div><!-- End .menu-col -->
@@ -233,13 +233,14 @@
                             <h4 class="widget-title">Danh mục nổi bật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="about.blade.php">Áo bóng đá</a></li>
-                                <li><a href="#">Áo câu lạc bộ</a></li>
-                                <li><a href="faq.blade.php">Áo đội tuyển quốc gia</a></li>
-                                <li><a href="contact.blade.php">Giày bóng đá</a></li>
-                                <li><a href="../admins/login.blade.php">Mizuno</a></li>
-                                <li><a href="../admins/login.blade.php">Adidas</a></li>
-                                <li><a href="../admins/login.blade.php">Puma</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo'])}}">Áo bóng đá</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}">Áo ngoại hạng anh</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}">Áo đội tuyển quốc gia</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Áo thiết kế theo yêu cầu'])}}">Áo thiết kế theo yêu cầu</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Giày'])}}">Giày bóng đá</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}">Nike</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}">Adidas</a></li>
+                                <li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}">Puma</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
                     </div><!-- Ensd .col-sm-4 col-lg-3 -->

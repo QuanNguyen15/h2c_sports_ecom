@@ -19,7 +19,7 @@ use App\Http\Controllers\admin\LogoutAdmin;
 
 
 
-    // Route::get('/', [ProductController::class, 'index'])->name('user.category-boxed');
+  
     Route::get('/{title}', [ProductController::class, 'index'])->name('user.category-boxed');
 
 

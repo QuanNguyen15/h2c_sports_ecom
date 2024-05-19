@@ -64,7 +64,7 @@
 
         <div class="container banner-container">
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="">
+                <a href="{{route('user.category-boxed',['title' => 'Áo'])}}">
                     <img src="../assets/images/banners/banner-aodm.jpg">
                 </a>
                 <div class="banner-content">
@@ -84,7 +84,7 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="">
+                <a href="{{route('user.category-boxed',['title' => 'Giày'])}}">
                     <img src="../assets/images/banners/banner-giaydm.jpg">
                 </a>
                 <div class="banner-content">
@@ -104,7 +104,7 @@
                 </div><!-- End .row -->
             </div>
             <div class="col-lg-4 col-md-8 col-sm-10 col-12 col-pd1">
-                <a href="category-fullwidth.php">
+                <a href="{{route('user.category-boxed',['title' => 'Phụ kiện'])}}">
                     <img src="../assets/images/banners/banner-phukiendm.jpg">
                 </a>
                 <div class="banner-content">
