@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\admin\CategoriesController as AdminCategoriesController;
+use App\Http\Controllers\admin\StatisticalsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\admin\AccountController as AdminAccountController;
+use App\Http\Controllers\admin\OderController;
+use App\Http\Controllers\admin\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,33 +21,28 @@ use Illuminate\Support\Facades\Route;
 */
 Route::prefix('/admin')->group(function (){
 
-    Route::get('/trang-chu', function () {
-        return view('admins.thongke');
-    })->name('admins.thongke');
-
-    Route::get('/san-pham', function () {
-        return view('admins.product');
-    })->name('admins.product');
-
-    Route::get('/thong-ke', function () {
-        return view('admins.thongke');
-    })->name('admins.thongke');
+ //Quản lí thống kê
+    Route::get('/', [StatisticalsController::class, 'index'])->name('admins.thongke');
 
 
+   //QUẢN LÍ DANH MỤC
     Route::resource('/danh-muc',AdminCategoriesController::class);
-    Route::resource('/san-pham',AdminProductController::class);
 
+    //QUẢN LÍ SẢN PHẨM
+    Route::resource('/san-pham',AdminProductController::class);
     Route::post('/products/delete-multiple',[AdminProductController::class, 'deleteMultiple'])->name('products.deleteMultiple');
 
+    //QUẢN LÍ TÀI KHOẢN
     Route::get('/tai-khoan',[AdminAccountController::class, 'index'])->name('admins.account');
     Route::delete('/tai-khoan/{id}',[AdminAccountController::class, 'destroy'])->name('admins.destroy');
 
-        
+    // QUẢN LÍ ĐƠN HÀNG
+    Route::get('/don-hang',[OrderController::class, 'index'])->name('admins.order');
+    Route::get('/don-hang/{id}/show', [OrderController::class, 'show'])->name('admins.order.show');
+    Route::put('/don-hang/{id}/update', [OrderController::class, 'update'])->name('orders.update');
+    Route::post('search', [OrderController::class, 'index'])->name('user.search');
 
 
-    Route::get('/don-hang', function () {
-        return view('admins.order');
-    })->name('admins.order');
 
     Route::get('/khuyen-mai', function () {
         return view('admins.discount');
