@@ -276,7 +276,7 @@
 
             <div class="footer-bottom">
                 <div class="container">
-                    <p class="footer-copyright">Copyright © 2019 H2C Store. All Rights Reserved.</p><!-- End .footer-copyright -->
+                    <p class="footer-copyright">Copyright © 2024 H2C SPORTS. All Rights Reserved.</p><!-- End .footer-copyright -->
                     <ul class="footer-menu">
                         <li><a href="#">Terms Of Use</a></li>
                         <li><a href="#">Privacy Policy</a></li>

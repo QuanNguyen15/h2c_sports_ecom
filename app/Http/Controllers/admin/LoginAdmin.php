@@ -4,21 +4,21 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use Validator;
-use Session;
+use Ramsey\Uuid\Rfc4122\Validator;
+use Illuminate\Support\Facades\Session;
 
 class LoginAdmin extends Controller
 {
-    public function login()
+    public function login(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('admins.login');
     }
 
-    public function postLoginAdmin(Request $request)
+    public function postLoginAdmin(Request $request): RedirectResponse
     {
         if(Auth::attempt(['account' => $request->account, 'password' => $request->password, 'roleID' => 1]))
         {
@@ -32,6 +32,7 @@ class LoginAdmin extends Controller
             $user = $request;
             // dd($user);
             return redirect()->route('admin.dashboard');
+
         }
 
         return redirect()->back()->with('error', 'Sai thông tin');

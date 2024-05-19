@@ -183,7 +183,7 @@
                            @foreach($productbestsale as $productbestsale)
 
                 <div class="product demo21">
-            
+
                     <figure class="product-media">
                         <span class="product-label label-sale">Sale</span>
                         <a href="{{route('user.product-sidebar',$productbestsale->ID)}}">
@@ -194,12 +194,12 @@
 
                     <div class="product-body text-center">
                         <div class="product-cat">
-                    
+
                         </div><!-- End .product-cat -->
                         <!-- {{route('user.product-sidebar', ['id' =>1 ])}} -->
                         <h3 class="product-title"><a href="">{{$productbestsale->name}}</a></h3><!-- End .product-title -->
                         <div class="product-price">
-                          
+
                             <span class="old-price">{{$productbestsale->price}} đồng</span>
                         </div><!-- End .product-price -->
                         <div class="ratings-container">
@@ -222,17 +222,17 @@
 
                     </div><!-- End .product-body -->
                 </div><!-- End .product -->
-              
-               
+
+
                      @endforeach
-               
-                     @else 
+
+                     @else
                       <h1>rỗng</h1>
                      @endif
 
-              
 
-               
+
+
 
             </div><!-- End .owl-carousel -->
         </div>
@@ -367,7 +367,7 @@
                 </div>
             </div>
         </div>
-      
+
 
         <div class="container new-arrivals">
 
@@ -1119,7 +1119,7 @@
                     <i class="icon-long-arrow-right"></i>
                 </a>
             </div>
-        </div><!-- End .container -->
+        </div><!-- End .container QUAN-->
 
         <div class="container newsletter">
             <div class="background" style="background-image: url(../assets/images/banners/banner-email.jpg);">
@@ -1194,7 +1194,7 @@
             </div><!-- End .col-sm-6 col-lg-4 -->
         </div>
 
-      
+
 
     </main>
 

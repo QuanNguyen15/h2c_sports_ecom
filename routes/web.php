@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\CategoriesController as AdminCategoriesController;
-use App\Http\Controllers\CategoriesController;
+//use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\admin\ProductController as AdminProductController;
 use App\Http\Controllers\admin\AccountController as AdminAccountController;
 use Illuminate\Support\Facades\Route;
@@ -64,7 +64,7 @@ Route::middleware('admin')->prefix('/admin')->group(function() {
     Route::get('/tai-khoan',[AdminAccountController::class, 'index'])->name('admins.account');
     Route::delete('/tai-khoan/{id}',[AdminAccountController::class, 'destroy'])->name('admins.destroy');
 
-        
+
 
 
     Route::get('/don-hang', function () {
