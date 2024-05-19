@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <?php include('layout/css_temp.blade.php')?>
     <link rel="stylesheet" href="{{ asset('assets/css/skins/skin-demo-21.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/demos/demo-21.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
  <!-- ffwefjwe frfe -->
 
@@ -71,7 +73,7 @@
                                     <a href="{{route('user.trangchu')}}" class="sf-with-ul">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('user.category-boxed')}}" class="sf-with-ul df-ul">Sản phẩm</a>
+                                    <a href="{{route('user.category-boxed',['title' => 'san-pham'])}}" class="sf-with-ul df-ul " data-title = "Sản phẩm">Sản phẩm</a>
 
                                     <div class="megamenu megamenu-md">
                                         <div class="row no-gutters">
@@ -81,23 +83,23 @@
                                                         <div class="col-md-6">
                                                             <div class="menu-title">Áo bóng đá</div><!-- End .menu-title -->
                                                             <ul>
-                                                                <li><a href="#">Áo đội tuyển quốc gia</a></li>
-                                                                <li><a href="#">Áo không logo</a></li>
-                                                                <li><a href="#">Áo câu lạc bộ</a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}" data-title = "Áo đội tuyển quốc gia" class = "df-ul">Áo đội tuyển quốc gia</a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo thiết kế theo yêu cầu'])}}" data-title = "Áo thiết kế theo yêu cầu" class = "df-ul">Áo thiết kế theo yêu cầu</a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}" data-title = "Áo ngoại hạng anh" class = "df-ul">Áo ngoại hạng anh</a></li>
                                                                 <!-- <li><a href="#">Shop Grid 4 Columns</a></li> -->
                                                                 <!-- <li><a href="#"><span>Shop Market<span class="tip tip-new">New</span></span></a></li> -->
                                                             </ul>
 
                                                             <div class="menu-title">Giày bóng đá</div><!-- End .menu-title -->
                                                             <ul>
-                                                                <li><a href="#"><span>Puma<span class="tip tip-hot">Hot</span></span></a></li>
-                                                                <li><a href="#">Adidas</a></li>
-                                                                <li><a href="#">Nike</a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}" data-title = "Puma"><span>Puma<span class="tip tip-hot df-ul">Hot</span></span></a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}" data-title = "Adidas" class = "df-ul">Adidas</a></li>
+                                                                <li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}" data-title = "Nike" class = "df-ul">Nike</a></li>
                                                             </ul>
                                                         </div><!-- End .col-md-6 -->
 
                                                         <div class="col-md-6">
-                                                            <div class="menu-title">Phụ kiện</div><!-- End .menu-title -->
+                                                            <div class="menu-title" data-title = "Phụ kiện">Phụ kiện</div><!-- End .menu-title -->
                                                         </div><!-- End .col-md-6 -->
                                                     </div><!-- End .row -->
                                                 </div><!-- End .menu-col -->
@@ -106,6 +108,7 @@
                                         </div><!-- End .row -->
                                     </div><!-- End .megamenu megamenu-md -->
                                 </li>
+                                
                                 <li>
                                     <a href="{{route('user.about')}}" class="sf-with-ul">Giới thiệu</a>
                                 </li>
@@ -119,7 +122,7 @@
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
                     </div><!-- End .header-left -->
-
+       
                     <div class="header-right">
                         <div class="header-search">
                             <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
@@ -137,7 +140,7 @@
                                 <i class="icon-shopping-cart"></i>
                                 <span class="cart-count">2</span>
                             </a>
-
+       
                             <div class="dropdown-menu dropdown-menu-right">
                                 <div class="dropdown-cart-products">
                                     <div class="product">

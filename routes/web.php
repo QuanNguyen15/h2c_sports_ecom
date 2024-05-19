@@ -17,7 +17,11 @@ use App\Http\Controllers\admin\LogoutAdmin;
 
 // client
 
-Route::get('/san-pham', [ProductController::class, 'index'])->name('user.category-boxed');
+
+
+    // Route::get('/', [ProductController::class, 'index'])->name('user.category-boxed');
+    Route::get('/{title}', [ProductController::class, 'index'])->name('user.category-boxed');
+
 
 Route::get('/product/{id}', [ProductController::class, 'productDetail'])->name('user.product-sidebar');
 
