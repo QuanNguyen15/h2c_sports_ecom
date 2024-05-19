@@ -44,7 +44,7 @@
                                 <a href="#">Links</a>
                                 <ul>
                                     <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-                                    <li><a href="about.blade.php">Về chúng tôi</a></li>
+                                    <li><a href="{{route('user.about')}}">Về chúng tôi</a></li>
                                     <li><a href="{{route('user.contact')}}">Liên hệ</a></li>
                                     <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Đăng nhập</a></li>
                                 </ul>
@@ -72,7 +72,7 @@
                                     <a href="{{route('user.trangchu')}}" class="sf-with-ul">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('user.category-boxed',['title' => 'san-pham'])}}" class="sf-with-ul df-ul " data-title = "Sản phẩm">Sản phẩm</a>
+                                    <a href="{{route('cuahang')}}" class="sf-with-ul df-ul " data-title = "Sản phẩm">Sản phẩm</a>
 
                                     <div class="megamenu megamenu-md">
                                         <div class="row no-gutters">
@@ -82,23 +82,23 @@
                                                         <div class="col-md-6">
                                                             <div class="menu-title">Áo bóng đá</div><!-- End .menu-title -->
                                                             <ul>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}" data-title = "Áo đội tuyển quốc gia" class = "df-ul">Áo đội tuyển quốc gia</a></li>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo thiết kế theo yêu cầu'])}}" data-title = "Áo thiết kế theo yêu cầu" class = "df-ul">Áo thiết kế theo yêu cầu</a></li>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}" data-title = "Áo ngoại hạng anh" class = "df-ul">Áo ngoại hạng anh</a></li>
+                                                                <li><a href="{{route('ao_doi_tuyen_quoc_gia')}}" data-title = "Áo đội tuyển quốc gia" class = "df-ul">Áo đội tuyển quốc gia</a></li>
+                                                                <li><a href="{{route('ao_thiet_ke_theo_yeu_cau')}}" data-title = "Áo thiết kế theo yêu cầu" class = "df-ul">Áo thiết kế theo yêu cầu</a></li>
+                                                                <li><a href="{{route('ao_ngoai_hang_anh')}}" data-title = "Áo ngoại hạng anh" class = "df-ul">Áo ngoại hạng anh</a></li>
                                                                 <!-- <li><a href="#">Shop Grid 4 Columns</a></li> -->
                                                                 <!-- <li><a href="#"><span>Shop Market<span class="tip tip-new">New</span></span></a></li> -->
                                                             </ul>
 
                                                             <div class="menu-title">Giày bóng đá</div><!-- End .menu-title -->
                                                             <ul>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}" data-title = "Puma"><span>Puma<span class="tip tip-hot df-ul">Hot</span></span></a></li>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}" data-title = "Adidas" class = "df-ul">Adidas</a></li>
-                                                                <li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}" data-title = "Nike" class = "df-ul">Nike</a></li>
+                                                                <li><a href="{{route('Puma')}}" data-title = "Puma"><span>Puma<span class="tip tip-hot df-ul">Hot</span></span></a></li>
+                                                                <li><a href="{{route('Adidas')}}" data-title = "Adidas" class = "df-ul">Adidas</a></li>
+                                                                <li><a href="{{route('Nike')}}" data-title = "Nike" class = "df-ul">Nike</a></li>
                                                             </ul>
                                                         </div><!-- End .col-md-6 -->
 
                                                         <div class="col-md-6">
-                                                            <a class="menu-title" href = "{{route('user.category-boxed',['title' => 'Phụ kiện'])}}">Phụ kiện</a><!-- End .menu-title -->
+                                                            <a class="menu-title" href = "{{route('PhuKien')}}">Phụ kiện</a><!-- End .menu-title -->
                                                         </div><!-- End .col-md-6 -->
                                                     </div><!-- End .row -->
                                                 </div><!-- End .menu-col -->
@@ -232,14 +232,14 @@
                             <h4 class="widget-title">Danh mục nổi bật</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                <li><a href="{{route('user.category-boxed',['title' => 'Áo'])}}">Áo bóng đá</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Áo ngoại hạng anh'])}}">Áo ngoại hạng anh</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Áo đội tuyển quốc gia'])}}">Áo đội tuyển quốc gia</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Áo thiết kế theo yêu cầu'])}}">Áo thiết kế theo yêu cầu</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Giày'])}}">Giày bóng đá</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Nike'])}}">Nike</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Adidas'])}}">Adidas</a></li>
-                                <li><a href="{{route('user.category-boxed',['title' => 'Puma'])}}">Puma</a></li>
+                                <li><a href="{{route('Ao')}}">Áo bóng đá</a></li>
+                                <li><a href="{{route('ao_ngoai_hang_anh')}}">Áo ngoại hạng anh</a></li>
+                                <li><a href="{{route('ao_doi_tuyen_quoc_gia')}}">Áo đội tuyển quốc gia</a></li>
+                                <li><a href="{{route('ao_thiet_ke_theo_yeu_cau')}}">Áo thiết kế theo yêu cầu</a></li>
+                                <li><a href="{{route('Giay')}}">Giày bóng đá</a></li>
+                                <li><a href="{{route('Nike')}}">Nike</a></li>
+                                <li><a href="{{route('Adidas')}}">Adidas</a></li>
+                                <li><a href="{{route('Puma')}}">Puma</a></li>
                             </ul><!-- End .widget-list -->
                         </div><!-- End .widget -->
                     </div><!-- Ensd .col-sm-4 col-lg-3 -->
