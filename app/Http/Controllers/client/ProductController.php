@@ -26,28 +26,10 @@ class ProductController extends Controller
         
         return view('user.category-boxed', compact('products','title')); 
 
-
-      
-        
-
-   
-    
-        
-        
-        
-        
-
-
-
-
-           
-        
-       
-     
-        
-      
-
     }
+
+
+
     public function Giay(){
          
        
@@ -148,9 +130,22 @@ return view('user.category-boxed', compact('products','title'));
     {
         $para = new Product();
         $product = $para->getById($id);
-      return view('user.product-sidebar',compact('product'));
-      
+
+        $para1 = new ProductInventory();
+        $inventory = $para1->getByProductID($id);
+
+        $para2 = new ProductInventory();
+        $colors = $para2->getDistinctColorsByProductID($id);
+
+        $para3 = new ProductInventory();
+        $sizes = $para3->getDistinctSizesByProductID($id);
+        // dd($sizes);
+
+        return view('user.product-sidebar', compact('product', 'inventory', 'colors', 'sizes'));
+        // return view('user.testProduct', compact('product', 'inventory', 'colors', 'sizes'));
     }
+
+
     public function productBestSale(){
         $productbestsale = Product::where('featured', '1')->get();
         $categories = ['Áo đội tuyển quốc gia', 'Giày', 'Phụ kiện'];
