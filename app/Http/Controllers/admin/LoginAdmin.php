@@ -8,17 +8,17 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use Ramsey\Uuid\Rfc4122\Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 
 class LoginAdmin extends Controller
 {
-    public function login(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    public function login()
     {
         return view('admins.login');
     }
 
-    public function postLoginAdmin(Request $request): RedirectResponse
+    public function postLoginAdmin(Request $request)
     {
         if(Auth::attempt(['account' => $request->account, 'password' => $request->password, 'roleID' => 1]))
         {
@@ -32,7 +32,6 @@ class LoginAdmin extends Controller
             $user = $request;
             // dd($user);
             return redirect()->route('admin.dashboard');
-
         }
 
         return redirect()->back()->with('error', 'Sai thông tin');

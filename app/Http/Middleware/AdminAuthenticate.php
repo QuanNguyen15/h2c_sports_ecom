@@ -4,15 +4,15 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminAuthenticate
 {
     /**
      * Handle an incoming request.
      *
-     * @param Closure(Request): (Response) $next
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next)
     {
@@ -23,7 +23,7 @@ class AdminAuthenticate
             return $next($request);
         }
         // Nếu không phải admin hoặc chưa đăng nhập, chuyển hướng về trang đăng nhập
-        // dd("xác thực là cần đăng nhập");
+//        dd("xác thực là cần đăng nhập");
         return redirect()->route('login');
     }
 

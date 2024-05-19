@@ -11,7 +11,7 @@ use App\Http\Controllers\admin\CategoriesController as AdminCategoriesController
 use App\Http\Controllers\admin\StatisticalsController;
 
 use App\Http\Controllers\admin\AccountController as AdminAccountController;
-use App\Http\Controllers\admin\OderController;
+//use App\Http\Controllers\admin\OderController;
 use App\Http\Controllers\admin\OrderController;
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +57,7 @@ Route::middleware('admin')->prefix('/admin')->group(function() {
     Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
 
     Route::get('/logout-admin', [LogoutAdmin::class, 'logout'])->name('admins.logout');
+
  //Quản lí thống kê
     Route::get('/', [StatisticalsController::class, 'index'])->name('admins.thongke');
 
