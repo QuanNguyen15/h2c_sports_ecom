@@ -12,6 +12,8 @@
         <thead>
             <tr>
                 <th>Mã đơn hàng</th>
+                <th>Màu</th>
+                <th>Size</th>
                 <th>Tên sản phẩm</th>
                 <th>Ảnh</th>
                 <th>Số lượng</th>
@@ -23,7 +25,10 @@
         <tbody>
             @foreach ($data as $index => $detail)
             <tr>
-                
+                <td>{{$detail->productID}}</td>
+                <td>{{ isset($color[$index]) ? $color[$index]->color : 'N/A' }}</td>
+                <td>{{ isset($size[$index]) ? $size[$index]->size : 'N/A' }}</td>
+
                 <td>{{ isset($products[$index]) ? $products[$index]->name : 'N/A' }}</td>
                 <td>
                     {{-- Hiển thị ảnh --}}

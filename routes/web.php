@@ -40,7 +40,7 @@ Route::prefix('/admin')->group(function (){
     Route::get('/don-hang',[OrderController::class, 'index'])->name('admins.order');
     Route::get('/don-hang/{id}/show', [OrderController::class, 'show'])->name('admins.order.show');
     Route::put('/don-hang/{id}/update', [OrderController::class, 'update'])->name('orders.update');
-    Route::post('search', [OrderController::class, 'index'])->name('user.search');
+    Route::post('/don-hang', [OrderController::class, 'index'])->name('user.search');
 
 
 

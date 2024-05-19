@@ -90,8 +90,23 @@ class OrderController extends Controller
                     $products[] = $product;
                 }
             }
+            $color = [];
+            foreach ($data as $detail) {
+                $colors = DB::table('colors')->where('ID', $detail->colorID)->first();
+                if ($colors) {
+                    $color[] = $colors;
+                }
+            }
 
-            return view(self::PATH_VIEW . __FUNCTION__, compact('data', 'title', 'products'));
+            $size = [];
+            foreach ($data as $detail) {
+                $sizes = DB::table('sizes')->where('ID', $detail->sizeID)->first();
+                if ($sizes) {
+                    $size[] = $sizes;
+                }
+            }
+
+            return view(self::PATH_VIEW . __FUNCTION__, compact('size','color','data', 'title', 'products'));
         } else {
             return redirect()->back()->with('error', 'Không tìm thấy đơn hàng');
         }

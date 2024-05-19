@@ -33,6 +33,7 @@
     <table class="table text-center">
         <thead>
             <tr>
+                <th>Mã đơn hàng</th>
                 <th>Ngày/Tháng</th>
                 <th>Họ tên</th>
                 <th>Số điện thoại</th>
@@ -48,8 +49,8 @@
         <tbody>
             @foreach ($data as $index => $item)
                 <tr>
+                    <td>{{ $item->ID}}</td>
 
-                    
                     <td>{{ $item->created_at }}</td>
 
                     <td>{{ isset($shippingData[$index]) ? $shippingData[$index]->full_name : 'N/A' }}</td>
