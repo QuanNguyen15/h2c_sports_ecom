@@ -26,6 +26,8 @@ Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('ch
 
 Route::get('/checkout',  [CheckoutController::class, 'index'])->name('checkout.index');
 
+Route::delete('/remove-cart/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
 Route::post('/add-cart', [CartController::class, 'add'])->name('cart.add');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');

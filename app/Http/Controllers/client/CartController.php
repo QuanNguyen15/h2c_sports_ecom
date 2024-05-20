@@ -56,5 +56,10 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    public function remove(Cart $cart, $id)
+    {
+        $cart->remove($id);
+        return redirect()->route('cart.index')->with('success', 'Product removed from cart successfully.');
+    }
 
 }

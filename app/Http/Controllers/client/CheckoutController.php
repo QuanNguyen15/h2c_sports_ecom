@@ -76,7 +76,6 @@ class CheckoutController extends Controller
                     'quantity' => $value['quantity'],
                     'sale_price' => $value['price']
                 ]);
-
             }
 
             DB::commit();
@@ -86,6 +85,7 @@ class CheckoutController extends Controller
             // return redirect()->view('user.order-success', compact('order'))->with('success', 'Order placed successfully!');
         } catch (\Exception $e) {
             DB::rollBack();
+            // return $e;
             return redirect()->route('checkout.index')->with('error', 'Something went wrong, please try again.');
         }
 
