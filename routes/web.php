@@ -39,7 +39,7 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 
 
-  
+
 
 
 
