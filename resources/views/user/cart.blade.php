@@ -105,14 +105,12 @@
                                                     </td>
                                                     <td class="total-col">{{number_format($value['price'] * $value['quantity'], 2)}} đ</td>
                                                     <td class="remove-col">
-                                                        {{-- <form method="post" action="{{ route('cart.remove', $product->id) }}">
+                                                        <form method="post" action="{{ route('cart.remove', ['id' => $value['productID']]) }}">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button class="btn-remove"><i class="icon-close"></i></button>
                                                         </form>
-                                                    </td> --}}
-                                                    <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
-
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

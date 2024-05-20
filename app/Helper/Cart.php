@@ -47,6 +47,14 @@ class Cart
     // cập nhật giỏ hàng
 
     // xóa sản phẩm khỏi giỏ hàng
+    public function remove($id)
+    {
+        // dd($item);
+        if (isset($this->items[$id])) {
+            unset($this->items[$id]);
+            session(['cart' => $this->items]);
+        }
+    }
 
     // xóa hết sản phẩm khỏi giỏ hàng
 
