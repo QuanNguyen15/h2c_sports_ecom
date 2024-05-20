@@ -56,12 +56,12 @@ Route::post('/login', [LoginAdmin::class, 'postLoginAdmin'])->name('admins.login
 
 Route::middleware('admin')->prefix('/admin')->group(function() {
 
-Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/', [LoginAdmin::class, 'dashboard'])->name('admin.dashboard');
 
     Route::get('/logout-admin', [LogoutAdmin::class, 'logout'])->name('admins.logout');
 
  //Quản lí thống kê
-    Route::get('/', [StatisticalsController::class, 'index'])->name('admins.thongke');
+    Route::get('/thong-ke', [StatisticalsController::class, 'index'])->name('admins.thongke');
 
 
    //QUẢN LÍ DANH MỤC

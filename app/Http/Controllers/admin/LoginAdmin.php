@@ -44,6 +44,7 @@ class LoginAdmin extends Controller
         // dd($user);
 
         return view('admin.layout.index', compact('user'));
+
     }
 
 }
